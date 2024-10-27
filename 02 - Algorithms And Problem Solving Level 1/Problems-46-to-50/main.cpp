@@ -75,7 +75,7 @@ bool Login()
 	} while (userPIN != "1234");
 }
 
-// ----------- Problem #49 - ATM PIN (3 tries) -----------
+// ----------- Problem #50 - ATM PIN (3 tries) -----------
 
 bool LoginWith3Tries()
 {
