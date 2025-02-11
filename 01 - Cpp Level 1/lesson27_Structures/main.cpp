@@ -99,7 +99,7 @@ void Homework()
     cout << "Monthly Salary: " << person1.monthlySalary << endl;
     cout << "Yearly Salary: " << person1.monthlySalary * 12 << endl;
     cout << "Gender: " << person1.gender << endl;
-    cout << "Is married? " << person1.name << endl;
+    cout << "Is married? " << person1.isMarried << endl;
     cout << "***********************" << endl;
 
 }
