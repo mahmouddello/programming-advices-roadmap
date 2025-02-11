@@ -88,7 +88,7 @@ void DatatypesRanges()
     cout << "unsigned long long int Range: 0 to " << ULLONG_MAX << "\n";
 
     cout << "float Range: " << FLT_MIN << " to " << FLT_MAX << "\n";
-    cout << "float (negative) Range: -" << -FLT_MIN << " to -" << -FLT_MAX << "\n";
+    cout << "float (negative) Range: " << -FLT_MIN << " to " << -FLT_MAX << "\n";
 
     cout << "double Range: " << DBL_MIN << " to " << DBL_MAX << "\n";
     cout << "double (negative) Range: -" << -DBL_MIN << " to -" << -DBL_MAX << "\n";
