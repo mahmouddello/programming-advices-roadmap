@@ -81,7 +81,7 @@ void readPersonInfo(strPerson& person)
 }
 
 // Function to display the information card
-void displayInfoCard(const strPerson person) {
+void displayInfoCard(const strPerson& person) {
 	cout << "Information Card:" << endl;
 	cout << "Name: " << person.name << endl;
 	cout << "City: " << person.city << endl;

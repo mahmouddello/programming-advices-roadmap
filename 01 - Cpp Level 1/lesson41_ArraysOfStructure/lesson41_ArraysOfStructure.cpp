@@ -31,7 +31,7 @@ void readPersonInfo(strInfo& person)
 
 }
 
-void writePersonInfo(strInfo person)
+void writePersonInfo(const strInfo& person)
 {
 
 	cout << "*******************************" << endl;
