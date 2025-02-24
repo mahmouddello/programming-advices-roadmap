@@ -103,6 +103,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Problem49-MyCeil", "Problem
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Problem50-MySqrt", "Problem50-MySqrt\Problem50-MySqrt.vcxproj", "{35E55368-8BD8-4118-97A5-A05D35534031}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1-RockPaperScissors", "Project1-RockPaperScissors\Project1-RockPaperScissors.vcxproj", "{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -511,6 +513,14 @@ Global
 		{35E55368-8BD8-4118-97A5-A05D35534031}.Release|x64.Build.0 = Release|x64
 		{35E55368-8BD8-4118-97A5-A05D35534031}.Release|x86.ActiveCfg = Release|Win32
 		{35E55368-8BD8-4118-97A5-A05D35534031}.Release|x86.Build.0 = Release|Win32
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Debug|x64.ActiveCfg = Debug|x64
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Debug|x64.Build.0 = Debug|x64
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Debug|x86.ActiveCfg = Debug|Win32
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Debug|x86.Build.0 = Debug|Win32
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Release|x64.ActiveCfg = Release|x64
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Release|x64.Build.0 = Release|x64
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Release|x86.ActiveCfg = Release|Win32
+		{FE2CAF2E-4F0C-4DD9-81A9-791077EA65E7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
