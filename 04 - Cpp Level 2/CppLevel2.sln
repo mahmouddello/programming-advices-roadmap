@@ -59,7 +59,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "L23_IntegerFormat_Printf", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "L24_FloatFormatting_Printf", "L24_FloatFormatting_Printf\L24_FloatFormatting_Printf.vcxproj", "{4F9600C8-2EB2-481C-B00B-89E01AECF10A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - Two Dimensional Array", "06 - Two Dimensional Array", "{41BDE1E7-AB92-4F14-8272-8E899B9F151E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - More About Arrays", "06 - More About Arrays", "{41BDE1E7-AB92-4F14-8272-8E899B9F151E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "L27_2DimensionalArrays", "L27_2DimensionalArrays\L27_2DimensionalArrays.vcxproj", "{E3332581-DECA-4597-99EB-9B1C445FCC71}"
 EndProject
