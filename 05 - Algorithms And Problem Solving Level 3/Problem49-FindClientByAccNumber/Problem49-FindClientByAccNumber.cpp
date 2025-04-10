@@ -52,7 +52,7 @@ vector<stClient> loadCleintsDataFromFile(string filePath)
     return vClients;
 }
 
-stClient findClientByAccountNumber(const vector<stClient>& vData, string inputAccNum)
+stClient findClientByAccountNumber(const vector<stClient>& vData, const string& inputAccNum)
 {
 
     for (stClient client : vData)
@@ -65,6 +65,34 @@ stClient findClientByAccountNumber(const vector<stClient>& vData, string inputAc
     return { "", "", "", "", 0.0 };
 }
 
+// Programming Advices Solution
+bool findClientByAccNumberV2(const string& accountNumber, stClient& client)
+{
+    vector<stClient> vClients = loadCleintsDataFromFile("./records.txt");
+
+    for (stClient c : vClients)
+    {
+        if (c.AccountNumber == accountNumber)
+        {
+            client = c; // assiging the found client
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void PrintClientCard(const stClient& client)
+{
+    cout << "\nThe following client details:\n";
+
+    cout << "Account Number: " << client.AccountNumber << endl;
+    cout << "Pin Code: " << client.PinCode << endl;
+    cout << "Name: " << client.Name << endl;
+    cout << "Phone Number: " << client.Phone << endl;
+    cout << "Account Balance: " << client.AccountBalance << endl;
+}
+
 int main()
 {
     vector<stClient> vAllData = loadCleintsDataFromFile("./records.txt");
@@ -74,13 +102,7 @@ int main()
 
     if (client.AccountNumber != "")
     {
-        cout << "\nThe following client details:\n";
-
-        cout << "Account Number: " << client.AccountNumber << endl;
-        cout << "Pin Code: " << client.PinCode << endl;
-        cout << "Name: " << client.Name << endl;
-        cout << "Phone Number: " << client.Phone << endl;
-        cout << "Account Balance: " << client.AccountBalance << endl;
+        PrintClientCard(client);
     }
 
     else
