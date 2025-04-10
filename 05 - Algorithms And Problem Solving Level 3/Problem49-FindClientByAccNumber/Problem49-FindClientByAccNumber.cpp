@@ -29,7 +29,7 @@ stClient converLineToRecord(string Line, string Seperator = "#//#")
     return Client;
 }
 
-vector<stClient> LoadCleintsDataFromFile(string filePath)
+vector<stClient> loadCleintsDataFromFile(string filePath)
 {
     vector<stClient> vClients;
     fstream MyFile;
@@ -67,7 +67,7 @@ stClient findClientByAccountNumber(const vector<stClient>& vData, string inputAc
 
 int main()
 {
-    vector<stClient> vAllData = LoadCleintsDataFromFile("./records.txt");
+    vector<stClient> vAllData = loadCleintsDataFromFile("./records.txt");
     string accNumber = stringUtils::readString("Please enter accout number: ");
 
     stClient client = findClientByAccountNumber(vAllData, accNumber);
