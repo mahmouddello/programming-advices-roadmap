@@ -7,7 +7,7 @@ This repository contains my personal notes for the **"Introduction to Programmin
 </p>
 
 > [!IMPORTANT]
-> Each folder contains the code for one lecture/problem in form of Visual Studio project. Projects are placed in a Visual Studio solution for better
+> Each folder contains the code for one lecture/problem in form of Visual Studio project. Projects are placed in a Visual Studio solution for easy management.
 
 ## 🔗 Notion Course Page
 
