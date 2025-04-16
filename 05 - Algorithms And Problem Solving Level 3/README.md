@@ -7,7 +7,7 @@ This repository contains my solutions for the **"Algorithms & Problem Solving Le
 </p>
 
 > [!IMPORTANT]
-> Each folder contains the code for one lecture/problem.
+> Each folder contains the code for one lecture/problem in form of Visual Studio project. Projects are placed in a Visual Studio solution for easy management.
 
 ## 🔗 Notion Course Page
 
