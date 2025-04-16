@@ -27,7 +27,7 @@ void PrintFirstLetterFromEachWord(string sentence)
 	
 	for (int i = 0; i < sentence.length(); i++)
 	{
-		if (sentence[i] != char(32) && i != sentence.length() - 1)
+		if (sentence[i] != char(32))
 			word += sentence[i];
 		else
 		{
@@ -35,6 +35,9 @@ void PrintFirstLetterFromEachWord(string sentence)
 			word = "";
 		}	
 	}
+
+	if (word != "")
+		cout << word[0] << endl;
 }
 
 int main() {

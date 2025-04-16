@@ -23,7 +23,7 @@ void FibonacciUsingLoop(int number)
 
 int main()
 {
-	int num = InputsLib::ReadPositiveNumber("Enter fibonacci number: ");
+	int num = InputsLib::readPositiveNumber("Enter fibonacci number: ");
 
 	FibonacciUsingLoop(num);
 

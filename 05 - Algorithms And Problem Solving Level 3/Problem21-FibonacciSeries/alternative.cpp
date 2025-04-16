@@ -20,7 +20,7 @@
 //}
 //
 //int main() {
-//    int fibonacci_length = InputsLib::ReadPositiveNumber("Fibonacci of? ");
+//    int fibonacci_length = InputsLib::readPositiveNumber("Fibonacci of? ");
 //
 //    if (fibonacci_length < 2) {
 //        cout << "Fibonacci sequence requires at least 2 terms.\n";

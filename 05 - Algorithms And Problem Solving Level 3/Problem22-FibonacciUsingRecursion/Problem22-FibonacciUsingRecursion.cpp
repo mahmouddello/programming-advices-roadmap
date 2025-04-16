@@ -29,7 +29,7 @@ int FibonacciUsingRecusion(int number)
 
 int main() {
 
-	int num = InputsLib::ReadPositiveNumber("Enter fibonacci: ");
+	int num = InputsLib::readPositiveNumber("Enter fibonacci: ");
 
 	cout << FibonacciUsingRecusion(num) << endl; // return result only
 
