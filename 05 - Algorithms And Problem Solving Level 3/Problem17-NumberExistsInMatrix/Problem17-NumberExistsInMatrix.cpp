@@ -36,7 +36,7 @@ int main() {
 	cout << "Matrix:" << endl;
 	Print2DArray(matrix, 3, 3);
 
-	short number = InputsLib::ReadNumber("Please enter the number to look for in the matrix? ");
+	short number = InputsLib::readNumber("Please enter the number to look for in the matrix? ");
 
 	if (isNumberExistsInMatrix(matrix, number, 3, 3))
 		cout << "\nYes, it is there." << endl;

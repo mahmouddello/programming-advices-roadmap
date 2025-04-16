@@ -40,7 +40,7 @@ int main() {
 
 	Print2DArray(matrix, 3, 3);
 
-	int number = InputsLib::ReadNumber("\nEnter the number to count in matrix? ");
+	int number = InputsLib::readNumber("\nEnter the number to count in matrix? ");
 	int numberFrequeny = CountNumberIn2DMatrix(matrix, 3, 3, number);
 
 	if (numberFrequeny > 0)
