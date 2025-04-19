@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "D:/MyCPP_Libs/stringUtils.h"
+#include "D:/MyCPP_Libs/headers/string_utils.h"
 
 using namespace std;
 
 string removePunctuationsFromString(string s1)
 {
-	vector<string> vTemp = stringUtils::splitString(s1, " ");
+	vector<string> vTemp = string_utils::splitString(s1, " ");
 
 	for (string& word : vTemp)
 	{
@@ -19,7 +19,7 @@ string removePunctuationsFromString(string s1)
 		}
 	}
 
-	return stringUtils::joinString(vTemp, " ");
+	return string_utils::joinString(vTemp, " ");
 }
 
 string removePunctV2(string s1)

@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <limits>
-#include "D:/MyCPP_Libs/stringUtils.h"
+#include "D:/MyCPP_Libs/headers/string_utils.h"
 
 using namespace std;
 
@@ -81,7 +81,7 @@ int main()
 	vector<string> vData = loadDataToVector(clientData);
 
 	cout << "\n\nClient record for saving is:\n"; 
-	cout << stringUtils::joinString(vData, "#//#") << endl;
+	cout << string_utils::joinString(vData, "#//#") << endl;
 
 	return 0;
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "D:/MyCPP_Libs/stringUtils.h"
+#include "D:/MyCPP_Libs/headers/string_utils.h"
 
 using namespace std;
 
@@ -16,7 +16,7 @@ struct stClientData
 
 stClientData convertLinetoRecord(string s1, string delimiter)
 {
-	vector<string> vTemp = stringUtils::splitString(s1, delimiter);
+	vector<string> vTemp = string_utils::splitString(s1, delimiter);
 
 	stClientData data;
 

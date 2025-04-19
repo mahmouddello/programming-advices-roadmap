@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "D:/MyCPP_Libs/InputsLib.h"
+#include "D:/MyCPP_Libs/headers/input_utils.h"
 
 using namespace std;
 
@@ -40,7 +40,7 @@ int main() {
 
 	Print2DArray(matrix, 3, 3);
 
-	int number = InputsLib::readNumber("\nEnter the number to count in matrix? ");
+	int number = input_utils::readNumber("\nEnter the number to count in matrix? ");
 	int numberFrequeny = CountNumberIn2DMatrix(matrix, 3, 3, number);
 
 	if (numberFrequeny > 0)

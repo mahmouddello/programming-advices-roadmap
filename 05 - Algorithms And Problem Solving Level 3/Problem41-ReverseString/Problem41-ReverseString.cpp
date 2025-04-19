@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "D:/MyCPP_Libs/stringUtils.h"
+#include "D:/MyCPP_Libs/headers/string_utils.h"
 
 using namespace std;
 
@@ -68,7 +68,7 @@ string reverseWordsInString(string S1)
 {
 	vector<string> vString;
 	string S2 = "";
-	vString = stringUtils::splitString(S1, " ");
+	vString = string_utils::splitString(S1, " ");
 
 	// declare iterator
 	vector<string>::iterator iter = vString.end();
@@ -84,7 +84,7 @@ string reverseWordsInString(string S1)
 
 int main()
 {
-	string word = stringUtils::readString();
+	string word = string_utils::readString();
 
 	cout << "\n\nReversed String:\n" << reverseWordsInString(word) << endl;
 

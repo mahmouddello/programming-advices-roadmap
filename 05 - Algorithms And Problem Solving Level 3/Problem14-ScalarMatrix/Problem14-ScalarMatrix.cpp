@@ -1,6 +1,5 @@
 #include <iostream>
-#include <iomanip>
-#include "D:\MyCPP_Libs\RandomLib.h";
+#include <iomanip>d
 
 using namespace std;
 

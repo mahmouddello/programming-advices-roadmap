@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "D:/MyCPP_Libs/stringUtils.h";
+#include "D:/MyCPP_Libs/headers/string_utils.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ stClient converLineToRecord(string Line, string Seperator = "#//#")
 {
     stClient Client;
     vector<string> vClientData;
-    vClientData = stringUtils::splitString(Line, Seperator);
+    vClientData = string_utils::splitString(Line, Seperator);
     Client.AccountNumber = vClientData[0];
     Client.PinCode = vClientData[1];
     Client.Name = vClientData[2];
@@ -96,7 +96,7 @@ void PrintClientCard(const stClient& client)
 int main()
 {
     vector<stClient> vAllData = loadCleintsDataFromFile("./records.txt");
-    string accNumber = stringUtils::readString("Please enter accout number: ");
+    string accNumber = string_utils::readString("Please enter accout number: ");
 
     stClient client = findClientByAccountNumber(vAllData, accNumber);
 

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "D:/MyCPP_Libs/RandomLib.h";
+#include "D:/MyCPP_Libs/headers/random_utils.h"
 
 /*
 	Problem 03: Write a C++ code to create a random 3x3 (2D) array, print it
@@ -14,7 +14,7 @@ void Fill2DArrayWithRandomNumbers(int array[3][3], short rows, short columns)
 {
 	for (short i = 0; i < rows; i++) {
 		for (short j = 0; j < columns; j++) {
-			array[i][j] = RandomLib::RandomNumberInRange(1, 100);
+			array[i][j] = random_utils::randomNumberInRange(1, 100);
 		}
 	}
 }

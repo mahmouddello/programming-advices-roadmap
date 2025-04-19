@@ -3,7 +3,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "D:/MyCPP_Libs/stringUtils.h";
+#include "D:/MyCPP_Libs/headers/string_utils.h";
 
 using namespace std;
 
@@ -353,7 +353,7 @@ vector<stClient> loadClientsData(const string& fileName)
 
 stClient convertLineToRecord(const string& line, string delimiter)
 {
-	vector<string> vTemp = stringUtils::splitString(line, delimiter);
+	vector<string> vTemp = string_utils::splitString(line, delimiter);
 
 	stClient data;
 

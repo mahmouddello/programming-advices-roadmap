@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "D:/MyCPP_Libs/InputsLib.h"
-
+#include "D:/MyCPP_Libs/headers/input_utils.h"
 
 using namespace std;
 
@@ -36,7 +35,7 @@ int main() {
 	cout << "Matrix:" << endl;
 	Print2DArray(matrix, 3, 3);
 
-	short number = InputsLib::readNumber("Please enter the number to look for in the matrix? ");
+	short number = input_utils::readNumber("Please enter the number to look for in the matrix? ");
 
 	if (isNumberExistsInMatrix(matrix, number, 3, 3))
 		cout << "\nYes, it is there." << endl;

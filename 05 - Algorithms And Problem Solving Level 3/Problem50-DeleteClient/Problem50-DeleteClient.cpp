@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "D:/MyCPP_Libs/stringUtils.h";
+#include "D:/MyCPP_Libs/headers/string_utils.h"
 
 using namespace std;
 
@@ -57,7 +57,7 @@ stClient converLineToRecord(string line, string seperator = "#//#")
     stClient client;
     vector<string> vClientData;
 
-    vClientData = stringUtils::splitString(line, seperator);
+    vClientData = string_utils::splitString(line, seperator);
     client.accountNumber = vClientData[0];
     client.pinCode = vClientData[1];
     client.name = vClientData[2];

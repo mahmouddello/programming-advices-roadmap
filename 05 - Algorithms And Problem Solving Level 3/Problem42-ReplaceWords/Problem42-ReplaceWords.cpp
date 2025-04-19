@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "D:/MyCPP_Libs/stringUtils.h"
+#include "D:/MyCPP_Libs/headers/string_utils.h"
+
 
 using namespace std;
 
@@ -42,7 +43,7 @@ string replaceWordInStringUsingBuiltinFunction(string s1, string toReplace, stri
 
 int main()
 {
-	string s1 = stringUtils::readString();
+	string s1 = string_utils::readString();
 
 	cout << replaceWords(s1, "Syria", "USA") << endl;
 	cout << "\n\n" << replaceWordInStringUsingBuiltinFunction(s1, "Syria", "Canada") << endl;

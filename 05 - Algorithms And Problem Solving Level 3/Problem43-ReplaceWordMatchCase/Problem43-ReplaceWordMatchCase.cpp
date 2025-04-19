@@ -1,13 +1,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "D:/MyCPP_Libs/stringUtils.h"
+#include "D:/MyCPP_Libs/headers/string_utils.h"
+
 
 using namespace std;
 
 string replaceWordsMatchCase(string originalString, string wordToReplace, string newWord, bool matchCase = true)
 {
-	vector<string> v = stringUtils::splitString(originalString, " ");
+	vector<string> v = string_utils::splitString(originalString, " ");
 
 	for (string& str : v)
 	{
@@ -25,19 +26,19 @@ string replaceWordsMatchCase(string originalString, string wordToReplace, string
 		// with new word
 		else
 		{
-			if (stringUtils::lowerAllLetters(str) == stringUtils::lowerAllLetters(wordToReplace))
+			if (string_utils::lowerAllLetters(str) == string_utils::lowerAllLetters(wordToReplace))
 			{
 				str = newWord;
 			}
 		}
 	}
 
-	return stringUtils::joinString(v, " ");
+	return string_utils::joinString(v, " ");
 }
 
 int main()
 {
-	//string s1 = stringUtils::readString();
+	//string s1 = string_utils::readString();
 	string s2 = "Mahmoud from Syria , Syria is a wonderful country!";
 
 
