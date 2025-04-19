@@ -1,5 +1,5 @@
 #include <iostream>
-#include "D:/MyCPP_Libs/date_utils.h"
+#include "D:/MyCPP_Libs/headers/date_utils.h"
 
 using namespace std;
 
@@ -25,7 +25,7 @@ int main()
 	month = date_utils::readMonth();
 	year = date_utils::readYear();
 
-	cout << "Number of days from the beginning of the year is:"; 
+	cout << "Number of days from the beginning of the year is: "; 
 	cout << numberOfDaysFromBeginningOfTheYear(year, month, day) << endl;
 
 	return 0;

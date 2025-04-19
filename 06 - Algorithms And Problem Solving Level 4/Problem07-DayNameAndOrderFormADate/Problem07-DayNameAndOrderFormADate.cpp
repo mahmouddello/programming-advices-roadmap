@@ -41,7 +41,7 @@ short readDay()
 	return day;
 }
 
-short getDayofWeekOrder(short year, short month, short day)
+short dayOfWeekOrder(short year, short month, short day)
 {
 	
 	short a = (14 - month) / 12;
@@ -54,7 +54,7 @@ short getDayofWeekOrder(short year, short month, short day)
 	return d;
 }
 
-string getDayNameGeorgianCalendar(short num)
+string dayShortName(short num)
 {
 	string days[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 
@@ -69,8 +69,8 @@ int main()
 	short day = readDay();
 
 	cout << "\nDate: " << day << "/" << month << "/" << year << endl;
-	cout << "Day Order: " << getDayofWeekOrder(year, month, day) << endl;
-	cout << "Day Name: " << getDayNameGeorgianCalendar(getDayofWeekOrder(year, month, day)) << endl;
+	cout << "Day Order: " << dayOfWeekOrder(year, month, day) << endl;
+	cout << "Day Name: " << dayShortName(dayOfWeekOrder(year, month, day)) << endl;
 
 	return 0;
 }

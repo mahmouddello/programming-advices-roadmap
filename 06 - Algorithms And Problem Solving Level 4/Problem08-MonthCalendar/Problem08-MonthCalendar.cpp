@@ -45,7 +45,7 @@ short numberOfDaysInAMonth(const short year, const short month)
 	return month == 2 ? (isLeapYear(year) ? 29 : 28) : monthDays[month - 1];
 }
 
-short getDayofWeekOrder(short year, short month, short day)
+short dayOfWeekOrder(short year, short month, short day)
 {
 
 	short a = (14 - month) / 12;
@@ -58,14 +58,14 @@ short getDayofWeekOrder(short year, short month, short day)
 	return d;
 }
 
-string getDayNameByOrder(short num)
+string dayShortName(short num)
 {
 	string days[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 
 	return days[num];
 }
 
-string getMonthName(short month)
+string monthShortName(short month)
 {
 	string months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 	 
@@ -74,11 +74,11 @@ string getMonthName(short month)
 
 void printMonthCalendar(short year, short month)
 {
-	short firstDayOrder = getDayofWeekOrder(year, month, 1);
-	string firstDayInMonth = getDayNameByOrder(firstDayOrder);
+	short firstDayOrder = dayOfWeekOrder(year, month, 1);
+	string firstDayInMonth = dayShortName(firstDayOrder);
 	short totalDays = numberOfDaysInAMonth(year, month);
 
-	cout << "_________________________" << getMonthName(month) << "_________________________" << endl;
+	cout << "_________________________" << monthShortName(month) << "_________________________" << endl;
 	cout << "\nSun\tMon\tTue\tWed\tThu\tFri\tSat\t" << endl;
 
 	short dayTrack = 0;
@@ -94,7 +94,7 @@ void printMonthCalendar(short year, short month)
 	{
 		cout << i << "\t";
 		
-		if (getDayNameByOrder(dayTrack) == "Sat")
+		if (dayShortName(dayTrack) == "Sat")
 		{
 			cout << endl;
 			dayTrack = 0;
