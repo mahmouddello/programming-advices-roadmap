@@ -1,14 +1,10 @@
 ﻿#include <iostream>
 #include "D:/MyCPP_Libs/headers/date_utils.h"
 
-using namespace std;
+// stDate is defined in date_utils.h file
 
-struct stDate
-{
-	short day = 0;
-	short month = 0;
-	short year = 0;
-};
+using namespace std;
+using date_utils::stDate;
 
 stDate getDateFromDayOrderInYear(short dateOrderInYear, short year)
 {

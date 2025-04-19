@@ -3,6 +3,7 @@
 #include "D:/MyCPP_Libs/headers/input_utils.h"
 
 using namespace std;
+using date_utils::stDate;
 
 // stDate is inside date_utils.h
 
@@ -55,6 +56,7 @@ stDate dateAddDays(short days, stDate date)
 	return date;
 }
 
+// optimized solution
 stDate dateAddDaysV2(short days, stDate Date) {
 
 	short reminingDays = days + date_utils::numberOfDaysFromBeginningOfTheYear(Date.day, Date.month, Date.year);
