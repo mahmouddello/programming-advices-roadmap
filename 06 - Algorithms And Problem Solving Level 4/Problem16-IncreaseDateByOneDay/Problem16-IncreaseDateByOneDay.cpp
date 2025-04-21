@@ -51,7 +51,7 @@ int main()
 {
 	stDate date = date_utils::readFullDate();
 
-	date = increaseDateByOneDay(date);
+	date = _AGLOBAL::increaseDateByOneDay(date);
 
 	cout << "Date after adding one day is: ";
 	printf("%d/%d/%d\n", date.day, date.month, date.year);

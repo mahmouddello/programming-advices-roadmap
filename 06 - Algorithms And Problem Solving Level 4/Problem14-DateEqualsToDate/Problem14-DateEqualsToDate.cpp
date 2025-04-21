@@ -20,7 +20,7 @@ int main()
 	stDate date1 = date_utils::readFullDate();
 	stDate date2 = date_utils::readFullDate();
 
-	if (isDateEqualsDate(date1, date2))
+	if (date_utils::isDateEqualsDate(date1, date2))
 		cout << "\nYes, Date 1 equals Date 2" << endl;
 	else
 		cout << "\nNo, Date 1 doesn't equals Date 2" << endl;
