@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{249e69e1-f978-4198-b538-5978f8ff8b52}</ProjectGuid>
-    <RootNamespace>Problems3346DecreaseDateProblems</RootNamespace>
+    <ProjectGuid>{4c8dc0e0-b9bc-46ca-af55-917040a750d9}</ProjectGuid>
+    <RootNamespace>Problem57CompareDate</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Problem33_46-DecreaseDateProblems</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Problems33_46-DecreaseDateProblems.cpp" />
+    <ClCompile Include="Problem57-CompareDate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

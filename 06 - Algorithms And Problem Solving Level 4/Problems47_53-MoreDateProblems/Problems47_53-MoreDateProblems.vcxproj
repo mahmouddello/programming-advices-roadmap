@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{249e69e1-f978-4198-b538-5978f8ff8b52}</ProjectGuid>
-    <RootNamespace>Problems3346DecreaseDateProblems</RootNamespace>
+    <ProjectGuid>{ce2b3760-6ebf-4015-8fb9-30d0f97bfcc5}</ProjectGuid>
+    <RootNamespace>Problems4753MoreDateProblems</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Problem33_46-DecreaseDateProblems</ProjectName>
+    <ProjectName>Problem47_53-MoreDateProblems</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Problems33_46-DecreaseDateProblems.cpp" />
+    <ClCompile Include="Problems47_53-MoreDateProblems.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

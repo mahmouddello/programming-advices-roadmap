@@ -24,6 +24,7 @@
     <ProjectGuid>{44bee3fb-b101-4fdb-8fd4-0a56fe213aca}</ProjectGuid>
     <RootNamespace>Problems2032IncreaseDateProblems</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Problem20_32-IncreaseDateProblems</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
