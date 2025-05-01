@@ -207,13 +207,13 @@ void transactionWindowRedirect(const enTransactions& userOption, vector<stClient
 	{
 		case enTransactions::eDeposit:
 		{
-			depositAmmount(vClients);
+			depositAmount(vClients);
 			goBackToTranstionsWindow(vClients);
 			break;
 		}
 		case enTransactions::eWithdraw:
 		{
-			withdrawAmmount(vClients);
+			withdrawAmount(vClients);
 			goBackToTranstionsWindow(vClients);
 			break;
 		}
