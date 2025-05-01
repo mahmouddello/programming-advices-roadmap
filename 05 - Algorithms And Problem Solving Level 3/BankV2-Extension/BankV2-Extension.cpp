@@ -273,6 +273,13 @@ void showAllClients(const vector<stClient>& vClients)
 	cout << "---------------------------------------------------";
 	cout << "--------------------------------------------------" << endl;
 
+	if (vClients.size() == 0)
+	{
+		cout << "There are no records of clients in this file!\n" << endl;
+		system("pause");
+		return;
+	}
+
 	for (const stClient& client : vClients)
 	{
 		cout << left
