@@ -59,7 +59,7 @@ struct stClient
 	bool markForDelete = false;
 };
 
-// defintions Bank V1
+// declarations
 void startBankApp();
 void showMainMenuScreen();
 void showAllClients(const vector<stClient>&);
@@ -84,13 +84,13 @@ void findClientAccount(const vector<stClient>&);
 void exitBankApp();
 void goBackToTranstionsWindow(vector<stClient>&);
 void transactionsWindow(vector<stClient>&);
-void depositAmmount(vector<stClient>&);
-void withdrawAmmount(vector<stClient>&);
+void depositAmount(vector<stClient>&);
+void withdrawAmount(vector<stClient>&);
 void showTotalBalance(const vector<stClient>&);
 int calculateTotalBalance(const vector<stClient>&);
 
 
-// declarations
+// defintions
 short readUserOption(short from, short to)
 {
 	unsigned short option;
@@ -576,7 +576,7 @@ void deleteClientAccount(vector<stClient>& vClients)
 	}
 }
 
-void depositAmmount(vector<stClient>& vClients)
+void depositAmount(vector<stClient>& vClients)
 {
 	system("cls");
 
@@ -618,7 +618,7 @@ void depositAmmount(vector<stClient>& vClients)
 	}
 }
 
-void withdrawAmmount(vector<stClient>& vClients)
+void withdrawAmount(vector<stClient>& vClients)
 {
 	system("cls");
 
