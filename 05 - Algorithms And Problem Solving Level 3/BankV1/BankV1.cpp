@@ -30,7 +30,7 @@ struct stClient
 	bool markForDelete = false;
 };
 
-// defintions
+// declarations
 void startBankApp();
 void showMainMenuScreen();
 void showAllClients(const vector<stClient>&);
@@ -54,7 +54,7 @@ void saveClientsDataToFile(const string&, const vector<stClient>&);
 void findClientAccount(const vector<stClient>&);
 void exitBankApp();
 
-// declarations
+// defintions
 enOptions readUserOption()
 {
 	unsigned short option;
