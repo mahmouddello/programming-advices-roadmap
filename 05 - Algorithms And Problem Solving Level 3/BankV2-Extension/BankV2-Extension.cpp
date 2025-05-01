@@ -9,7 +9,7 @@ using namespace std;
 
 /*
 	TODO
-	
+
 	New features to add
 
 	Transactions window or screen that should have the following options:
@@ -205,33 +205,33 @@ void transactionWindowRedirect(const enTransactions& userOption, vector<stClient
 {
 	switch (userOption)
 	{
-		case enTransactions::eDeposit:
-		{
-			depositAmount(vClients);
-			goBackToTranstionsWindow(vClients);
-			break;
-		}
-		case enTransactions::eWithdraw:
-		{
-			withdrawAmount(vClients);
-			goBackToTranstionsWindow(vClients);
-			break;
-		}
-		case enTransactions::eTotalBalance:
-		{
-			showTotalBalance(vClients);
-			goBackToTranstionsWindow(vClients);
-			break;
-		}
-		case enTransactions::eBackToMainMenu:
-		{
-			showMainMenuScreen();
-			break;
-		}
-		default:
-		{
-			break;
-		}
+	case enTransactions::eDeposit:
+	{
+		depositAmount(vClients);
+		goBackToTranstionsWindow(vClients);
+		break;
+	}
+	case enTransactions::eWithdraw:
+	{
+		withdrawAmount(vClients);
+		goBackToTranstionsWindow(vClients);
+		break;
+	}
+	case enTransactions::eTotalBalance:
+	{
+		showTotalBalance(vClients);
+		goBackToTranstionsWindow(vClients);
+		break;
+	}
+	case enTransactions::eBackToMainMenu:
+	{
+		showMainMenuScreen();
+		break;
+	}
+	default:
+	{
+		break;
+	}
 	}
 }
 
@@ -597,7 +597,7 @@ void depositAmount(vector<stClient>& vClients)
 	if (client.accountNumber != "")
 	{
 		printClientDetails(client);
-		
+
 		double balanceToBeAdded;
 		cout << "\nEnter the ammount you want to deposit: ";
 		cin >> balanceToBeAdded;
@@ -640,11 +640,21 @@ void withdrawAmount(vector<stClient>& vClients)
 	{
 		printClientDetails(client);
 
-		double balanceToWithdraw;
-
+		double balanceToWithdraw = 0.0;
 		char confirm = 'n';
 
-		cout << "\nAre you sure you want to withdraw this ammount? Y / N: ";
+		while (true)
+		{
+			cout << "\nEnter the amount you want to withdraw: ";
+			cin >> balanceToWithdraw;
+
+			if (client.accountBalance < balanceToWithdraw)
+				cout << "Specified amount exceeds balance, try withdrawing another amount" << endl;
+			else
+				break;
+		}
+
+		cout << "\nAre you sure you want to withdraw this amount? y / n: ";
 		cin >> confirm;
 
 		if (tolower(confirm) == 'y')
@@ -653,33 +663,19 @@ void withdrawAmount(vector<stClient>& vClients)
 			{
 				if (c.accountNumber == client.accountNumber)
 				{
-					while (true)
-					{
-
-						cout << "\nEnter the ammount of balance to withdraw: ";
-						cin >> balanceToWithdraw;
-
-						if (c.accountBalance < balanceToWithdraw)
-						{
-							cout << "Specified ammount exceeds balance, ";
-						}
-						else
-						{
-							c.accountBalance -= balanceToWithdraw;
-							break;
-						}
-
-					}
+					c.accountBalance -= balanceToWithdraw;
 					break;
 				}
 			}
+			saveClientsDataToFile(fileName, vClients);
+
+			cout << "\nClient balance updated successfully!" << endl;
+
+			vClients = loadClientsData(fileName); // refresh
 		}
-		saveClientsDataToFile(fileName, vClients);
-
-		cout << "\nClient balance updated successfully!" << endl;
-
-		vClients = loadClientsData(fileName); // refresh
 	}
+	else
+		cout << "Client with account number [" << accountNumber << "] not found!" << endl;
 }
 
 void printClientDetails(const stClient& client)
