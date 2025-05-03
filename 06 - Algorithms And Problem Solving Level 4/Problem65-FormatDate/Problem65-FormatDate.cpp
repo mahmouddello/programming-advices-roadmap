@@ -51,9 +51,9 @@ string fetchSeperatorFromFormat(string dateFormat)
 
 string formatDate(const stDate& date, string dateFormat)
 {
-	dateFormat = string_utils::replaceWords(dateFormat, "dd", to_string(date.day));
-	dateFormat = string_utils::replaceWords(dateFormat, "mm", to_string(date.month));
-	dateFormat = string_utils::replaceWords(dateFormat, "yyyy", to_string(date.year));
+	dateFormat = string_utils::replaceAll(dateFormat, "dd", to_string(date.day));
+	dateFormat = string_utils::replaceAll(dateFormat, "mm", to_string(date.month));
+	dateFormat = string_utils::replaceAll(dateFormat, "yyyy", to_string(date.year));
 
 	return dateFormat;
 }
