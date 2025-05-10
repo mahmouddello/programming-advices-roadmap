@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "D:/MyCPP_Libs/headers/string_utils.h"
+#include #include "../mylibs/headers/string_utils.h"
 
 
 using namespace std;

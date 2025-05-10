@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 
-#include "D:/MyCPP_Libs/headers/random_utils.h";
+#include "../mylibs/headers/random_utils.h";
 
 using namespace std;
 

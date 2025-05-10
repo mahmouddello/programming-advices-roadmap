@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "D:/MyCPP_Libs/headers/input_utils.h"
+#include "../mylibs/headers/input_utils.h"
 
 using namespace std;
 

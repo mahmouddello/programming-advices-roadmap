@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <limits>
-#include "D:/MyCPP_Libs/headers/string_utils.h"
+#include "../mylibs/headers/string_utils.h"
 
 using namespace std;
 

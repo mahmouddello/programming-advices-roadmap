@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "D:/MyCPP_Libs/headers/string_utils.h"
+#include "../mylibs/headers/string_utils.h"
 
 using namespace std;
 
