@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "D:/MyCPP_Libs/headers/date_utils.h"
-#include "D:/MyCPP_Libs/headers/string_utils.h"
+#include "../mylibs/headers/date_utils.h"
+#include "../mylibs/headers/string_utils.h"
 
 using namespace std;
 using date_utils::stDate;

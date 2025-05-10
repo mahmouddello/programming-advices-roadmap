@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "D:/MyCPP_Libs/headers/date_utils.h"
+#include "../mylibs/headers/date_utils.h"
 
 // stDate is defined in date_utils.h file
 

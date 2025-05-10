@@ -1,5 +1,5 @@
 #include <iostream>
-#include "D:/MyCPP_Libs/headers/date_utils.h"
+#include "../mylibs/headers/date_utils.h"
 
 using date_utils::stDate;
 using namespace std;
