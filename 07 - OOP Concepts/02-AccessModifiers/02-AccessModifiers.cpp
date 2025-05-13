@@ -23,6 +23,7 @@ protected:
 	}
 
 public:
+	// accessible from everywhere inside and outside the class.
 	string firstName;
 	string lastName;
 
