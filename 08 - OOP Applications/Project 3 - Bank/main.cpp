@@ -150,7 +150,7 @@ void printClientRecordLine(clsBankClient client)
 
 }
 
-void PrintClientRecordBalanceLine(clsBankClient client)
+void printClientRecordBalanceLine(clsBankClient client)
 {
 
 	cout << "| " << setw(15) << left << client.getAccountNumber();
@@ -212,17 +212,22 @@ void showTotalBalances()
 	if (vClients.size() == 0)
 		cout << "\t\t\t\tNo Clients Available In the System!";
 	else
-
+	{
 		for (clsBankClient Client : vClients)
 		{
-			PrintClientRecordBalanceLine(Client);
+			printClientRecordBalanceLine(Client);
 			cout << endl;
 		}
 
+		cout << "\n_______________________________________________________";
+		cout << "_________________________________________\n" << endl;
+		cout << "\t\t\t\t\t   Total Balances = " << TotalBalances << endl;
+		cout << "\t\t\t\t\t   ( " << clsUtil::NumberToText(TotalBalances) << ")" << endl;;
+	}
+
+
 	cout << "\n_______________________________________________________";
 	cout << "_________________________________________\n" << endl;
-	cout << "\t\t\t\t\t   Total Balances = " << TotalBalances << endl;
-	cout << "\t\t\t\t\t   ( " << clsUtil::NumberToText(TotalBalances) << ")" << endl;;
 }
 
 int main()
