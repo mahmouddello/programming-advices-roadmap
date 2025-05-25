@@ -8,8 +8,8 @@ private:
 	int x;
 
 public:
-
-	enum enCharType {
+	enum enCharType
+	{
 		smallLetter = 1,
 		capitalLetter = 2,
 		sepcialChar = 3,
@@ -17,7 +17,17 @@ public:
 		mixChars = 5
 	};
 
-	static double readNumber(const std::string& message = "Enter a number: ")
+	static std::string readString(const std::string &message = "Enter a string: ")
+	{
+		std::string input;
+
+		std::cout << message;
+		std::getline(std::cin >> std::ws, input);
+
+		return input;
+	}
+
+	static double readNumber(const std::string &message = "Enter a number: ")
 	{
 		double number = 0;
 
@@ -27,7 +37,7 @@ public:
 		return number;
 	}
 
-	static bool isPerfectNumber(const int& number)
+	static bool isPerfectNumber(const int &number)
 	{
 		int sum = 0;
 
@@ -70,14 +80,14 @@ public:
 		return isNegative ? -revNumber : revNumber;
 	}
 
-	static short countDigitFrequency(const short& digitToCheck, int number)
+	static short countDigitFrequency(const short &digitToCheck, int number)
 	{
 		int freqCount = 0, remainder = 0;
 
 		while (number > 0)
 		{
 			remainder = number % 10; // getting the digit in ones place
-			number = number / 10; // dividing by 10 to remove the digit in ones place
+			number = number / 10;	 // dividing by 10 to remove the digit in ones place
 			if (digitToCheck == remainder)
 				freqCount++;
 		}
@@ -85,7 +95,7 @@ public:
 		return freqCount;
 	}
 
-	static void countAllDigitsFrequncies(const int& number)
+	static void countAllDigitsFrequncies(const int &number)
 	{
 		for (int i = 0; i <= 9; i++) // trying all possible digits from 0 - 9
 		{
@@ -93,11 +103,10 @@ public:
 
 			if (digitFreq > 0)
 				std::cout << "Digit " << i << " frequency is " << digitFreq << " time(s)." << std::endl;
-
 		}
 	}
 
-	static std::string encryptMessage(std::string message, const short& encryptionKey)
+	static std::string encryptMessage(std::string message, const short &encryptionKey)
 	{
 
 		for (int i = 0; i < message.length(); i++)
@@ -111,7 +120,7 @@ public:
 		return message;
 	}
 
-	static std::string decryptMessage(std::string message, const short& encryptionKey)
+	static std::string decryptMessage(std::string message, const short &encryptionKey)
 	{
 
 		for (int i = 0; i < message.length(); i++)
@@ -130,20 +139,26 @@ public:
 		srand((unsigned)time(NULL));
 	}
 
-	static int randomNumber(const int& from, const int& to)
-	{	
-		return rand() % (to - from + 1) + from;;
+	static int randomNumber(const int &from, const int &to)
+	{
+		return rand() % (to - from + 1) + from;
+		;
 	}
 
 	static char getRandomCharacter(enCharType charType)
 	{
 		switch (charType)
 		{
-			case enCharType::smallLetter: return char(randomNumber(97, 122));
-			case enCharType::capitalLetter: return char(randomNumber(65, 90));
-			case enCharType::sepcialChar: return char(randomNumber(33, 47));
-			case enCharType::digit: return char(randomNumber(48, 57));
-			case enCharType::mixChars: return char(randomNumber(0, 1) ? randomNumber(97, 122) : randomNumber(65, 90));
+		case enCharType::smallLetter:
+			return char(randomNumber(97, 122));
+		case enCharType::capitalLetter:
+			return char(randomNumber(65, 90));
+		case enCharType::sepcialChar:
+			return char(randomNumber(33, 47));
+		case enCharType::digit:
+			return char(randomNumber(48, 57));
+		case enCharType::mixChars:
+			return char(randomNumber(0, 1) ? randomNumber(97, 122) : randomNumber(65, 90));
 		}
 	}
 
@@ -182,41 +197,40 @@ public:
 			std::cout << generateKey(charType) << std::endl;
 	}
 
-	static void swap(int& x, int& y)
+	static void swap(int &x, int &y)
 	{
 		int temp = x;
 		x = y;
 		y = temp;
 	}
 
-	static void swap(std::string& x, std::string& y)
+	static void swap(std::string &x, std::string &y)
 	{
 		std::string temp = x;
 		x = y;
 		y = temp;
 	}
 
-	static void swap(double& x, double& y)
+	static void swap(double &x, double &y)
 	{
 		double temp = x;
 		x = y;
 		y = temp;
 	}
 
-	static void swap(char& x, char& y)
+	static void swap(char &x, char &y)
 	{
 		char temp = x;
 		x = y;
 		y = temp;
 	}
 
-	static void swap(clsDate& x, clsDate& y)
+	static void swap(clsDate &x, clsDate &y)
 	{
 		clsDate temp = x;
 		x = y;
 		y = temp;
 	}
-
 
 	static void fillArrayWithRandomNumbers(int arr[100], int length, int start, int finish)
 	{
@@ -226,7 +240,7 @@ public:
 		}
 	}
 
-	static void printArray(int array[100], const int& length)
+	static void printArray(int array[100], const int &length)
 	{
 
 		for (int i = 0; i < length; i++)
@@ -241,7 +255,7 @@ public:
 			std::cout << "\t";
 	}
 
-	static void shuffleArray(int array[100], const int& length)
+	static void shuffleArray(int array[100], const int &length)
 	{
 		for (int i = 0; i < length; i++)
 		{
@@ -250,4 +264,3 @@ public:
 		}
 	}
 };
-
