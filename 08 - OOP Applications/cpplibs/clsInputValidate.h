@@ -74,7 +74,7 @@ public:
 	{
 		double number = 0;
 
-		std::cout << "Please enter a number: ";
+		std::cout << message;
 		std::cin >> number;
 
 		while (std::cin.fail())

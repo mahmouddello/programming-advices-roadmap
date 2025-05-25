@@ -5,8 +5,7 @@
 #include "clsPerson.h"
 #include "../cpplibs/clsString.h"
 
-using std::string;
-using std::vector;
+using namespace std;
 
 class clsBankClient : public clsPerson
 {
@@ -18,6 +17,22 @@ private:
 	string _pinCode;
 	double _accountBalance;
 
+	static string _converClientObjectToLine(clsBankClient client, string seperator = "#//#")
+	{
+
+		string stClientRecord = "";
+		stClientRecord += client.firstName + seperator;
+		stClientRecord += client.lastName + seperator;
+		stClientRecord += client.email + seperator;
+		stClientRecord += client.phoneNumber + seperator;
+		stClientRecord += client.getAccountNumber() + seperator;
+		stClientRecord += client.pinCode + seperator;
+		stClientRecord += to_string(client.accountBalance);
+
+		return stClientRecord;
+
+	}
+
 	static clsBankClient _convertLineToClientObject(string line, string seperator = "#//#") 
 	{
 		vector<string> vClientData;
@@ -28,9 +43,74 @@ private:
 			vClientData[5], stod(vClientData[6]));
 	}
 
+	static vector <clsBankClient> _loadClientsDataFromFile()
+	{
+
+		vector <clsBankClient> vClients;
+
+		fstream MyFile;
+		MyFile.open("clients.txt", ios::in);//read Mode
+
+		if (MyFile.is_open())
+		{
+			string line;
+			while (getline(MyFile, line))
+			{
+
+				clsBankClient Client = _convertLineToClientObject(line);
+
+				vClients.push_back(Client);
+			}
+
+			MyFile.close();
+
+		}
+
+		return vClients;
+
+	}
+
+	static void _saveCleintsDataToFile(vector <clsBankClient> vClients)
+	{
+
+		fstream MyFile;
+		MyFile.open("clients.txt", ios::out);//overwrite
+
+		string DataLine;
+
+		if (MyFile.is_open())
+		{
+
+			for (clsBankClient C : vClients)
+			{
+				DataLine = _converClientObjectToLine(C);
+				MyFile << DataLine << endl;
+
+			}
+
+			MyFile.close();
+
+		}
+	}
+
 	static clsBankClient _getEmptyClientObject()
 	{
 		return clsBankClient(enMode::emptyMode, "", "", "", "", "", "", 0);
+	}
+
+	void _update()
+	{
+		vector<clsBankClient> _vClients = _loadClientsDataFromFile();
+		for (clsBankClient& client : _vClients)
+		{
+			if (client.getAccountNumber() == this->getAccountNumber())
+			{
+				client = *this;
+				break;
+			}
+		}
+
+		_saveCleintsDataToFile(_vClients);
 	}
 public:
 	clsBankClient(
@@ -108,8 +188,8 @@ public:
 	static clsBankClient find(string accountNumber)
 	{
 
-		std::fstream MyFile;
-		MyFile.open("clients.txt", std::ios::in);//read Mode
+		fstream MyFile;
+		MyFile.open("clients.txt", ios::in);//read Mode
 
 		if (MyFile.is_open())
 		{
@@ -134,8 +214,8 @@ public:
 
 	static clsBankClient find(string accountNumber, string pinCode)
 	{
-		std::fstream MyFile;
-		MyFile.open("clients.txt", std::ios::in);//read Mode
+		fstream MyFile;
+		MyFile.open("clients.txt", ios::in);//read Mode
 
 		if (MyFile.is_open())
 		{
@@ -163,6 +243,17 @@ public:
 		clsBankClient client = clsBankClient::find(accountNumber);
 
 		return (!client.isEmpty()); // if exist, emptyMode = 0, !emptyMode = 1 -> true
+	}
+
+	const enum enSaveResults {svFailedEmptyObject = 0, svSucceeded = 1};
+
+	enSaveResults save()
+	{
+		switch (_mode)
+		{
+			case enMode::emptyMode: return enSaveResults::svFailedEmptyObject;
+			case enMode::updateMode: _update(); return enSaveResults::svSucceeded;
+		}
 	}
 };
 
