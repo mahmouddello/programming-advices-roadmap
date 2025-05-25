@@ -10,7 +10,7 @@ using namespace std;
 class clsBankClient : public clsPerson
 {
 private:
-	const enum enMode {emptyMode = 0, updateMode = 1};
+	const enum enMode { emptyMode = 0, updateMode = 1, addNewMode = 2 };
 	enMode _mode;
 
 	string _accountNumber;
@@ -33,7 +33,7 @@ private:
 
 	}
 
-	static clsBankClient _convertLineToClientObject(string line, string seperator = "#//#") 
+	static clsBankClient _convertLineToClientObject(string line, string seperator = "#//#")
 	{
 		vector<string> vClientData;
 		vClientData = clsString::split(line, seperator);
@@ -98,6 +98,20 @@ private:
 		return clsBankClient(enMode::emptyMode, "", "", "", "", "", "", 0);
 	}
 
+	void _addDataLineToFile(string dataLine)
+	{
+		fstream MyFile;
+		MyFile.open("clients.txt", ios::out | ios::app);
+
+		if (MyFile.is_open())
+		{
+
+			MyFile << dataLine << endl;
+
+			MyFile.close();
+		}
+	}
+
 	void _update()
 	{
 		vector<clsBankClient> _vClients = _loadClientsDataFromFile();
@@ -112,18 +126,24 @@ private:
 
 		_saveCleintsDataToFile(_vClients);
 	}
+
+	void _addNew()
+	{
+		_addDataLineToFile(_converClientObjectToLine(*this));
+	}
+
 public:
 	clsBankClient(
-		enMode mode, 
-		string firstName, 
+		enMode mode,
+		string firstName,
 		string lastName,
 		string email,
-		string phoneNumber, 
+		string phoneNumber,
 		string accountNumber,
 		string pinCode,
 		double accountBalance
 	)
-	: clsPerson(firstName, lastName, email, phoneNumber)
+		: clsPerson(firstName, lastName, email, phoneNumber)
 	{
 		_mode = mode;
 		_accountNumber = accountNumber;
@@ -245,14 +265,38 @@ public:
 		return (!client.isEmpty()); // if exist, emptyMode = 0, !emptyMode = 1 -> true
 	}
 
-	const enum enSaveResults {svFailedEmptyObject = 0, svSucceeded = 1};
+	const enum enSaveResults { svFailedEmptyObject = 0, svSucceeded = 1, svFailedBecauseAccountExist = 2 };
+
+	static clsBankClient getAddNewClientObject(string accountNumber)
+	{
+		return clsBankClient(enMode::addNewMode, "", "", "", "", accountNumber, "", 0);
+	}
 
 	enSaveResults save()
 	{
 		switch (_mode)
 		{
-			case enMode::emptyMode: return enSaveResults::svFailedEmptyObject;
-			case enMode::updateMode: _update(); return enSaveResults::svSucceeded;
+			case enMode::emptyMode:
+			{
+				if (isEmpty())
+					return enSaveResults::svFailedEmptyObject;
+			}
+			case enMode::updateMode:
+			{
+				_update();
+				return enSaveResults::svSucceeded;
+			}
+			case enMode::addNewMode:
+			{
+				if (isClientExist(_accountNumber))
+					return enSaveResults::svFailedBecauseAccountExist;
+				
+				_addNew();
+				
+				// update the mode, becuase object is added to file, and it's still in memory
+				_mode = enMode::updateMode;
+				return enSaveResults::svSucceeded;
+			}
 		}
 	}
 };
