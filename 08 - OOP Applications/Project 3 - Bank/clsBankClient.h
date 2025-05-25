@@ -323,5 +323,18 @@ public:
 	{
 		return _loadClientsDataFromFile();
 	}
+
+	static double getTotalBalance()
+	{
+		vector<clsBankClient> vClients = _loadClientsDataFromFile();	
+		double sum = 0;
+
+		for (clsBankClient c : vClients)
+		{
+			sum += c.accountBalance;
+		}
+
+		return sum;
+	}
 };
 
