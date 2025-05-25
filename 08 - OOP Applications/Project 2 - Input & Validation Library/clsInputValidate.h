@@ -98,14 +98,7 @@ public:
 	
 	static bool isDateValid(clsDate date)
 	{
-		short month = date.getMonth();
-		short day = date.getDay();
-		short year = date.getYear();
-
-		if (month < 1 || month > 12)
-			return false;
-
-		return day >= 1 && day <= clsDate::numberOfDaysInAMonth(month, year);
+		return clsDate::isDateValid(date);
 	}
 };
 

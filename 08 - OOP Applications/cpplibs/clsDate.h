@@ -437,4 +437,9 @@ public:
 
 		return enDateCompare::eAfter;
 	}
+
+	static bool isDateValid(clsDate date)
+	{
+		return date.month < 1 || date.month > 12 ? false : date.day <= numberOfDaysInAMonth(date.month, date.year);
+	}
 };

@@ -209,9 +209,7 @@ public:
         {
 
             word = s1.substr(0, pos);
-
-            if (word != "")
-                v.push_back(word);
+            v.push_back(word); // add the word to the vector
 
             s1.erase(0, pos + delimiter.length());
         }
