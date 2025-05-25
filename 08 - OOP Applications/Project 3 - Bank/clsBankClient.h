@@ -16,6 +16,7 @@ private:
 	string _accountNumber;
 	string _pinCode;
 	double _accountBalance;
+	bool _markForDelete = false;
 
 	static string _converClientObjectToLine(clsBankClient client, string seperator = "#//#")
 	{
@@ -83,13 +84,13 @@ private:
 
 			for (clsBankClient C : vClients)
 			{
-				DataLine = _converClientObjectToLine(C);
-				MyFile << DataLine << endl;
-
+				if (!C._markForDelete)
+				{
+					DataLine = _converClientObjectToLine(C);
+					MyFile << DataLine << endl;
+				}
 			}
-
 			MyFile.close();
-
 		}
 	}
 
@@ -298,6 +299,24 @@ public:
 				return enSaveResults::svSucceeded;
 			}
 		}
+	}
+
+	bool deleteClient()
+	{
+		vector<clsBankClient> _vClients = _loadClientsDataFromFile();
+
+		for (clsBankClient& client : _vClients)
+		{
+			if (client.getAccountNumber() == this->getAccountNumber())
+			{
+				client._markForDelete = true;
+				*this = _getEmptyClientObject(); // empty the object.
+				_saveCleintsDataToFile(_vClients); // save 
+				return true;
+			}
+		}
+
+		return false; // no client found
 	}
 };
 
