@@ -318,5 +318,10 @@ public:
 
 		return false; // no client found
 	}
+
+	static vector<clsBankClient> getClientsList()
+	{
+		return _loadClientsDataFromFile();
+	}
 };
 
