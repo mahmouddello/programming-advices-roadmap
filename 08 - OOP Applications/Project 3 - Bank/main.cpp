@@ -5,51 +5,6 @@
 
 using namespace std;
 
-//void updateClient()
-//{
-//	string accountNumber = "";
-//
-//	string message = "Please enter client's account number: ";
-//	accountNumber = clsInputValidate::readString(message);
-//
-//	// while client doesn't exist
-//	while (!clsBankClient::isClientExist(accountNumber))
-//	{
-//		cout << "\nAccount number not found, choose another one: ";
-//		accountNumber = clsInputValidate::readString("");
-//	}
-//
-//	clsBankClient client = clsBankClient::find(accountNumber);
-//	client.print();
-//
-//	cout << "\n\nUpdate Client Info:";
-//	cout << "\n____________________\n";
-//
-//	// We can choose what we want to update, e.g.: here we updated all info
-//	readClientInfo(client);
-//
-//	// save phase
-//	clsBankClient::enSaveResults saveResult;
-//	saveResult = client.save();
-//
-//	switch (saveResult)
-//	{
-//	case  clsBankClient::enSaveResults::svSucceeded:
-//	{
-//		cout << "\nAccount Updated Successfully :-)\n";
-//		client.print();
-//		break;
-//	}
-//	case clsBankClient::enSaveResults::svFailedEmptyObject:
-//	{
-//		cout << "\nError account was not saved because it's Empty";
-//		break;
-//	}
-//	default:
-//		break;
-//	}
-//}
-//
 //void printClientRecordBalanceLine(clsBankClient client)
 //{
 //

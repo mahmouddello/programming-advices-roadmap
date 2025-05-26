@@ -5,6 +5,7 @@
 #include "clsClientListScreen.h"
 #include "clsAddNewClientScreen.h"
 #include "clsDeleteClientScreen.h"
+#include "clsUpdateClientScreen.h"
 #include "../cpplibs/clsInputValidate.h"
 
 class clsMainScreen : protected clsScreen
@@ -48,8 +49,7 @@ private:
 
     static void _showUpdateClientScreen()
     {
-        cout << "\nUpdate Client Screen Will be here...\n";
-
+        clsUpdateClientScreen::showUpdateClientScreen();
     }
 
     static void _showFindClientScreen()
