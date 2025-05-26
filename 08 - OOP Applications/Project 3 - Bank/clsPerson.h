@@ -82,19 +82,5 @@ public:
 	}
 
 	__declspec(property(get = getPhoneNumber, put = setPhoneNumber)) string phoneNumber;
-
-
-	void print()
-	{
-		cout << "\nInfo:";
-		cout << "\n___________________";
-		cout << "\nFirstName: " << _firstName;
-		cout << "\nLastName : " << _lastName;
-		cout << "\nFull Name: " << getFullName();
-		cout << "\nEmail    : " << _email;
-		cout << "\nPhone    : " << _phoneNumber;
-		cout << "\n___________________\n";
-
-	}
 };
 

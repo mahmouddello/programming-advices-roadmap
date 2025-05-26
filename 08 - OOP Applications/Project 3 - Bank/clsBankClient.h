@@ -4,6 +4,7 @@
 #include <string>
 #include "clsPerson.h"
 #include "../cpplibs/clsString.h"
+#include "../cpplibs/clsInputValidate.h"
 
 using namespace std;
 
@@ -191,21 +192,6 @@ public:
 
 	__declspec(property(get = getAccountBalance, put = setAccountBalance)) double accountBalance;
 
-	void print()
-	{
-		cout << "\nClient Card:";
-		cout << "\n___________________";
-		cout << "\nFirstName   : " << firstName;
-		cout << "\nLastName    : " << lastName;
-		cout << "\nFull Name   : " << getFullName();
-		cout << "\nEmail       : " << email;
-		cout << "\nPhone       : " << phoneNumber;
-		cout << "\nAcc. Number : " << _accountNumber;
-		cout << "\nPassword    : " << _pinCode;
-		cout << "\nBalance     : " << _accountBalance;
-		cout << "\n___________________\n";
-	}
-
 	static clsBankClient find(string accountNumber)
 	{
 
@@ -336,5 +322,17 @@ public:
 
 		return sum;
 	}
+
+	static void readClientInfo(clsBankClient& client)
+	{
+		// seperating UI from object, reads from console and stores in the object
+		client.firstName = clsInputValidate::readString("Enter first name: ");
+		client.lastName = clsInputValidate::readString("Enter last name: ");
+		client.email = clsInputValidate::readString("Enter email: ");
+		client.phoneNumber = clsInputValidate::readString("Enter phone number: ");
+		client.pinCode = clsInputValidate::readString("Enter pincode: ");
+		client.accountBalance = clsInputValidate::readDoubleNumber("Enter account balance: ");
+	}
+
 };
 
