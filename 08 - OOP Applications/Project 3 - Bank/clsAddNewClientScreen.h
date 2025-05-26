@@ -9,7 +9,7 @@ using namespace std;
 class clsAddNewClientScreen : protected clsScreen
 {
 private:
-	static void _print(clsBankClient client)
+	static void _printClient(clsBankClient client)
 	{
 		cout << "\nClient Card:";
 		cout << "\n___________________";
@@ -53,7 +53,7 @@ public:
 		case  clsBankClient::enSaveResults::svSucceeded:
 		{
 			cout << "\nAccount Created Successfully :-)\n";
-			_print(newClient);
+			_printClient(newClient);
 			break;
 		}
 		case clsBankClient::enSaveResults::svFailedBecauseAccountExist:

@@ -6,7 +6,7 @@
 class clsDeleteClientScreen : protected clsScreen
 {
 private:
-	static void _print(clsBankClient client)
+	static void _printClient(clsBankClient client)
 	{
 		cout << "\nClient Card:";
 		cout << "\n___________________";
@@ -48,7 +48,7 @@ public:
 			if (client.deleteClient())
 			{
 				cout << "\nClient deleted successfully!" << endl;
-				_print(client);
+				_printClient(client);
 			}
 			else
 			{
