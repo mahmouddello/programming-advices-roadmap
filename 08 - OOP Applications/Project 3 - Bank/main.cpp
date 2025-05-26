@@ -61,49 +61,6 @@ void updateClient()
 	}
 }
 
-void addNewClient()
-{
-	string accountNumber = "";
-
-	string message = "Please enter client's account number: ";
-	accountNumber = clsInputValidate::readString(message);
-
-	// While client already exist
-	while (clsBankClient::isClientExist(accountNumber))
-	{
-		cout << "\nAccount number is associated to another user, choose another one: ";
-		accountNumber = clsInputValidate::readString("");
-	}
-
-	clsBankClient newClient = clsBankClient::getAddNewClientObject(accountNumber);
-
-	readClientInfo(newClient);
-
-	clsBankClient::enSaveResults saveResult = newClient.save();
-
-	switch (saveResult)
-	{
-		case  clsBankClient::enSaveResults::svSucceeded:
-		{
-			cout << "\nAccount Updated Successfully :-)\n";
-			newClient.print();
-			break;
-		}
-		case clsBankClient::enSaveResults::svFailedBecauseAccountExist:
-		{
-			cout << "\nError account was not saved because account number is used!\n";
-			break;
-		}
-		case clsBankClient::enSaveResults::svFailedEmptyObject:
-		{
-			cout << "\nError account was not saved because it's Empty!\n";
-			break;
-		}
-		default:
-			break;
-	}
-}
-
 void deleteClient()
 {
 	string accountNumber = "";
