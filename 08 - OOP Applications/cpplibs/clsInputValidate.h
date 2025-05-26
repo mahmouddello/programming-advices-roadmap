@@ -44,6 +44,24 @@ public:
 		return number;
 	}
 
+	static short readShortNumber(const std::string &message)
+	{
+		short number = 0;
+		std::cin >> number;
+
+		while (std::cin.fail())
+		{
+			// user didn't input a number
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+			std::cout << message << std::endl;
+			std::cin >> number;
+		}
+
+		return number;
+	}
+
 	static std::string readString(const std::string &message = "Enter a string: ")
 	{
 		std::string input;
@@ -64,6 +82,22 @@ public:
 				std::cout << message << std::endl;
 
 			number = readIntNumber("Invalid number, enter another one: ");
+			flag = true;
+		} while (!(isNumberBetween(number, from, to)));
+
+		return number;
+	}
+
+	static short readShortNumberBetween(short from, short to, std::string message)
+	{
+		short number = 0;
+		bool flag = false;
+		do
+		{
+			if (flag)
+				std::cout << message << std::endl;
+
+			number = readShortNumber("Invalid number, enter another one: ");
 			flag = true;
 		} while (!(isNumberBetween(number, from, to)));
 
