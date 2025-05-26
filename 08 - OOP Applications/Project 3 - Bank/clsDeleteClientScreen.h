@@ -24,6 +24,9 @@ private:
 public:
 	static void showDeleteClientScreen()
 	{
+
+		_drawScreenHeader("\t Delete Client Screen");
+
 		string accountNumber = "";
 
 		string message = "Please enter client's account number: ";
