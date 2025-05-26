@@ -40,7 +40,7 @@ public:
 		}
 
 		clsBankClient client = clsBankClient::find(accountNumber);
-		client.print();
+		_printClient(client);
 
 		char confirmation = 'n';
 		cout << "\nAre you sure you want to delete this client? y / n: ";
