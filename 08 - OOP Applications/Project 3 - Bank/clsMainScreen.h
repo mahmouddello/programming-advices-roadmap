@@ -6,6 +6,7 @@
 #include "clsAddNewClientScreen.h"
 #include "clsDeleteClientScreen.h"
 #include "clsUpdateClientScreen.h"
+#include "clsFindClientScreen.h"
 #include "../cpplibs/clsInputValidate.h"
 
 class clsMainScreen : protected clsScreen
@@ -26,7 +27,7 @@ private:
 
     static  void _goBackToMainMenu()
     {
-        cout << setw(37) << left << "" << "\n\tPress any key to go back to Main Menue...\n";
+        cout << setw(37) << left << "" << "\nPress any key to go back to Main Menu...\n";
 
         system("pause>0");
         showMainMenu();
@@ -54,8 +55,7 @@ private:
 
     static void _showFindClientScreen()
     {
-        cout << "\nFind Client Screen Will be here...\n";
-
+        clsFindClientScreen::showFindClientScreen();
     }
 
     static void _showTransactionsMenue()
