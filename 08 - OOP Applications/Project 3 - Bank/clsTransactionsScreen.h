@@ -3,6 +3,7 @@
 #include "clsScreen.h"
 #include "clsBankClient.h"
 #include "../cpplibs/clsInputValidate.h"
+#include "clsTotalBalancesScreen.h"
 
 class clsMainMenu;
 
@@ -11,51 +12,6 @@ class clsTransactionsScreen : protected clsScreen
 private:
 
     enum _enTransactionMenuOptions {eDeposit = 1, eWithdraw = 2, eTotalBalances = 3, eMainMenu = 4};
-
-    static void _printClientRecordBalanceLine(clsBankClient client)
-    {
-
-        cout << "| " << setw(15) << left << client.getAccountNumber();
-        cout << "| " << setw(40) << left << client.getFullName();
-        cout << "| " << setw(12) << left << client.accountBalance;
-    }
-
-    static void _showTotalBalances()
-    {
-
-        vector<clsBankClient> vClients = clsBankClient::getClientsList();
-
-        cout << "\n\t\t\t\t\tBalances List (" << vClients.size() << ") Client(s).";
-        cout << "\n_______________________________________________________";
-        cout << "_________________________________________\n" << endl;
-
-        cout << "| " << left << setw(15) << "Accout Number";
-        cout << "| " << left << setw(40) << "Client Name";
-        cout << "| " << left << setw(12) << "Balance";
-        cout << "\n_______________________________________________________";
-        cout << "_________________________________________\n" << endl;
-
-        double TotalBalances = clsBankClient::getTotalBalance();
-
-        if (vClients.size() == 0)
-            cout << "\t\t\t\tNo Clients Available In the System!";
-        else
-        {
-            for (clsBankClient Client : vClients)
-            {
-                _printClientRecordBalanceLine(Client);
-                cout << endl;
-            }
-
-            cout << "\n_______________________________________________________";
-            cout << "_________________________________________\n" << endl;
-            cout << "\t\t\t\t\t   Total Balances = " << TotalBalances << endl;
-            cout << "\t\t\t\t\t   ( " << clsUtil::NumberToText(TotalBalances) << ")" << endl;
-        }
-
-        cout << "\n_______________________________________________________";
-        cout << "_________________________________________\n" << endl;
-    }
 
     static  void _goBackToTransactionsMenu()
     {
@@ -117,7 +73,7 @@ private:
 
     static void _showTotalBalancesScreen()
     {
-        cout << "Total Balances Screen will be here" << endl;
+        clsTotalBalancesScreen::showTotalBalancesScreen();
     }
 
 public:
