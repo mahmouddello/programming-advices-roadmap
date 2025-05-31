@@ -340,5 +340,10 @@ public:
 		save();
 	}
 
+	void withdraw(double amount)
+	{
+		this->accountBalance -= amount;
+		save();
+	}
 };
 

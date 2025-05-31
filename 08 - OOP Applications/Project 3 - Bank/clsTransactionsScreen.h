@@ -4,6 +4,7 @@
 #include "clsBankClient.h"
 #include "clsTotalBalancesScreen.h"
 #include "clsDepositScreen.h"
+#include "clsWithdrawScreen.h"
 #include "../cpplibs/clsInputValidate.h"
 
 class clsMainMenu;
@@ -69,7 +70,7 @@ private:
 
     static void _showWithdrawScreen()
     {
-        cout << "Withdraw Screen will be here" << endl;
+        clsWithdrawScreen::showWithdrawScreen();
     }
 
     static void _showTotalBalancesScreen()
