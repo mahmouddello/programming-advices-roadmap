@@ -44,20 +44,21 @@ public:
 		double amount = 0.0;
 		char confirm = 'n';
 
-		while (amount <= 0.0)
-			amount = clsInputValidate::readDoubleNumber("Enter an amount to deposit (positive): ");
+		amount = clsInputValidate::readDoubleNumber("Enter an amount to deposit: ");
 
-		cout << "Are you sure you want to deposit this amount? y / n: ";
+		cout << "\nAre you sure you want to deposit this amount? y / n: ";
 		cin >> confirm;
-
 
 		if (tolower(confirm) == 'y')
 		{
-			client.deposit(amount);
-			cout << "Amount deposited successfully!\n";
-			cout << "New Balance: " << client.accountBalance << endl;
+			if (client.deposit(amount))
+			{
+				cout << "Amount deposited successfully!\n";
+				cout << "New Balance: " << client.accountBalance << endl;
+			}
+			else
+				cout << "\nDeposit failed! Amount must be greater than 0!" << endl;
 		}
-
 		else
 		{
 			cout << "\nOperation was canceled!" << endl;

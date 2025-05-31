@@ -334,10 +334,14 @@ public:
 		client.accountBalance = clsInputValidate::readDoubleNumber("Enter account balance: ");
 	}
 
-	void deposit(double amount)
+	bool deposit(double amount)
 	{
-		this->accountBalance += amount;
+		if (amount <= 0.0)
+			return false;
+
+		accountBalance += amount;
 		save();
+		return true;
 	}
 
 	bool withdraw(double amount)
