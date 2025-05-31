@@ -76,30 +76,27 @@ private:
             {
                 system("cls");
                 _showDepositScreen();
-                _goBackToTransactionsMenu();
                 break;
             }
             case _enTransactionMenuOptions::eWithdraw:
             {
                 system("cls");
                 _showWithdrawScreen();
-                _goBackToTransactionsMenu();
                 break;
             }
             case _enTransactionMenuOptions::eTotalBalances:
             {
                 system("cls");
                 _showTotalBalancesScreen();
-                _goBackToTransactionsMenu();
                 break;
             }
             default:
             {
-                system("cls");
-                showTransactionsMenu();
                 break;
             }
         }
+
+        _goBackToTransactionsMenu();
     }
 
     static short _readTransactionsMenuOption()
