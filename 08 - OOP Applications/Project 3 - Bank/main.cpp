@@ -1,5 +1,4 @@
 #include <iostream>
-#include "clsBankClient.h"
 #include "clsMainScreen.h"
 #include "../cpplibs/clsInputValidate.h"
 
