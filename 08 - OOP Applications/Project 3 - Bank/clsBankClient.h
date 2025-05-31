@@ -340,10 +340,14 @@ public:
 		save();
 	}
 
-	void withdraw(double amount)
+	bool withdraw(double amount)
 	{
-		this->accountBalance -= amount;
-		save();
+		if (amount <= 0.0 || amount > accountBalance)
+			return false;
+
+		accountBalance -= amount;
+		save(); // Persist changes
+		return true;
 	}
 };
 

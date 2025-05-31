@@ -40,32 +40,28 @@ public:
 
 		_printClient(client);
 
-		double amount = 0.0;
+		double amount = clsInputValidate::readDoubleNumber("Enter an amount to withdraw: ");
 		char confirm = 'n';
 
-		amount = abs(clsInputValidate::readDoubleNumber("Enter an amount to withdraw: "));
-
-		while (amount > client.accountBalance)
-		{
-			cout << "Entered amount exceeds account's balance! enter another amount: ";
-			amount = abs(clsInputValidate::readDoubleNumber(""));
-		}
-		cout << "Are you sure you want to deposit this amount? y / n: ";
+		cout << "\nAre you sure you want to withdraw this amount? y / n: ";
 		cin >> confirm;
-
 
 		if (tolower(confirm) == 'y')
 		{
-			client.withdraw(amount);
-			cout << "Amount withdrawed successfully!\n";
-			cout << "New Balance: " << client.accountBalance << endl;
+			if (client.withdraw(amount))
+			{
+				cout << "Amount withdrawn successfully!\n";
+				cout << "New Balance: " << client.accountBalance << endl;
+			}
+			else
+			{
+				cout << "Withdrawal failed! Either the amount is invalid or exceeds the balance.\n";
+			}
 		}
-
 		else
 		{
 			cout << "\nOperation was canceled!" << endl;
-		};
-
+		}
 	}
 };
 
