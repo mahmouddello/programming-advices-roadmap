@@ -2,8 +2,9 @@
 #include <iomanip>
 #include "clsScreen.h"
 #include "clsBankClient.h"
-#include "../cpplibs/clsInputValidate.h"
 #include "clsTotalBalancesScreen.h"
+#include "clsDepositScreen.h"
+#include "../cpplibs/clsInputValidate.h"
 
 class clsMainMenu;
 
@@ -63,7 +64,7 @@ private:
 
     static void _showDepositScreen()
     {
-        cout << "Deposit Screen will be here" << endl;
+        clsDepositScreen::showDepositScreen();
     }
 
     static void _showWithdrawScreen()

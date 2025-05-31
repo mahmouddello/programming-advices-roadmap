@@ -334,5 +334,11 @@ public:
 		client.accountBalance = clsInputValidate::readDoubleNumber("Enter account balance: ");
 	}
 
+	void deposit(double amount)
+	{
+		this->accountBalance += amount;
+		save();
+	}
+
 };
 
