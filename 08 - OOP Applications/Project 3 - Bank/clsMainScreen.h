@@ -123,7 +123,8 @@ private:
             break;
         }
 
-        _goBackToMainMenu();
+        if (MainMenueOption != enMainMenuOptions::eExit)
+            _goBackToMainMenu();
     }
 
 public:
