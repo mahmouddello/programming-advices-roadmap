@@ -84,37 +84,31 @@ private:
         {
             system("cls");
             _showAllClientsScreen();
-            _goBackToMainMenu();
             break;
         }
         case enMainMenuOptions::eAddNewClient:
             system("cls");
             _showAddNewClientsScreen();
-            _goBackToMainMenu();
             break;
 
         case enMainMenuOptions::eDeleteClient:
             system("cls");
             _showDeleteClientScreen();
-            _goBackToMainMenu();
             break;
 
         case enMainMenuOptions::eUpdateClient:
             system("cls");
             _showUpdateClientScreen();
-            _goBackToMainMenu();
             break;
 
         case enMainMenuOptions::eFindClient:
             system("cls");
             _showFindClientScreen();
-            _goBackToMainMenu();
             break;
 
         case enMainMenuOptions::eShowTransactionsMenue:
             system("cls");
             _showTransactionsMenue();
-            showMainMenu();
             break;
 
         case enMainMenuOptions::eManageUsers:
@@ -126,10 +120,10 @@ private:
             system("cls");
             _showEndScreen();
             //Login();
-
             break;
         }
 
+        _goBackToMainMenu();
     }
 
 public:
