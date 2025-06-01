@@ -21,6 +21,17 @@ private:
 		cout << "\n___________________\n";
 	}
 
+	static void _readClientInfo(clsBankClient& client)
+	{
+		// seperating UI from object, reads from console and stores in the object
+		client.firstName = clsInputValidate::readString("Enter first name: ");
+		client.lastName = clsInputValidate::readString("Enter last name: ");
+		client.email = clsInputValidate::readString("Enter email: ");
+		client.phoneNumber = clsInputValidate::readString("Enter phone number: ");
+		client.pinCode = clsInputValidate::readString("Enter pincode: ");
+		client.accountBalance = clsInputValidate::readDoubleNumber("Enter account balance: ");
+	}
+
 public:
 	static void showUpdateClientScreen()
 	{
@@ -44,26 +55,37 @@ public:
 		cout << "\n\nUpdate Client Info:";
 		cout << "\n____________________\n";
 
-		clsBankClient::readClientInfo(client);
+		char confirmation = 'n';
+		cout << "\nAre you sure you want to update this client? y / n: ";
+		cin >> confirmation;
 
-		clsBankClient::enSaveResults saveResult;
-		saveResult = client.save();
+		if (tolower(confirmation) == 'y')
+		{
+			_readClientInfo(client);
 
-		switch (saveResult)
-		{
-		case  clsBankClient::enSaveResults::svSucceeded:
-		{
-			cout << "\nAccount Updated Successfully :-)\n";
-			_printClient(client);
-			break;
+			clsBankClient::enSaveResults saveResult;
+			saveResult = client.save();
+
+			switch (saveResult)
+			{
+			case  clsBankClient::enSaveResults::svSucceeded:
+			{
+				cout << "\nAccount Updated Successfully :-)\n";
+				_printClient(client);
+				break;
+			}
+			case clsBankClient::enSaveResults::svFailedEmptyObject:
+			{
+				cout << "\nError account was not saved because it's Empty";
+				break;
+			}
+			default:
+				break;
+			}
 		}
-		case clsBankClient::enSaveResults::svFailedEmptyObject:
+		else
 		{
-			cout << "\nError account was not saved because it's Empty";
-			break;
-		}
-		default:
-			break;
-		}
+			cout << "Operation was canceled!" << endl;
+		}		
 	}
 };

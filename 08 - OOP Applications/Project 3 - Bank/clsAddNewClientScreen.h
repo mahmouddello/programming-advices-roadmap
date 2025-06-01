@@ -23,6 +23,18 @@ private:
 		cout << "\nBalance     : " << client.getAccountBalance();
 		cout << "\n___________________\n";
 	}
+
+	static void _readClientInfo(clsBankClient& client)
+	{
+		// seperating UI from object, reads from console and stores in the object
+		client.firstName = clsInputValidate::readString("Enter first name: ");
+		client.lastName = clsInputValidate::readString("Enter last name: ");
+		client.email = clsInputValidate::readString("Enter email: ");
+		client.phoneNumber = clsInputValidate::readString("Enter phone number: ");
+		client.pinCode = clsInputValidate::readString("Enter pincode: ");
+		client.accountBalance = clsInputValidate::readDoubleNumber("Enter account balance: ");
+	}
+
 	
 public:
 	static void showAddNewClientScreen()
@@ -44,7 +56,7 @@ public:
 
 		clsBankClient newClient = clsBankClient::getAddNewClientObject(accountNumber);
 
-		clsBankClient::readClientInfo(newClient);
+		_readClientInfo(newClient);
 
 		clsBankClient::enSaveResults saveResult = newClient.save();
 

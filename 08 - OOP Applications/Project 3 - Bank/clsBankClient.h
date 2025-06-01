@@ -323,17 +323,6 @@ public:
 		return sum;
 	}
 
-	static void readClientInfo(clsBankClient& client)
-	{
-		// seperating UI from object, reads from console and stores in the object
-		client.firstName = clsInputValidate::readString("Enter first name: ");
-		client.lastName = clsInputValidate::readString("Enter last name: ");
-		client.email = clsInputValidate::readString("Enter email: ");
-		client.phoneNumber = clsInputValidate::readString("Enter phone number: ");
-		client.pinCode = clsInputValidate::readString("Enter pincode: ");
-		client.accountBalance = clsInputValidate::readDoubleNumber("Enter account balance: ");
-	}
-
 	bool deposit(double amount)
 	{
 		if (amount <= 0.0)
