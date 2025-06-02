@@ -6,6 +6,7 @@
 #include "clsDeleteUserScreen.h"
 #include "clsUpdateUserScreen.h"
 #include "clsFindUserScreen.h"
+#include "clsAccessDeniedScreen.h"
 
 class clsManageUsersScreen : protected clsScreen
 {
@@ -38,6 +39,7 @@ private:
 	{
 		if (option == _enManageUsersMenuOptions::eMainMenu)
 			return; // exit the function
+
 		system("cls");
 
 		switch (option)

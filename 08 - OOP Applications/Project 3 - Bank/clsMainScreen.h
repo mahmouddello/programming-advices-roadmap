@@ -9,23 +9,24 @@
 #include "clsFindClientScreen.h"
 #include "clsTransactionsScreen.h"
 #include "clsManageUsersScreen.h"
+#include "globals.h"
 #include "../cpplibs/clsInputValidate.h"
 
 class clsMainScreen : protected clsScreen
 {
 private:
-	enum enMainMenuOptions {
-		eListClients = 1, eAddNewClient = 2, eDeleteClient = 3,
-		eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6,
-		eManageUsers = 7, eExit = 8
-	};
+    enum enMainMenuOptions {
+        eListClients = 1, eAddNewClient = 2, eDeleteClient = 3,
+        eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6,
+        eManageUsers = 7, eExit = 8
+    };
 
-	static short _readMainMenuOption()
-	{
-		cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 8]? ";
-		short choice = clsInputValidate::readShortNumberBetween(1, 8, "Enter Number between 1 to 8? ");
-		return choice;
-	}
+    static short _readMainMenuOption()
+    {
+        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 8]? ";
+        short choice = clsInputValidate::readShortNumberBetween(1, 8, "Enter Number between 1 to 8? ");
+        return choice;
+    }
 
     static  void _goBackToMainMenu()
     {
@@ -70,63 +71,74 @@ private:
         clsManageUsersScreen::showManageUsersMenu();
     }
 
-    static void _showEndScreen()
+    static void _logout()
     {
-        cout << "\nEnd Screen Will be here...\n";
-
+        currentUser = clsUser::find("", "");
     }
 
     static void _perfromMainMenueOption(enMainMenuOptions MainMenueOption)
     {
+        system("cls");
+        
+        if (MainMenueOption != enMainMenuOptions::eExit)
+        {
+            if (!currentUser.checkAccessPermission(clsUser::enPermessions(MainMenueOption)))
+            {
+                clsAccessDeniedScreen::showAccessDeniedScreen();
+                _goBackToMainMenu();
+                return;
+            }
+        }
+
         switch (MainMenueOption)
         {
-        case enMainMenuOptions::eListClients:
-        {
-            system("cls");
-            _showAllClientsScreen();
-            break;
-        }
-        case enMainMenuOptions::eAddNewClient:
-            system("cls");
-            _showAddNewClientsScreen();
-            break;
-
-        case enMainMenuOptions::eDeleteClient:
-            system("cls");
-            _showDeleteClientScreen();
-            break;
-
-        case enMainMenuOptions::eUpdateClient:
-            system("cls");
-            _showUpdateClientScreen();
-            break;
-
-        case enMainMenuOptions::eFindClient:
-            system("cls");
-            _showFindClientScreen();
-            break;
-
-        case enMainMenuOptions::eShowTransactionsMenue:
-            system("cls");
-            _showTransactionsMenue();
-            break;
-
-        case enMainMenuOptions::eManageUsers:
-            system("cls");
-            _showManageUsersMenue();
-            break;
-
-        case enMainMenuOptions::eExit:
-            system("cls");
-            _showEndScreen();
-            //Login();
-            break;
+            case enMainMenuOptions::eListClients:
+            {
+                _showAllClientsScreen();
+                break;
+            }
+            case enMainMenuOptions::eAddNewClient:
+            {
+                _showAddNewClientsScreen();
+                break;
+            }
+            case enMainMenuOptions::eDeleteClient:
+            {
+                _showDeleteClientScreen();
+                break;
+            }
+            case enMainMenuOptions::eUpdateClient:
+            {
+                _showUpdateClientScreen();
+                break;
+            }
+            case enMainMenuOptions::eFindClient:
+            {
+                _showFindClientScreen();
+                break;
+            }
+            case enMainMenuOptions::eShowTransactionsMenue:
+            {
+                _showTransactionsMenue();
+                break;
+            }
+            case enMainMenuOptions::eManageUsers:
+            {
+                _showManageUsersMenue();
+                break;
+            }
+            case enMainMenuOptions::eExit:
+            {
+                _logout();
+                break;
+            }
+            default: 
+                break;
         }
 
         if (MainMenueOption != enMainMenuOptions::eExit)
             _goBackToMainMenu();
     }
-
 public:
     static void showMainMenu()
     {

@@ -2,8 +2,8 @@
 #include "clsPerson.h"
 #include <vector>
 #include <fstream>
-#include "../cpplibs/clsString.h"
 #include <string>
+#include "../cpplibs/clsString.h"
 
 using namespace std;
 
@@ -316,6 +316,24 @@ public:
 
 		return false;
 	}
+
+	static bool authenticateLogin(string username, string password)
+	{
+		clsUser user = clsUser::find(username, password);
+		return !(user.isEmpty());
+	}
+
+	bool checkAccessPermission(enPermessions ePermissions)
+	{
+		if (this->permessions == enPermessions::eAll)
+			return true;
+
+		if ((this->permessions & ePermissions) == ePermissions)
+			return true;
+
+		return false;
+	}
+
 
 };
 

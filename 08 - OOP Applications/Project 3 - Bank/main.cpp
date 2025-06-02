@@ -1,8 +1,9 @@
 #include <iostream>
-#include "clsMainScreen.h"
+#include "clsLoginScreen.h"
 
 int main()
 {
-	clsMainScreen::showMainMenu();
+	while(true)
+		clsLoginScreen::showLoginScreen();
 	return 0;
 }
