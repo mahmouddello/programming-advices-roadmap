@@ -299,6 +299,14 @@ public:
 		return includeEndDay ? ++days : days;
 	}
 
+	static std::string getSystemDate()
+	{
+		time_t t = time(0);
+		tm *now = localtime(&t);
+
+		return std::to_string(now->tm_mday) + "/" + std::to_string(now->tm_mon + 1) + "/" + std::to_string(now->tm_year + 1900);
+	}
+
 	// --- INSTANCE METHODS ---
 	void print()
 	{

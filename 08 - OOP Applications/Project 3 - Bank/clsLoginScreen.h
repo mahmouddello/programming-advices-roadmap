@@ -21,8 +21,8 @@ private:
 			if (loginFailed)
 				cout << "Login Failed! Invalid Username or Password!\n" << endl;
 
-			username = clsInputValidate::readString("Enter username: ");
-			password = clsInputValidate::readString("Enter password: ");
+			username = clsInputValidate::readString("\nEnter username: ");
+			password = clsInputValidate::readString("\nEnter password: ");
 
 			currentUser = clsUser::find(username, password);
 			loginFailed = currentUser.isEmpty();

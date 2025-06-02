@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include "globals.h"
+#include "../cpplibs/clsDate.h"
 
 using namespace std;
 
@@ -15,6 +17,9 @@ protected:
             cout << "\n\t\t\t\t\t  " << subTitle;
         }
         cout << "\n\t\t\t\t\t______________________________________\n\n";
+
+        cout << "\t\t\t\t\tUser: " << currentUser.getUsername() << endl;
+        cout << "\t\t\t\t\tDate: " << clsDate::getSystemDate() << endl;
 	}
 };
 
