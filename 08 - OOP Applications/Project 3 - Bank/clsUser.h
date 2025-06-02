@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include "../cpplibs/clsString.h"
+#include "../cpplibs/clsDate.h"
 
 using namespace std;
 
@@ -120,6 +121,18 @@ private:
 	void _addNew()
 	{
 		_addDataLineToFile(_converUserObjectToLine(*this));
+	}
+
+	string _prepareLoginRecord(string sep = "#//#")
+	{
+		vector<string> vData(4);
+
+		vData[0] = clsDate::getSystemDateTime();
+		vData[1] = this->getUsername();
+		vData[2] = this->password;
+		vData[3] = to_string(this->permessions);
+
+		return clsString::join(vData, sep);
 	}
 
 public:
@@ -334,6 +347,19 @@ public:
 		return false;
 	}
 
+	void registerLogin()
+	{
+		fstream file;
+		file.open("logs.txt", ios::app | ios::out);
+
+		if (file.is_open())
+		{
+			string dataLine = _prepareLoginRecord();
+			file << dataLine << endl;
+
+			file.close();
+		}
+	}
 
 };
 

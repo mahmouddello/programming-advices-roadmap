@@ -3,7 +3,7 @@
 
 int main()
 {
-	while(true)
+	while(programFlag)
 		clsLoginScreen::showLoginScreen();
 	return 0;
 }

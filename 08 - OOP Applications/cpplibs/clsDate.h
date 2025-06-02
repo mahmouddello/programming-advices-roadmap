@@ -307,6 +307,19 @@ public:
 		return std::to_string(now->tm_mday) + "/" + std::to_string(now->tm_mon + 1) + "/" + std::to_string(now->tm_year + 1900);
 	}
 
+	static std::string getSystemTime()
+	{
+		time_t t = time(0);
+		tm *now = localtime(&t);
+
+		return std::to_string(now->tm_hour) + ":" + std::to_string(now->tm_min) + ":" + std::to_string(now->tm_sec);
+	}
+
+	static std::string getSystemDateTime()
+	{
+		return getSystemDate() + " - " + getSystemTime();
+	}
+
 	// --- INSTANCE METHODS ---
 	void print()
 	{
