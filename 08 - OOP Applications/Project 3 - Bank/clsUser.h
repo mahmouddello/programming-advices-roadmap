@@ -187,6 +187,7 @@ public:
 		pFindClient = 16,
 		pTransactions = 32,
 		pManageUsers = 64,
+		pLoginRegitser = 128,
 	};
 
 	// read-only property
@@ -360,10 +361,12 @@ public:
 
 	bool checkAccessPermission(enPermessions ePermissions)
 	{
+		short per = pow(2, short(ePermissions - 1));
+		
 		if (this->permessions == enPermessions::eAll)
 			return true;
 
-		if ((this->permessions & ePermissions) == ePermissions)
+		if ((this->permessions & per) == per)
 			return true;
 
 		return false;

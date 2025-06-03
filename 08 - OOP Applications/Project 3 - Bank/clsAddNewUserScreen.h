@@ -51,6 +51,10 @@ private:
 		if (_confirmAction())
 			permissions += clsUser::enPermessions::pManageUsers;
 
+		cout << "\View Login register logs? y / n: ";
+		if (_confirmAction())
+			permissions += clsUser::enPermessions::pLoginRegitser;
+
 		return permissions;
 	}
 
