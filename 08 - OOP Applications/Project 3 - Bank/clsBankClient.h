@@ -134,6 +134,36 @@ private:
 		_addDataLineToFile(_converClientObjectToLine(*this));
 	}
 
+	string _prepareTransferLogRecord(clsBankClient source, clsBankClient destination, double amount, string sep = "#//#")
+	{
+		string record;
+
+		record+= clsDate::getSystemDateTime() + sep ;
+		record+= source.getAccountNumber() + sep;
+		record+= destination.getAccountNumber() + sep;
+		record+= to_string(amount) + sep;
+		record+= to_string(source.getAccountBalance()) + sep;
+		record+= to_string(destination.getAccountBalance()) + sep;
+		record+= currentUser.getUsername();
+
+		return record;
+	}
+
+
+	void _logTransfer(clsBankClient receiverClient, double amount)
+	{
+		string log = _prepareTransferLogRecord(*this, receiverClient, amount);
+		fstream file;
+		file.open("transfer_logs.txt", ios::app | ios::out);
+
+		if (file.is_open())
+		{
+			file << log << endl;
+
+			file.close();
+		}
+	}
+
 public:
 	clsBankClient(
 		enMode mode,
@@ -152,6 +182,17 @@ public:
 		_pinCode = pinCode;
 		_accountBalance = accountBalance;
 	}
+
+	struct stTransferLogRecord
+	{
+		string datetime;
+		string sourceAccountNumber;
+		string destinationAccountNumber;
+		double transferAmount;
+		double sourceBalanceAfter;
+		double destinationBalanceAfter;
+		string username;
+	};
 
 	bool isEmpty()
 	{
@@ -345,12 +386,27 @@ public:
 
 	bool transferMoneyTo(clsBankClient receiverClient, double amount)
 	{
-		return this->withdraw(amount) && receiverClient.deposit(amount);
+		if (this->withdraw(amount))
+		{
+			if (receiverClient.deposit(amount))
+			{
+				this->_logTransfer(receiverClient, amount);
+				return true;
+			}
+			else
+			{
+				// Deposit failed, rollback withdrawal
+				this->deposit(amount);
+			}
+		}
+
+		return false;
 	}
 
 	void refresh()
 	{
 		*this = clsBankClient::find(this->_accountNumber);
 	}
+
 };
 

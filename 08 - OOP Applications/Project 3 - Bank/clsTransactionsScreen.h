@@ -67,7 +67,7 @@ private:
     static short _readTransactionsMenuOption()
     {
         cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 5]: ";
-        return clsInputValidate::readShortNumberBetween(1, 4, "Enter a number between 1 - 5: ");
+        return clsInputValidate::readShortNumberBetween(1, 5, "Enter a number between 1 - 5: ");
     }
 
     static void _showDepositScreen()
