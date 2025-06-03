@@ -124,16 +124,16 @@ public:
 		return number;
 	}
 
-	static double readDoubleNumberBetween(double from, double to, std::string message)
+	static double readDoubleNumberBetween(double from, double to, std::string message, std::string errMessage)
 	{
 		double number = 0;
 		bool flag = false;
 		do
 		{
 			if (flag)
-				std::cout << message << std::endl;
+				std::cout << errMessage << std::endl;
 
-			number = readDoubleNumber("Invalid number, enter another one: ");
+			number = readDoubleNumber(message);
 			flag = true;
 		} while (!(isNumberBetween(number, from, to)));
 

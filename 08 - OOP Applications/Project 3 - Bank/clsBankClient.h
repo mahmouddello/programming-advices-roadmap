@@ -342,5 +342,15 @@ public:
 		save(); // Persist changes
 		return true;
 	}
+
+	bool transferMoneyTo(clsBankClient receiverClient, double amount)
+	{
+		return this->withdraw(amount) && receiverClient.deposit(amount);
+	}
+
+	void refresh()
+	{
+		*this = clsBankClient::find(this->_accountNumber);
+	}
 };
 
