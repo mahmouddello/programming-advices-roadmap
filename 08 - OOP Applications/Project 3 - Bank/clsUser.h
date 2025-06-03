@@ -10,6 +10,16 @@ using namespace std;
 
 class clsUser : public clsPerson
 {
+public:
+
+	struct stLoginRegisterRecord
+	{
+		string datetime;
+		string username;
+		string password;
+		int permissions;
+	};
+
 private:
 	enum _enMode { emptyMode = 0, updateMode = 1, addNewMode = 2 };
 
@@ -135,6 +145,19 @@ private:
 		return clsString::join(vData, sep);
 	}
 
+	static stLoginRegisterRecord _convertLineToLoginRecord(string line, string sep = "#//#")
+	{
+		stLoginRegisterRecord record;
+
+		vector<string> loginRegisterDataLine = clsString::split(line, sep);
+		record.datetime = loginRegisterDataLine[0];
+		record.username = loginRegisterDataLine[1];
+		record.password = loginRegisterDataLine[2];
+		record.permissions = stoi(loginRegisterDataLine[3]);
+
+		return record;
+	}
+
 public:
 	clsUser
 	(
@@ -163,9 +186,8 @@ public:
 		pUpdateClient = 8,
 		pFindClient = 16,
 		pTransactions = 32,
-		pManageUsers = 64
+		pManageUsers = 64,
 	};
-
 
 	// read-only property
 	string getUsername()
@@ -359,6 +381,25 @@ public:
 
 			file.close();
 		}
+	}
+
+	static vector<stLoginRegisterRecord> getRegisterLoginLogs()
+	{
+		fstream file;
+		file.open("logs.txt", ios::in);
+		vector<stLoginRegisterRecord> vData;
+		string line;
+
+		if (file.is_open())
+		{
+			while (getline(file, line))
+			{
+				vData.push_back(_convertLineToLoginRecord(line));
+			}
+			file.close();
+		}
+
+		return vData;
 	}
 
 };
