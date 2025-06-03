@@ -10,6 +10,18 @@ using namespace std;
 
 class clsBankClient : public clsPerson
 {
+public:
+	struct stTransferLogRecord
+	{
+		string datetime;
+		string sourceAccountNumber;
+		string destinationAccountNumber;
+		double transferAmount;
+		double sourceBalanceAfter;
+		double destinationBalanceAfter;
+		string username;
+	};
+
 private:
 	const enum enMode { emptyMode = 0, updateMode = 1, addNewMode = 2 };
 	enMode _mode;
@@ -149,7 +161,6 @@ private:
 		return record;
 	}
 
-
 	void _logTransfer(clsBankClient receiverClient, double amount)
 	{
 		string log = _prepareTransferLogRecord(*this, receiverClient, amount);
@@ -162,6 +173,22 @@ private:
 
 			file.close();
 		}
+	}
+
+	static stTransferLogRecord _convertLineToTransferLogRecord(string line)
+	{
+		vector<string> vData = clsString::split(line, "#//#");
+		stTransferLogRecord vRecord;
+
+		vRecord.datetime = vData[0];
+		vRecord.sourceAccountNumber = vData[1];
+		vRecord.destinationAccountNumber = vData[2];
+		vRecord.transferAmount = stod(vData[3]);
+		vRecord.sourceBalanceAfter = stod(vData[4]);
+		vRecord.destinationBalanceAfter = stod(vData[5]);
+		vRecord.username = vData[6];
+
+		return vRecord;
 	}
 
 public:
@@ -182,17 +209,6 @@ public:
 		_pinCode = pinCode;
 		_accountBalance = accountBalance;
 	}
-
-	struct stTransferLogRecord
-	{
-		string datetime;
-		string sourceAccountNumber;
-		string destinationAccountNumber;
-		double transferAmount;
-		double sourceBalanceAfter;
-		double destinationBalanceAfter;
-		string username;
-	};
 
 	bool isEmpty()
 	{
@@ -408,5 +424,25 @@ public:
 		*this = clsBankClient::find(this->_accountNumber);
 	}
 
+	static vector<stTransferLogRecord> getTransferLogRecords()
+	{
+		fstream file;
+		file.open("transfer_logs.txt", ios::in);
+		vector<stTransferLogRecord> vLogs;
+
+		string line;
+
+		if (file.is_open())
+		{
+			while (getline(file, line))
+			{
+				vLogs.push_back(_convertLineToTransferLogRecord(line));
+			}
+
+			file.close();
+		}
+
+		return vLogs;
+	}
 };
 
