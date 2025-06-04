@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsCurrency.h" />
+    <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -95,9 +95,9 @@ public:
 		do
 		{
 			if (flag)
-				std::cout << message << std::endl;
+				std::cout << "Enter a number between [" << from << " - " << to << "]:\n" << std::endl;
 
-			number = readShortNumber("Invalid number, enter another one: ");
+			number = readShortNumber(message);
 			flag = true;
 		} while (!(isNumberBetween(number, from, to)));
 
