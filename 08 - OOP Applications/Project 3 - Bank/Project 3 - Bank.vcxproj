@@ -152,6 +152,7 @@
     <ClInclude Include="clsUser.h" />
     <ClInclude Include="clsWithdrawScreen.h" />
     <ClInclude Include="globals.h" />
+    <ClInclude Include="interfaceCommuncation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

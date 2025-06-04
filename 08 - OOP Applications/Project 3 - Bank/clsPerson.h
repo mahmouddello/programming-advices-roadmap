@@ -1,11 +1,12 @@
 #pragma once
 #include <iostream>
+#include "interfaceCommuncation.h"
 
 using std::string;
 using std::cout; 
 using std::endl;
 
-class clsPerson
+class clsPerson : public interfaceCommuncation
 {
 private:
 	string _firstName;
@@ -83,7 +84,6 @@ public:
 
 	__declspec(property(get = getPhoneNumber, put = setPhoneNumber)) string phoneNumber;
 
-
 	void print()
 	{
 		cout << "\nInfo:";
@@ -94,6 +94,20 @@ public:
 		cout << "\nEmail    : " << _email;
 		cout << "\nPhone    : " << _phoneNumber;
 		cout << "\n___________________\n";
+
+	}
+
+	// Without implementing these in clsPerson, we will get compilation error.
+	void sendEmail(std::string title, std::string body = "")
+	{
+
+	}
+	void sendFax(std::string title, std::string body = "")
+	{
+
+	}
+	void sendSMS(std::string title, std::string body = "")
+	{
 
 	}
 };
