@@ -75,7 +75,7 @@ private:
 		user.lastName = clsInputValidate::readString("Enter last name: ");
 		user.email = clsInputValidate::readString("Enter email: ");
 		user.phoneNumber = clsInputValidate::readString("Enter phone number: ");
-		user.password = clsInputValidate::readString("Enter password: ");
+		user.password = clsUtil::encryptMessage(clsInputValidate::readString("Enter password: "), 007);
 	}
 
 public:

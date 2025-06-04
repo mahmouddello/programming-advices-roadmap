@@ -106,7 +106,7 @@ public:
 		}
 	}
 
-	static std::string encryptMessage(std::string message, const short &encryptionKey)
+	static std::string encryptMessage(std::string message, const short &encryptionKey = 2)
 	{
 
 		for (int i = 0; i < message.length(); i++)
@@ -120,7 +120,7 @@ public:
 		return message;
 	}
 
-	static std::string decryptMessage(std::string message, const short &encryptionKey)
+	static std::string decryptMessage(std::string message, const short &encryptionKey = 2)
 	{
 
 		for (int i = 0; i < message.length(); i++)

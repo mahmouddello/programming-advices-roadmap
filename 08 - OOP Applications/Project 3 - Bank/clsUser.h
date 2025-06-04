@@ -5,6 +5,7 @@
 #include <string>
 #include "../cpplibs/clsString.h"
 #include "../cpplibs/clsDate.h"
+#include "../cpplibs/clsUtil.h"
 
 using namespace std;
 
@@ -38,7 +39,7 @@ private:
 		userRecord += user.email + seperator;
 		userRecord += user.phoneNumber + seperator;
 		userRecord += user._username + seperator;
-		userRecord += user.password + seperator;
+		userRecord += clsUtil::encryptMessage(user.password) + seperator;
 		userRecord += to_string(user.permessions);
 
 		return userRecord;
@@ -52,7 +53,7 @@ private:
 
 		return clsUser(_enMode::updateMode, vUserData[0], vUserData[1],
 			vUserData[2], vUserData[3], vUserData[4],
-			vUserData[5], stoi(vUserData[6]));
+			clsUtil::decryptMessage(vUserData[5]), stoi(vUserData[6]));
 	}
 
 	static vector<clsUser> _loadUsersDataFromFile()
@@ -139,7 +140,7 @@ private:
 
 		vData[0] = clsDate::getSystemDateTime();
 		vData[1] = this->getUsername();
-		vData[2] = this->password;
+		vData[2] = clsUtil::encryptMessage(this->password);
 		vData[3] = to_string(this->permessions);
 
 		return clsString::join(vData, sep);
@@ -152,7 +153,7 @@ private:
 		vector<string> loginRegisterDataLine = clsString::split(line, sep);
 		record.datetime = loginRegisterDataLine[0];
 		record.username = loginRegisterDataLine[1];
-		record.password = loginRegisterDataLine[2];
+		record.password = clsUtil::decryptMessage(loginRegisterDataLine[2]);
 		record.permissions = stoi(loginRegisterDataLine[3]);
 
 		return record;
