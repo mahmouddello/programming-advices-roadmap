@@ -173,5 +173,34 @@ public:
 	{
 		return _loadCurrencyDataFromFile();
 	}
+
+	static bool isSameCurrency(clsCurrency currency1, clsCurrency currency2)
+	{
+		return clsString::upperAllLetters(currency1.getCode()) == clsString::upperAllLetters(currency2.getCode());
+	}
+
+	float exchange(clsCurrency currency2, float amount)
+	{
+		if (!isSameCurrency(*this, currency2))
+		{
+			if (clsString::upperAllLetters(this->getCode()) == "USD")
+			{
+				return amount * currency2.getRate();
+			}
+
+			else if (clsString::upperAllLetters(currency2.getCode()) == "USD")
+			{
+				return amount / this->getRate();
+			}
+
+			else
+				return amount * currency2.getRate() / this->getRate();
+		}
+		else
+		{
+			cout << "\nYou can't exchange amount from the same currency!" << endl;
+			return -1;
+		}
+	}
 };
 

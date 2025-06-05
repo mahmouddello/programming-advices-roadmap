@@ -5,6 +5,7 @@
 #include "clsListCurrenciesScreen.h"
 #include "clsFindCurrencyScreen.h"
 #include "clsUpdateCurrencyScreen.h"
+#include "clsCurrencyCalculatorScreen.h"
 
 class clsMainScreen : protected clsScreen
 {
@@ -50,7 +51,7 @@ private:
 
     static void _showCurrencyCalculatorScreen()
     {
-        cout << "Currency calculator Screen will be here!" << endl;
+        clsCurrencyCalculatorScreen::showCurrencyCalculatorScreen();
     }
 
     static void _performMainMenuOption(enMainMenuOptions option)
