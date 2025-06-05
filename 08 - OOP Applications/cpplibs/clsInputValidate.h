@@ -124,6 +124,26 @@ public:
 		return number;
 	}
 
+	static float readFloatNumber(const std::string& message)
+	{
+		float number = 0;
+
+		std::cout << message;
+		std::cin >> number;
+
+		while (std::cin.fail())
+		{
+			// user didn't input a number
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+			std::cout << message << std::endl;
+			std::cin >> number;
+		}
+
+		return number;
+	}
+
 	static double readDoubleNumberBetween(double from, double to, std::string message, std::string errMessage)
 	{
 		double number = 0;

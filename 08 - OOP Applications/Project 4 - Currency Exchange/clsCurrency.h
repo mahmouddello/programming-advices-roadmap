@@ -31,6 +31,19 @@ private:
 		return clsCurrency(enMode::updateMode, vCurrency[0], vCurrency[1], vCurrency[2], stof(vCurrency[3]));
 	}
 
+	static string _converCurrencyObjectToLine(clsCurrency currency, string seperator = "#//#")
+	{
+
+		string record = "";
+		record += currency.getCountry() + seperator;
+		record += currency.getCode() + seperator;
+		record += currency.getName() + seperator;
+		record += to_string(currency.getRate()) + seperator;
+
+		return record;
+
+	}
+
 	static vector<clsCurrency> _loadCurrencyDataFromFile()
 	{
 		vector<clsCurrency> vData;
@@ -52,6 +65,22 @@ private:
 		return vData;
 	}
 
+	static void _saveCurrenciesDataToFile(vector<clsCurrency> vData)
+	{
+		fstream file;
+
+		file.open("currencies.txt", ios::out);
+		if (file.is_open())
+		{
+			for (clsCurrency curr : vData)
+			{
+				file << _converCurrencyObjectToLine(curr) << endl;
+			}
+
+			file.close();
+		}
+	}
+
 	void _update()
 	{
 		vector<clsCurrency> currencies = _loadCurrencyDataFromFile();
@@ -61,6 +90,7 @@ private:
 			if (curr.getCode() == this->getCode())
 			{
 				curr = *this;
+				_saveCurrenciesDataToFile(currencies);
 				break;
 			}
 		}
