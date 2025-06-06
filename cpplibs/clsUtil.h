@@ -17,26 +17,6 @@ public:
 		mixChars = 5
 	};
 
-	static std::string readString(const std::string &message = "Enter a string: ")
-	{
-		std::string input;
-
-		std::cout << message;
-		std::getline(std::cin >> std::ws, input);
-
-		return input;
-	}
-
-	static double readNumber(const std::string &message = "Enter a number: ")
-	{
-		double number = 0;
-
-		std::cout << message;
-		std::cin >> number;
-
-		return number;
-	}
-
 	static bool isPerfectNumber(const int &number)
 	{
 		int sum = 0;
