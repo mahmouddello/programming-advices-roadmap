@@ -6,14 +6,44 @@
 class clsInputValidate
 {
 public:
-	static bool isNumberBetween(int number, int from, int to)
+	template <typename T>
+	static bool isNumberBetween(T number, T from, T to)
 	{
 		return number >= from && number <= to;
 	}
 
-	static bool isNumberBetween(double number, double from, double to)
+	template <typename T>
+	static T readNumber(const std::string &message = "Please enter a number: ")
 	{
-		return number >= from && number <= to;
+		T number;
+		std::cout << message;
+		std::cin >> number;
+
+		while (std::cin.fail())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << "Invalid input. " << message;
+			std::cin >> number;
+		}
+		return number;
+	}
+
+	template <typename T>
+	static T readNumberBetween(T from, T to)
+	{
+		T number;
+		bool flag = false;
+		const string message = "\nPlease enter a number between " + to_string(from) + " - " + to_string(to) + ": ";
+		const string errorMessage = "\nInput either not a number or out of range!";
+		do
+		{
+			if (flag)
+				std::cout << errorMessage << std::endl;
+			number = readNumber(message);
+			flag = true;
+		} while (!(isNumberBetween(number, from, to)));
+		return number;
 	}
 
 	static bool isDateBetween(clsDate date1, clsDate startDate, clsDate endDate)
@@ -24,44 +54,6 @@ public:
 		return clsPeriod::isDateInPeriod(clsPeriod(startDate, endDate), date1);
 	}
 
-	static int readIntNumber(const std::string &message)
-	{
-		int number = 0;
-
-		std::cout << "Please enter a number?" << std::endl;
-		std::cin >> number;
-
-		while (std::cin.fail())
-		{
-			// user didn't input a number
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-			std::cout << message << std::endl;
-			std::cin >> number;
-		}
-
-		return number;
-	}
-
-	static short readShortNumber(const std::string &message)
-	{
-		short number = 0;
-		std::cin >> number;
-
-		while (std::cin.fail())
-		{
-			// user didn't input a number
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-			std::cout << message << std::endl;
-			std::cin >> number;
-		}
-
-		return number;
-	}
-
 	static std::string readString(const std::string &message = "Enter a string: ")
 	{
 		std::string input;
@@ -70,94 +62,6 @@ public:
 		std::getline(std::cin >> std::ws, input);
 
 		return input;
-	}
-
-	static int readIntNumberBetween(short from, short to, std::string message)
-	{
-		int number = 0;
-		bool flag = false;
-		do
-		{
-			if (flag)
-				std::cout << message << std::endl;
-
-			number = readIntNumber("Invalid number, enter another one: ");
-			flag = true;
-		} while (!(isNumberBetween(number, from, to)));
-
-		return number;
-	}
-
-	static short readShortNumberBetween(short from, short to, std::string message)
-	{
-		short number = 0;
-		bool flag = false;
-		do
-		{
-			if (flag)
-				std::cout << "Enter a number between [" << from << " - " << to << "]:\n" << std::endl;
-
-			number = readShortNumber(message);
-			flag = true;
-		} while (!(isNumberBetween(number, from, to)));
-
-		return number;
-	}
-
-	static double readDoubleNumber(const std::string &message)
-	{
-		double number = 0;
-
-		std::cout << message;
-		std::cin >> number;
-
-		while (std::cin.fail())
-		{
-			// user didn't input a number
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-			std::cout << message << std::endl;
-			std::cin >> number;
-		}
-
-		return number;
-	}
-
-	static float readFloatNumber(const std::string& message)
-	{
-		float number = 0;
-
-		std::cout << message;
-		std::cin >> number;
-
-		while (std::cin.fail())
-		{
-			// user didn't input a number
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-			std::cout << message << std::endl;
-			std::cin >> number;
-		}
-
-		return number;
-	}
-
-	static double readDoubleNumberBetween(double from, double to, std::string message, std::string errMessage)
-	{
-		double number = 0;
-		bool flag = false;
-		do
-		{
-			if (flag)
-				std::cout << errMessage << std::endl;
-
-			number = readDoubleNumber(message);
-			flag = true;
-		} while (!(isNumberBetween(number, from, to)));
-
-		return number;
 	}
 
 	static bool isDateValid(clsDate date)
