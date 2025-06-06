@@ -122,7 +122,6 @@ public:
 	static int randomNumber(const int &from, const int &to)
 	{
 		return rand() % (to - from + 1) + from;
-		;
 	}
 
 	static char getRandomCharacter(enCharType charType)
@@ -177,40 +176,14 @@ public:
 			std::cout << generateKey(charType) << std::endl;
 	}
 
-	static void swap(int &x, int &y)
+	template <typename T>
+	static void swap(T &x, T &y)
 	{
-		int temp = x;
+		T temp = x;
 		x = y;
 		y = temp;
 	}
 
-	static void swap(std::string &x, std::string &y)
-	{
-		std::string temp = x;
-		x = y;
-		y = temp;
-	}
-
-	static void swap(double &x, double &y)
-	{
-		double temp = x;
-		x = y;
-		y = temp;
-	}
-
-	static void swap(char &x, char &y)
-	{
-		char temp = x;
-		x = y;
-		y = temp;
-	}
-
-	static void swap(clsDate &x, clsDate &y)
-	{
-		clsDate temp = x;
-		x = y;
-		y = temp;
-	}
 
 	static void fillArrayWithRandomNumbers(int arr[100], int length, int start, int finish)
 	{
