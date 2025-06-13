@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04 - Big O (log n) - Logari
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05 - Important Question about Big O(n)", "05 - Important Question about Big O(n)\05 - Important Question about Big O(n).vcxproj", "{0AC59342-E0B2-4CA7-A82E-B06B4825B2D9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06 - Array Data Structure", "06 - Array Data Structure\06 - Array Data Structure.vcxproj", "{109AA8CE-BBB9-440E-B86B-F45CCE409013}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{0AC59342-E0B2-4CA7-A82E-B06B4825B2D9}.Release|x64.Build.0 = Release|x64
 		{0AC59342-E0B2-4CA7-A82E-B06B4825B2D9}.Release|x86.ActiveCfg = Release|Win32
 		{0AC59342-E0B2-4CA7-A82E-B06B4825B2D9}.Release|x86.Build.0 = Release|Win32
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Debug|x64.ActiveCfg = Debug|x64
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Debug|x64.Build.0 = Debug|x64
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Debug|x86.ActiveCfg = Debug|Win32
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Debug|x86.Build.0 = Debug|Win32
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Release|x64.ActiveCfg = Release|x64
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Release|x64.Build.0 = Release|x64
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Release|x86.ActiveCfg = Release|Win32
+		{109AA8CE-BBB9-440E-B86B-F45CCE409013}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
