@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07 - Matrix Data Structure"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08 - STL & Stack", "08 - STL & Stack\08 - STL & Stack.vcxproj", "{13B6FAFD-1312-41DF-816F-7E1CB6A578F0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09 - Vector Data Structure", "09 - Vector Data Structure\09 - Vector Data Structure.vcxproj", "{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{13B6FAFD-1312-41DF-816F-7E1CB6A578F0}.Release|x64.Build.0 = Release|x64
 		{13B6FAFD-1312-41DF-816F-7E1CB6A578F0}.Release|x86.ActiveCfg = Release|Win32
 		{13B6FAFD-1312-41DF-816F-7E1CB6A578F0}.Release|x86.Build.0 = Release|Win32
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Debug|x64.ActiveCfg = Debug|x64
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Debug|x64.Build.0 = Debug|x64
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Debug|x86.ActiveCfg = Debug|Win32
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Debug|x86.Build.0 = Debug|Win32
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Release|x64.ActiveCfg = Release|x64
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Release|x64.Build.0 = Release|x64
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Release|x86.ActiveCfg = Release|Win32
+		{C84B02FE-DB83-47A2-A25F-5808EC1A0C4F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
