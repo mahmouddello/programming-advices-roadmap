@@ -14,9 +14,11 @@ public:
 		Node* next;
 		Node* prev;
 	};
+private:
 	Node* head;
-
-	clsDblLinkedList() : head(NULL) {}
+	unsigned short elementCount;
+public:
+	clsDblLinkedList() : head(NULL), elementCount(0){}
 
 	void insertAtBeginning(const T& value)
 	{
@@ -28,12 +30,15 @@ public:
 		{
 			newNode->next = NULL;
 			this->head = newNode;
+			elementCount++;
 			return;
 		}
 
 		newNode->next = this->head;
 		this->head->prev = newNode;
 		this->head = newNode;
+
+		elementCount++;
 	}
 
 	void print()
@@ -94,6 +99,7 @@ public:
 		}
 
 		node->next = newNode;
+		elementCount++;
 	}
 
 	void insertAtEnd(const T& value)
@@ -116,6 +122,8 @@ public:
 		newNode->prev = lastNode;
 
 		lastNode->next = newNode;
+
+		elementCount++;
 	}
 
 	void deleteNode(Node* node)
@@ -131,6 +139,7 @@ public:
 				this->head->prev = NULL;
 
 			delete node;
+			elementCount--;
 			return;
 		}
 
@@ -140,6 +149,7 @@ public:
 		if (node->next != NULL)
 			node->next->prev = node->prev;
 
+		elementCount--;
 		delete node;
 	}
 
@@ -155,12 +165,14 @@ public:
 		{
 			this->head = NULL;
 			delete nodeToDelete;
+			elementCount--;
 			return;
 		}
 
 		this->head = this->head->next;
 		this->head->prev = NULL;
 
+		elementCount--;
 		delete nodeToDelete;
 	}
 
@@ -175,11 +187,18 @@ public:
 		{
 			delete nodeToDelete;
 			this->head = NULL;
+			elementCount--;
 			return;
 		}
 			
 		nodeToDelete->prev->next = NULL;
+		elementCount--;
 		delete nodeToDelete;
+	}
+
+	unsigned short size()
+	{
+		return elementCount;
 	}
 
 };

@@ -15,6 +15,7 @@ int main()
 
 	myDblLinkedList.print();
 
+
 	clsDblLinkedList<int>::Node* n1 = myDblLinkedList.find(2);
 	if (n1 != NULL)
 		cout << "\nNode with value 2 has been found :)\n";
@@ -41,6 +42,8 @@ int main()
 	cout << "\nDeleting last node:\n";
 	myDblLinkedList.deleteLastNode();
 	myDblLinkedList.print();
+
+	cout << "\nSize of the linked list is: " << myDblLinkedList.size() << endl;
 
 	return 0;
 }
