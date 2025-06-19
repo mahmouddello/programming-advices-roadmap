@@ -85,26 +85,39 @@ void insertAtEnd(Node* &head, int value)
 	return;
 }
 
-void deleteNode(Node* &head, int value)
+void deleteNode(Node*& head, int value)
 {
 	if (head == NULL)
 		return;
 
+	// One node only
 	if (head->next == NULL && head->previous == NULL)
-		delete head;
+	{
+		if (head->value == value)
+		{
+			delete head;
+			head = NULL;
+		}
+		return;
+	}
 
 	Node* nodeToDelete = findNode(head, value);
 
-	if (nodeToDelete != NULL)
-	{
+	if (nodeToDelete == NULL)
+		return;
+
+	if (nodeToDelete == head)
+		head = nodeToDelete->next;
+
+	if (nodeToDelete->next != NULL)
 		nodeToDelete->next->previous = nodeToDelete->previous;
-		nodeToDelete->previous = nodeToDelete->next;
 
-		nodeToDelete->previous = NULL;
-		nodeToDelete->next = NULL;
-		delete nodeToDelete;
-	}
+	if (nodeToDelete->previous != NULL)
+		nodeToDelete->previous->next = nodeToDelete->next;
 
+	nodeToDelete->next = NULL;
+	nodeToDelete->previous = NULL;
+	delete nodeToDelete;
 }
 
 void deleteFirstNode(Node*& head)
