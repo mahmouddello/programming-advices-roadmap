@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "../../cpplibs/clsUtil.h"
 
 using namespace std;
 
@@ -199,6 +200,40 @@ public:
 	unsigned short size()
 	{
 		return elementCount;
+	}
+
+	bool isEmpty()
+	{
+		return elementCount == 0;
+	}
+
+	void clear()
+	{
+		while (elementCount > 0)
+		{
+			this->deleteFirstNode();
+		}
+	}
+
+	void reverse()
+	{
+		if (head == NULL)
+			return;
+
+		Node* temp = nullptr;
+		Node* current = head;
+
+		while (current != nullptr)
+		{
+			temp = current->prev;
+			current->prev = current->next;
+			current->next = temp;
+			current = current->prev;
+		}
+
+		// setting new head
+		if (temp != nullptr)
+			this->head = temp->prev;
 	}
 
 };

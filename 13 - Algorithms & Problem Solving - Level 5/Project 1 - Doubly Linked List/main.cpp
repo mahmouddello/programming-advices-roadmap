@@ -7,6 +7,11 @@ int main()
 {
 	clsDblLinkedList<int> myDblLinkedList;
 
+	if (myDblLinkedList.isEmpty())
+		cout << "List is currently empty!\n\n";
+	else
+		cout << "List contains element(s), not empty!\n\n";
+
 	myDblLinkedList.insertAtBeginning(5);
 	myDblLinkedList.insertAtBeginning(4);
 	myDblLinkedList.insertAtBeginning(3);
@@ -44,6 +49,23 @@ int main()
 	myDblLinkedList.print();
 
 	cout << "\nSize of the linked list is: " << myDblLinkedList.size() << endl;
+
+	cout << "\nExecuting clear()." << endl;
+	myDblLinkedList.clear();
+
+	cout << "\nSize of the linked list is: " << myDblLinkedList.size() << endl;
+
+
+	myDblLinkedList.insertAtBeginning(5);
+	myDblLinkedList.insertAtBeginning(4);
+	myDblLinkedList.insertAtBeginning(3);
+	myDblLinkedList.insertAtBeginning(2);
+	myDblLinkedList.insertAtBeginning(1);
+	myDblLinkedList.print();
+	cout << endl;
+
+	myDblLinkedList.reverse();
+	myDblLinkedList.print();
 
 	return 0;
 }
