@@ -20,7 +20,7 @@ public:
 
 	void print()
 	{
-		_myList.print();
+		_myList.print(" ");
 	}
 
 	unsigned short size()

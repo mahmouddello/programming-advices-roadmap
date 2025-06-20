@@ -42,12 +42,12 @@ public:
 		elementCount++;
 	}
 
-	void print()
+	void print(const string& format = " <---> ")
 	{
 		Node* temp = this->head;
 		while (temp != NULL)
 		{
-			cout << temp->value << " <---> ";
+			cout << temp->value << format;
 			temp = temp->next;
 		}
 
