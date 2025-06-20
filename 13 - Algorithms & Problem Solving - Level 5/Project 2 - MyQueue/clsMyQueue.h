@@ -1,0 +1,41 @@
+#pragma once
+#include "../Project 1 - Doubly Linked List/clsDblLinkedList.h"
+
+template <class T>
+class clsMyQueue
+{
+protected:
+	clsDblLinkedList<T> _myList; // composition
+public:
+
+	void push(const T& value)
+	{
+		_myList.insertAtEnd(value);
+	}
+
+	void pop()
+	{
+		_myList.deleteFirstNode();
+	}
+
+	void print()
+	{
+		_myList.print();
+	}
+
+	unsigned short size()
+	{
+		return _myList.size();
+	}
+
+	T front()
+	{
+		return _myList.getItem(0);
+	}
+
+	T back()
+	{
+		return _myList.getItem(_myList.getSize() - 1);
+	}
+};
+

@@ -116,6 +116,7 @@ public:
 			newNode->prev = NULL;
 			newNode->next = NULL;
 			this->head = newNode;
+			elementCount++;
 			return;
 		}
 
@@ -288,6 +289,11 @@ public:
 		}
 	
 		return false;
+	}
+
+	unsigned short getSize()
+	{
+		return elementCount;
 	}
 };
 
