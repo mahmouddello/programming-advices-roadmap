@@ -37,5 +37,41 @@ public:
 	{
 		return _myList.getItem(_myList.getSize() - 1);
 	}
+
+	T getItem(const short& index)
+	{
+		return _myList.getItem(index);
+	}
+
+	void reverse()
+	{
+		_myList.reverse();
+	}
+
+	bool updateItem(const short& index, const T& val)
+	{
+		return _myList.updateByIndex(index, val);
+	}
+
+	bool insertAfter(const short& index, const T& val)
+	{
+		return _myList.insertAfter(index, val);
+	}
+
+	void insertAtFront(const T& val)
+	{
+		_myList.insertAtBeginning(val);
+	}
+
+	void insertAtBack(const T& val)
+	{
+		_myList.insertAtEnd(val);
+	}
+
+	void clear()
+	{
+		_myList.clear();
+	}
+
 };
 
