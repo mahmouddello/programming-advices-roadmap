@@ -236,5 +236,58 @@ public:
 			this->head = temp->prev;
 	}
 
+	Node* getNodeByIndex(const short& index)
+	{
+		if (index < 0 || index >= this->elementCount)
+			return NULL;
+
+		Node* current = head;
+		short steps = 0;
+
+		while (current != NULL)
+		{
+			if (steps == index)
+				return current;
+
+			current = current->next;
+			steps++;
+		}
+
+		return NULL;
+	}
+
+	T getItem(const short& index)
+	{
+		Node* node = getNodeByIndex(index);
+
+		if (node == NULL)
+			return NULL;
+
+		return node->value;
+	}
+
+	bool updateByIndex(const short& index, const T& newValue)
+	{
+		Node* node = getNodeByIndex(index);
+
+		if (node == NULL)
+			return false;
+
+		node->value = newValue;
+		return true;
+	}
+
+	bool insertAfter(const short& index, const T& value)
+	{
+		Node* node = getNodeByIndex(index);
+
+		if (node != NULL)
+		{
+			insertAfter(node, value);
+			return true;
+		}
+	
+		return false;
+	}
 };
 
