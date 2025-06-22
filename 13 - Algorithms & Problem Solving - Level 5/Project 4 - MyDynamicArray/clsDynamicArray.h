@@ -73,7 +73,7 @@ public:
 
 	T getItem(const unsigned short& index)
 	{
-		if (index < 0 || index >= this->_size)
+		if (index >= this->_size)
 			return T();
 
 		return this->_array[index];
@@ -89,5 +89,59 @@ public:
 	{
 		this->resize(0);
 	}
+
+	void deleteAt(unsigned short index)
+	{
+		if (index >= _size)
+			return;
+
+		T* temp = new T[_size - 1];
+
+		for (short i = 0, j = 0; i < _size; i++)
+		{
+			if (i == index)
+				continue;
+
+			temp[j++] = _array[i];
+		}
+
+		delete[] _array;
+		_array = temp;
+		_size--;
+	}
+
+	/*
+		programming advices
+	bool DeleteItemAt(int index)
+	{
+
+		if (index >= _size || index < 0)
+		{
+			return false;
+		}
+
+		_size--;
+
+		_TempArray = new T[_size];
+
+		copy all before index
+		for (int i = 0; i < index; i++)
+		{
+			_TempArray[i] = _array[i];
+		}
+
+		copy all after index
+		for (int i = index + 1; i < _size + 1; i++)
+		{
+			_TempArray[i - 1] = _array[i];
+		}
+
+		delete[] _array;
+		_array = _TempArray;
+		return true;
+
+	}
+	
+	*/
 };
 
