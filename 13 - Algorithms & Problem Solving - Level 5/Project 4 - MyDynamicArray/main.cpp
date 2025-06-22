@@ -29,5 +29,9 @@ int main()
 	myDynamicArr.reverse();
 	myDynamicArr.print();
 
+	cout << "\nArray after clearing elements:\n";
+	myDynamicArr.clear();
+	myDynamicArr.print();
+
 	return 0;
 }

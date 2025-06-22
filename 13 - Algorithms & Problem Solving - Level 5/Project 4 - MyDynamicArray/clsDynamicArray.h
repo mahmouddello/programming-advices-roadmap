@@ -8,7 +8,6 @@ class clsDynamicArray
 protected:
 	unsigned short _size;
 	T* _array;
-	T* _tempArray;
 public:
 	clsDynamicArray(unsigned short size = 0)
 	{
@@ -58,15 +57,15 @@ public:
 		if (newSize == this->_size || this->isEmpty())
 			return;
 
-		this->_tempArray = new T[newSize];
+		T* tempArray = new T[newSize];
 
 		unsigned short limit = (newSize < _size) ? newSize : _size;
 
 		for (short i = 0; i < limit; i++)
-			this->_tempArray[i] = _array[i];
+			tempArray[i] = _array[i];
 
 		delete[] _array;
-		this->_array = this->_tempArray;
+		this->_array = tempArray;
 		this->_size = newSize;
 	}
 
@@ -86,5 +85,9 @@ public:
 			clsUtil::swap(this->_array[i], this->_array[_size - 1 - i]);
 	}
 
+	void clear()
+	{
+		this->resize(0);
+	}
 };
 
