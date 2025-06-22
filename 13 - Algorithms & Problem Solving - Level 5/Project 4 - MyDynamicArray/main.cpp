@@ -15,6 +15,19 @@ int main()
 
 	myDynamicArr.print();
 
+	//myDynamicArr.resize(2);
+	//cout << "\nArray after resize, size = " << myDynamicArr.size() << endl;
+	//myDynamicArr.print();
+
+	//myDynamicArr.resize(10);
+	//cout << "\nArray after resize, size = " << myDynamicArr.size() << endl;
+	//myDynamicArr.print();
+
+	cout << "\n" << myDynamicArr.getItem(2) << endl;
+	cout << "\nReversed Array:\n";
+
+	myDynamicArr.reverse();
+	myDynamicArr.print();
 
 	return 0;
 }
