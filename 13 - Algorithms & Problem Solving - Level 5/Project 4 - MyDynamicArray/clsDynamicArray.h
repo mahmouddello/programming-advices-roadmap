@@ -73,7 +73,7 @@ public:
 
 	T getItem(const unsigned short& index)
 	{
-		if (index >= this->_size)
+		if (index < 0 || index >= this->_size)
 			return T();
 
 		return this->_array[index];
