@@ -143,5 +143,21 @@ public:
 	}
 	
 	*/
+
+	void deleteFirstItem()
+	{
+		if (this->isEmpty())
+			return;
+
+		this->deleteAt(0);
+	}
+
+	void deleteLastItem()
+	{
+		if (this->isEmpty())
+			return;
+
+		this->deleteAt(this->_size - 1);
+	}
 };
 

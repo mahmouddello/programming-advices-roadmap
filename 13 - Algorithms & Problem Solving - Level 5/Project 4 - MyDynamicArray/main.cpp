@@ -33,7 +33,16 @@ int main()
 	//myDynamicArr.clear();
 	//myDynamicArr.print();
 
+	cout << "\nArray after deleting item (1):\n";
 	myDynamicArr.deleteAt(1);
+	myDynamicArr.print();
+
+	cout << "\nArray after deleting first item:\n";
+	myDynamicArr.deleteFirstItem();
+	myDynamicArr.print();
+
+	cout << "\nArray after deleting last item:\n";
+	myDynamicArr.deleteLastItem();
 	myDynamicArr.print();
 
 	return 0;
