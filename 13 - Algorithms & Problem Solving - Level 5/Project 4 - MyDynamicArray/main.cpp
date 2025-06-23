@@ -45,5 +45,19 @@ int main()
 	myDynamicArr.deleteLastItem();
 	myDynamicArr.print();
 
+	short index = myDynamicArr.find(20);
+	if (index == -1)
+		cout << "\nItem wasn't found :(\n";
+	else
+		cout << "\nItem 20 found at index " << index;
+
+	if (myDynamicArr.deleteItem(20))
+	{
+		cout << "\nItem deleted successfully! New Array:\n";
+		myDynamicArr.print();
+	}
+	else
+		cout << "\nItem wasn't found, no deletion performed\n" << endl;
+
 	return 0;
 }

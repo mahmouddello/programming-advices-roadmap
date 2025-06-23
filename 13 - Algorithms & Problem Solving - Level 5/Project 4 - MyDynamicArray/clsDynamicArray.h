@@ -90,6 +90,7 @@ public:
 		this->resize(0);
 	}
 
+	// # Extenstion 5
 	void deleteAt(unsigned short index)
 	{
 		if (index >= _size)
@@ -144,6 +145,7 @@ public:
 	
 	*/
 
+	// # Extension 6 to 7
 	void deleteFirstItem()
 	{
 		if (this->isEmpty())
@@ -158,6 +160,28 @@ public:
 			return;
 
 		this->deleteAt(this->_size - 1);
+	}
+
+	// # Extension 8 to 9
+
+	short find(const T& item)
+	{
+		for (short i = 0; i < _size; i++)
+			if (_array[i] == item)
+				return i;
+
+		return -1;
+	}
+
+	bool deleteItem(const T& item)
+	{
+		short index = find(item);
+
+		if (index == -1)
+			return false;
+
+		deleteAt(index);
+		return true;
 	}
 };
 
