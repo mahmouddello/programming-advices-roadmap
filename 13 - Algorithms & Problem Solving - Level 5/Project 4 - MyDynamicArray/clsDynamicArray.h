@@ -183,5 +183,28 @@ public:
 		deleteAt(index);
 		return true;
 	}
+
+	// Extension 10
+	void insertAt(const unsigned short& index, const T& value)
+	{
+		if (index >= _size)
+			return;
+
+		T* tempArr = new T[_size + 1];
+
+		// copy before
+		for (short i = 0; i < index; i++)
+			tempArr[i] = _array[i];
+
+		tempArr[index] = value;
+
+		// copy after
+		for (short j = index; j < _size; j++)
+			tempArr[j + 1] = _array[j];
+
+		delete[] _array;
+		_size++;
+		_array = tempArr;
+	}
 };
 

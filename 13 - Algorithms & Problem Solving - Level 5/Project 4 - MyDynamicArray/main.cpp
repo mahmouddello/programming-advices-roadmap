@@ -53,11 +53,24 @@ int main()
 
 	if (myDynamicArr.deleteItem(20))
 	{
-		cout << "\nItem deleted successfully! New Array:\n";
+		cout << "\nItem deleted successfully! New Array: ";
 		myDynamicArr.print();
 	}
 	else
 		cout << "\nItem wasn't found, no deletion performed\n" << endl;
+
+
+	// reset array
+	myDynamicArr.resize(5);
+	myDynamicArr.setItem(0, 10);
+	myDynamicArr.setItem(1, 20);
+	myDynamicArr.setItem(2, 30);
+	myDynamicArr.setItem(3, 40);
+	myDynamicArr.setItem(4, 50);
+
+	cout << "\nArray after inseting 500 at index (2):\n";
+	myDynamicArr.insertAt(2, 500);
+	myDynamicArr.print();
 
 	return 0;
 }
