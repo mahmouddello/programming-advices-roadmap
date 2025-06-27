@@ -187,7 +187,7 @@ public:
 	// Extension 10
 	void insertAt(const unsigned short& index, const T& value)
 	{
-		if (index >= _size)
+		if (index > _size)
 			return;
 
 		T* tempArr = new T[_size + 1];
@@ -205,6 +205,34 @@ public:
 		delete[] _array;
 		_size++;
 		_array = tempArr;
+	}
+
+	// Extensions #11 to #14
+
+	void insertAtBeginning(const T& value)
+	{
+		insertAt(0, value);
+	}
+
+	void insertBefore(const unsigned short& index, const T& value)
+	{
+		if (index < 1)
+			insertAt(0, value);
+		else
+			insertAt(index - 1, value);
+	}
+
+	void insertAfter(const unsigned short& index, const T& value)
+	{
+		if (index >= _size)
+			insertAt(_size, value);
+		else
+			insertAt(index + 1, value);
+	}
+
+	void insertAtEnd(const T& value)
+	{
+		insertAfter(_size, value);
 	}
 };
 

@@ -72,5 +72,17 @@ int main()
 	myDynamicArr.insertAt(2, 500);
 	myDynamicArr.print();
 
+	cout << "\nArray after inseting 911 at beginning:\n";
+	myDynamicArr.insertAtBeginning(911);
+	myDynamicArr.print();
+
+	cout << "\nArray after inseting 420 after index 2:\n";
+	myDynamicArr.insertAfter(2, 420);
+	myDynamicArr.print();
+
+	cout << "\nArray after inseting 679 at the end:\n";
+	myDynamicArr.insertAtEnd(679);
+	myDynamicArr.print();
+
 	return 0;
 }
