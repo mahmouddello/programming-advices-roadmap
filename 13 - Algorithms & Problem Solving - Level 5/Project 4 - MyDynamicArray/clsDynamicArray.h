@@ -23,12 +23,13 @@ public:
 		delete[] _array;
 	}
 
-	void setItem(const unsigned short& index, const T& value)
+	bool setItem(const unsigned short& index, const T& value)
 	{
 		if (index < 0 || index >= _size)
-			return;
+			return false;
 
 		_array[index] = value;
+		return true;
 	}
 
 	void print()
@@ -185,10 +186,10 @@ public:
 	}
 
 	// Extension 10
-	void insertAt(const unsigned short& index, const T& value)
+	bool insertAt(const unsigned short& index, const T& value)
 	{
 		if (index > _size)
-			return;
+			return false;
 
 		T* tempArr = new T[_size + 1];
 
@@ -205,34 +206,35 @@ public:
 		delete[] _array;
 		_size++;
 		_array = tempArr;
+		return true;
 	}
 
 	// Extensions #11 to #14
 
-	void insertAtBeginning(const T& value)
+	bool insertAtBeginning(const T& value)
 	{
-		insertAt(0, value);
+		return insertAt(0, value);
 	}
 
-	void insertBefore(const unsigned short& index, const T& value)
+	bool insertBefore(const unsigned short& index, const T& value)
 	{
 		if (index < 1)
-			insertAt(0, value);
+			return insertAt(0, value);
 		else
-			insertAt(index - 1, value);
+			return insertAt(index - 1, value);
 	}
 
-	void insertAfter(const unsigned short& index, const T& value)
+	bool insertAfter(const unsigned short& index, const T& value)
 	{
 		if (index >= _size)
-			insertAt(_size, value);
+			return insertAt(_size, value);
 		else
-			insertAt(index + 1, value);
+			return insertAt(index + 1, value);
 	}
 
-	void insertAtEnd(const T& value)
+	bool insertAtEnd(const T& value)
 	{
-		insertAfter(_size, value);
+		return insertAfter(_size, value);
 	}
 };
 
