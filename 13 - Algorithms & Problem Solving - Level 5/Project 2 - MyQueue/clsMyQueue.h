@@ -73,5 +73,10 @@ public:
 		_myList.clear();
 	}
 
+	bool isEmpty()
+	{
+		return _myList.getSize() == 0;
+	}
+
 };
 
