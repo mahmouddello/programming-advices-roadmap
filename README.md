@@ -1,8 +1,8 @@
 # Programming Advices Roadmap
 
-<!-- >[!TIP]
+>[!TIP]
 > هل تبحث عن النسخة العربية؟  
-> [اقرأ هذا الملف باللغة العربية هنا](README.ar.md) -->
+> [اقرأ هذا الملف باللغة العربية هنا](./README.ar.md)
 
 Welcome to the **Programming Advices Roadmap** repository!  
 This repo contains my personal code and notes as I progress through the roadmap. Each folder corresponds to a specific course or module.
