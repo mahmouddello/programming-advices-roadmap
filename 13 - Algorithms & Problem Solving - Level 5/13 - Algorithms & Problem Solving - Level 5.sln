@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project 6 - Array Based Sta
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project 7 - Redo & Undo using Stack", "Project 7 - Redo & Undo using Stack\Project 7 - Redo & Undo using Stack.vcxproj", "{E5BECFFE-5AA0-484D-9DC3-87A93AF702B8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project 8 - Application (Queue Line)", "Project 8 - Application (Queue Line)\Project 8 - Application (Queue Line).vcxproj", "{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{E5BECFFE-5AA0-484D-9DC3-87A93AF702B8}.Release|x64.Build.0 = Release|x64
 		{E5BECFFE-5AA0-484D-9DC3-87A93AF702B8}.Release|x86.ActiveCfg = Release|Win32
 		{E5BECFFE-5AA0-484D-9DC3-87A93AF702B8}.Release|x86.Build.0 = Release|Win32
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Debug|x64.ActiveCfg = Debug|x64
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Debug|x64.Build.0 = Debug|x64
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Debug|x86.ActiveCfg = Debug|Win32
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Debug|x86.Build.0 = Debug|Win32
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Release|x64.ActiveCfg = Release|x64
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Release|x64.Build.0 = Release|x64
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Release|x86.ActiveCfg = Release|Win32
+		{FEDCD766-5A01-49A2-8C0C-9AC371F02CB4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
