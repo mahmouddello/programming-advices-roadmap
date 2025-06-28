@@ -13,9 +13,12 @@ This repo contains my personal code and notes as I progress through the roadmap.
 
 > [!IMPORTANT]
 > ### 📌 Visual Studio Projects  
-> Starting from **Course 3**, each course is a **Microsoft Visual Studio Solution**. 
-> You can open the entire course by launching the `.sln` file in the corresponding directory.
-> Each solution contains multiple projects, with each project representing a lesson in the course. To run the code for a lesson, right-click the project and select "Set as Startup Project".
+> Starting from **Course 3**, each course is a **Microsoft Visual Studio Solution**.  
+> You can open the entire course by launching the `.sln` file in the corresponding directory.  
+>  
+> Each solution contains multiple projects, with each project representing a lesson in the course.  
+> To run the code for a lesson, right-click the project and select **"Set as Startup Project"**.
+
 
 > [!NOTE]
 > ### 🗒️ Notion Notes  
