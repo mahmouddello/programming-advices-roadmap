@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09 - User Input", "09 - Use
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 - Operators", "10 - Operators\10 - Operators.csproj", "{84A37791-AE63-457F-818D-B37932234053}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 - Control Flow", "11 - Control Flow\11 - Control Flow.csproj", "{4072A021-4FF2-4D53-A679-C264B44F0DB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{84A37791-AE63-457F-818D-B37932234053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84A37791-AE63-457F-818D-B37932234053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84A37791-AE63-457F-818D-B37932234053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4072A021-4FF2-4D53-A679-C264B44F0DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4072A021-4FF2-4D53-A679-C264B44F0DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4072A021-4FF2-4D53-A679-C264B44F0DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4072A021-4FF2-4D53-A679-C264B44F0DB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
