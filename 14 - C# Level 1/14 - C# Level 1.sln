@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 - Control Flow", "11 - C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12 - Arrays", "12 - Arrays\12 - Arrays.csproj", "{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13 - MathLibrary", "13 - MathLibrary\13 - MathLibrary.csproj", "{D3494D05-5515-4AFB-805F-84A4E4BBBF41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3494D05-5515-4AFB-805F-84A4E4BBBF41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3494D05-5515-4AFB-805F-84A4E4BBBF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3494D05-5515-4AFB-805F-84A4E4BBBF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3494D05-5515-4AFB-805F-84A4E4BBBF41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
