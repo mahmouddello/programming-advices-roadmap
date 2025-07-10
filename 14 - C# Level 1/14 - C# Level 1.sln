@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 - Operators", "10 - Oper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 - Control Flow", "11 - Control Flow\11 - Control Flow.csproj", "{4072A021-4FF2-4D53-A679-C264B44F0DB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12 - Arrays", "12 - Arrays\12 - Arrays.csproj", "{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{4072A021-4FF2-4D53-A679-C264B44F0DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4072A021-4FF2-4D53-A679-C264B44F0DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4072A021-4FF2-4D53-A679-C264B44F0DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754CFDBE-DE78-4DEE-A5D5-B9564B57E3E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
