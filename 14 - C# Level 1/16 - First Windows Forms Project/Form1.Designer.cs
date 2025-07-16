@@ -40,7 +40,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCloseform = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -48,7 +48,7 @@
             this.textBox1.Location = new System.Drawing.Point(325, 134);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(205, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -86,7 +86,7 @@
             this.button3.Location = new System.Drawing.Point(526, 394);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 49);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Disable Textbox 1";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -96,7 +96,7 @@
             this.button4.Location = new System.Drawing.Point(526, 477);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 49);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 9;
             this.button4.Text = "Enable Textbox 1";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -116,7 +116,7 @@
             this.button7.Location = new System.Drawing.Point(325, 399);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(150, 49);
-            this.button7.TabIndex = 8;
+            this.button7.TabIndex = 4;
             this.button7.Text = "Make Text1 RED";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -126,7 +126,7 @@
             this.button8.Location = new System.Drawing.Point(325, 477);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(150, 49);
-            this.button8.TabIndex = 9;
+            this.button8.TabIndex = 8;
             this.button8.Text = "Make Text1 White";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -136,7 +136,7 @@
             this.button9.Location = new System.Drawing.Point(952, 399);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(150, 49);
-            this.button9.TabIndex = 10;
+            this.button9.TabIndex = 7;
             this.button9.Text = "Change Form Title";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -158,30 +158,30 @@
             this.button10.Location = new System.Drawing.Point(756, 477);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(150, 49);
-            this.button10.TabIndex = 12;
+            this.button10.TabIndex = 10;
             this.button10.Text = "Show Textbox 1";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnCloseform
             // 
-            this.button6.FlatAppearance.BorderSize = 5;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(1157, 399);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 49);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.btnCloseform.FlatAppearance.BorderSize = 5;
+            this.btnCloseform.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCloseform.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnCloseform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseform.Location = new System.Drawing.Point(1157, 399);
+            this.btnCloseform.Name = "btnCloseform";
+            this.btnCloseform.Size = new System.Drawing.Size(150, 49);
+            this.btnCloseform.TabIndex = 11;
+            this.btnCloseform.Text = "Close";
+            this.btnCloseform.UseVisualStyleBackColor = true;
+            this.btnCloseform.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1383, 578);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnCloseform);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button9);
@@ -215,7 +215,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCloseform;
     }
 }
 

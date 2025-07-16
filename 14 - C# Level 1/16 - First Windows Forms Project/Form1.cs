@@ -85,7 +85,7 @@ namespace _16___First_Windows_Forms_Project
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-
+            this.Close(); // closes the current form (form 1)
         }
     }
 }
