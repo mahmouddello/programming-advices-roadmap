@@ -28,5 +28,11 @@ namespace _16___First_Windows_Forms_Project
             Form form1 = new Form1();
             form1.ShowDialog();
         }
+
+        private void btnShowDialogForm_Click(object sender, EventArgs e)
+        {
+            Form f = new DialogsForm();
+            f.ShowDialog();
+        }
     }
 }

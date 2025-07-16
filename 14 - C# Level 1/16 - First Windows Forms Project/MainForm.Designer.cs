@@ -30,6 +30,7 @@
         {
             this.btnShowForm1 = new System.Windows.Forms.Button();
             this.btnShowFormDialo = new System.Windows.Forms.Button();
+            this.btnShowDialogForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnShowForm1
@@ -52,11 +53,22 @@
             this.btnShowFormDialo.UseVisualStyleBackColor = true;
             this.btnShowFormDialo.Click += new System.EventHandler(this.btnShowFormDialo_Click);
             // 
+            // btnShowDialogForm
+            // 
+            this.btnShowDialogForm.Location = new System.Drawing.Point(262, 57);
+            this.btnShowDialogForm.Name = "btnShowDialogForm";
+            this.btnShowDialogForm.Size = new System.Drawing.Size(150, 60);
+            this.btnShowDialogForm.TabIndex = 2;
+            this.btnShowDialogForm.Text = "Show Dialog Form";
+            this.btnShowDialogForm.UseVisualStyleBackColor = true;
+            this.btnShowDialogForm.Click += new System.EventHandler(this.btnShowDialogForm_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnShowDialogForm);
             this.Controls.Add(this.btnShowFormDialo);
             this.Controls.Add(this.btnShowForm1);
             this.Name = "MainForm";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button btnShowForm1;
         private System.Windows.Forms.Button btnShowFormDialo;
+        private System.Windows.Forms.Button btnShowDialogForm;
     }
 }
