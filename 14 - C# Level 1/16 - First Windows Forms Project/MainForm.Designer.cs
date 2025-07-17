@@ -32,6 +32,7 @@
             this.btnShowFormDialo = new System.Windows.Forms.Button();
             this.btnShowDialogForm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.ShowMoreAboutTextboxForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnShowForm1
@@ -74,11 +75,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // ShowMoreAboutTextboxForm
+            // 
+            this.ShowMoreAboutTextboxForm.Location = new System.Drawing.Point(262, 294);
+            this.ShowMoreAboutTextboxForm.Name = "ShowMoreAboutTextboxForm";
+            this.ShowMoreAboutTextboxForm.Size = new System.Drawing.Size(150, 60);
+            this.ShowMoreAboutTextboxForm.TabIndex = 4;
+            this.ShowMoreAboutTextboxForm.Text = "More About TextBox";
+            this.ShowMoreAboutTextboxForm.UseVisualStyleBackColor = true;
+            this.ShowMoreAboutTextboxForm.Click += new System.EventHandler(this.ShowMoreAboutTextboxForm_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ShowMoreAboutTextboxForm);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnShowDialogForm);
             this.Controls.Add(this.btnShowFormDialo);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Button btnShowFormDialo;
         private System.Windows.Forms.Button btnShowDialogForm;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ShowMoreAboutTextboxForm;
     }
 }

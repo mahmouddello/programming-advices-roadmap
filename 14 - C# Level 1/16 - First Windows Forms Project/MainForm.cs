@@ -40,5 +40,11 @@ namespace _16___First_Windows_Forms_Project
             Form frm = new frmChkRadioGroup();
             frm.ShowDialog();
         }
+
+        private void ShowMoreAboutTextboxForm_Click(object sender, EventArgs e)
+        {
+            Form form = new MoreAboutTextBox();
+            form.ShowDialog();
+        }
     }
 }
