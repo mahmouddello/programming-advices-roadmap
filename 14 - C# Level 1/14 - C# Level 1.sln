@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17 - PizzaMaker App", "17 -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18 - PictureBox", "18 - PictureBox\18 - PictureBox.csproj", "{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19 - Drawing", "19 - Drawing\19 - Drawing.csproj", "{B988BC70-C5A8-451D-A07B-80B2A721702F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B988BC70-C5A8-451D-A07B-80B2A721702F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B988BC70-C5A8-451D-A07B-80B2A721702F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B988BC70-C5A8-451D-A07B-80B2A721702F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B988BC70-C5A8-451D-A07B-80B2A721702F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
