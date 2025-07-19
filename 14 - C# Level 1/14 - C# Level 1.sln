@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16 - First Windows Forms Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17 - PizzaMaker App", "17 - PizzaMaker App\17 - PizzaMaker App.csproj", "{9B1DA157-6727-4F63-B671-16957A12E04D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18 - PictureBox", "18 - PictureBox\18 - PictureBox.csproj", "{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{9B1DA157-6727-4F63-B671-16957A12E04D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B1DA157-6727-4F63-B671-16957A12E04D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B1DA157-6727-4F63-B671-16957A12E04D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F54FA7E-1E54-4539-AE36-BDDCE2ED3149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
