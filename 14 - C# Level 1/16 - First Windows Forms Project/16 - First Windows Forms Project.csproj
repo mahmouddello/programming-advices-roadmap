@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckedListBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckedListBoxForm.Designer.cs">
+      <DependentUpon>CheckedListBoxForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComboBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CheckedListBoxForm.resx">
+      <DependentUpon>CheckedListBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComboBoxExercise.resx">
       <DependentUpon>ComboBoxExercise.cs</DependentUpon>
     </EmbeddedResource>

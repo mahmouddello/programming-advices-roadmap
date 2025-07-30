@@ -64,5 +64,11 @@ namespace _16___First_Windows_Forms_Project
             Form form = new LinkLabelForm();
             form.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form form = new CheckedListBoxForm();
+            form.ShowDialog();
+        }
     }
 }
