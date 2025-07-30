@@ -53,5 +53,27 @@ namespace _16___First_Windows_Forms_Project
         {
             checkedListBox1.Items.RemoveAt(2);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                checkedListBox1.Items.Add(textBox1.Text);
+                textBox1.Clear();
+            }
+            else
+                MessageBox.Show("Textbox is Empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                if (checkedListBox1.GetItemChecked(i))
+                {
+                    checkedListBox1.Items.RemoveAt(i);
+                }
+            }
+        }
     }
 }
