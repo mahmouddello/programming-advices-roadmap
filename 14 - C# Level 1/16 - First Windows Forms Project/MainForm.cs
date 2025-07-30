@@ -58,5 +58,11 @@ namespace _16___First_Windows_Forms_Project
             Form form = new ComboBoxForm();
             form.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form form = new LinkLabelForm();
+            form.ShowDialog();
+        }
     }
 }

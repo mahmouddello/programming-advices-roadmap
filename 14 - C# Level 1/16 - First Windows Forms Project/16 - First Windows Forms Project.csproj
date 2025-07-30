@@ -70,6 +70,12 @@
     <Compile Include="ComboBoxExercise.Designer.cs">
       <DependentUpon>ComboBoxExercise.cs</DependentUpon>
     </Compile>
+    <Compile Include="LinkLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinkLabelForm.Designer.cs">
+      <DependentUpon>LinkLabelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChkRadioGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChkRadioGroup.resx">
       <DependentUpon>frmChkRadioGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkLabelForm.resx">
+      <DependentUpon>LinkLabelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
