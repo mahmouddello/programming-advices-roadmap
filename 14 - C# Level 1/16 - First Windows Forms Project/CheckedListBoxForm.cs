@@ -20,25 +20,19 @@ namespace _16___First_Windows_Forms_Project
         private void button1_Click(object sender, EventArgs e)
         {
             for (int i = 1; i <= 5; i++)
-            {
                 checkedListBox1.Items.Add("Item " +  i);
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
-            {
                 MessageBox.Show(checkedListBox1.CheckedItems[i].ToString());
-            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
-            {
                 checkedListBox1.SetItemChecked(i, true);
-            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -57,23 +51,18 @@ namespace _16___First_Windows_Forms_Project
         private void button6_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
-            {
                 checkedListBox1.Items.Add(textBox1.Text);
-                textBox1.Clear();
-            }
             else
                 MessageBox.Show("Textbox is Empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            textBox1.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
-            {
                 if (checkedListBox1.GetItemChecked(i))
-                {
                     checkedListBox1.Items.RemoveAt(i);
-                }
-            }
         }
     }
 }
