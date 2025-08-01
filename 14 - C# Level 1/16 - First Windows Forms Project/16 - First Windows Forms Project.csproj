@@ -82,6 +82,12 @@
     <Compile Include="ComboBoxExercise.Designer.cs">
       <DependentUpon>ComboBoxExercise.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonthCalendarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthCalendarForm.Designer.cs">
+      <DependentUpon>MonthCalendarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LinkLabelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MaskedTextboxForm.resx">
       <DependentUpon>MaskedTextboxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthCalendarForm.resx">
+      <DependentUpon>MonthCalendarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreAboutTextBox.resx">
       <DependentUpon>MoreAboutTextBox.cs</DependentUpon>

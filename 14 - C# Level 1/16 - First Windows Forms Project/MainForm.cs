@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _16___First_Windows_Forms_Project
@@ -74,6 +67,12 @@ namespace _16___First_Windows_Forms_Project
         private void button6_Click(object sender, EventArgs e)
         {
             Form form = new DateTimePickerForm();
+            form.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form form = new MonthCalendarForm();
             form.ShowDialog();
         }
     }
