@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19 - Drawing", "19 - Drawin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20 - TicTacToe Game", "20 - TicTacToe Game\20 - TicTacToe Game.csproj", "{FBD4066D-1599-4313-8ECA-84E4E1A20837}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21 - NotifyIcon", "21 - NotifyIcon\21 - NotifyIcon.csproj", "{3F96A3B2-F774-435D-A646-740920419EB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{FBD4066D-1599-4313-8ECA-84E4E1A20837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD4066D-1599-4313-8ECA-84E4E1A20837}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD4066D-1599-4313-8ECA-84E4E1A20837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F96A3B2-F774-435D-A646-740920419EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F96A3B2-F774-435D-A646-740920419EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F96A3B2-F774-435D-A646-740920419EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F96A3B2-F774-435D-A646-740920419EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
