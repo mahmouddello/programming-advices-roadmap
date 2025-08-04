@@ -39,6 +39,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnShowForm1
@@ -54,7 +55,7 @@
             // 
             // btnShowFormDialo
             // 
-            this.btnShowFormDialo.Location = new System.Drawing.Point(70, 224);
+            this.btnShowFormDialo.Location = new System.Drawing.Point(70, 225);
             this.btnShowFormDialo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnShowFormDialo.Name = "btnShowFormDialo";
             this.btnShowFormDialo.Size = new System.Drawing.Size(169, 75);
@@ -65,7 +66,7 @@
             // 
             // btnShowDialogForm
             // 
-            this.btnShowDialogForm.Location = new System.Drawing.Point(295, 71);
+            this.btnShowDialogForm.Location = new System.Drawing.Point(292, 71);
             this.btnShowDialogForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnShowDialogForm.Name = "btnShowDialogForm";
             this.btnShowDialogForm.Size = new System.Drawing.Size(169, 75);
@@ -76,7 +77,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(295, 224);
+            this.button1.Location = new System.Drawing.Point(292, 224);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 75);
@@ -87,7 +88,7 @@
             // 
             // ShowMoreAboutTextboxForm
             // 
-            this.ShowMoreAboutTextboxForm.Location = new System.Drawing.Point(295, 368);
+            this.ShowMoreAboutTextboxForm.Location = new System.Drawing.Point(70, 379);
             this.ShowMoreAboutTextboxForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ShowMoreAboutTextboxForm.Name = "ShowMoreAboutTextboxForm";
             this.ShowMoreAboutTextboxForm.Size = new System.Drawing.Size(169, 75);
@@ -98,7 +99,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(518, 71);
+            this.button2.Location = new System.Drawing.Point(514, 71);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 75);
@@ -109,7 +110,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(518, 224);
+            this.button3.Location = new System.Drawing.Point(514, 224);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(169, 75);
@@ -120,7 +121,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(518, 368);
+            this.button4.Location = new System.Drawing.Point(294, 380);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(169, 75);
@@ -131,7 +132,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(737, 71);
+            this.button5.Location = new System.Drawing.Point(736, 71);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(169, 75);
@@ -142,7 +143,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(737, 224);
+            this.button6.Location = new System.Drawing.Point(736, 224);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(169, 75);
@@ -153,7 +154,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(737, 368);
+            this.button7.Location = new System.Drawing.Point(518, 380);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(169, 75);
@@ -162,11 +163,23 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(736, 379);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(169, 75);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "Timer Form";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 558);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -198,5 +211,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

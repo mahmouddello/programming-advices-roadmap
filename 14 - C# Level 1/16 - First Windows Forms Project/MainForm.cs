@@ -75,5 +75,11 @@ namespace _16___First_Windows_Forms_Project
             Form form = new MonthCalendarForm();
             form.ShowDialog();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form form = new TimerForm();
+            form.ShowDialog();
+        }
     }
 }
