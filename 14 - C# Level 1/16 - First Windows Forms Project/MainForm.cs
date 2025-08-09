@@ -81,5 +81,11 @@ namespace _16___First_Windows_Forms_Project
             Form form = new TimerForm();
             form.ShowDialog();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form form = new ProgressBarForm();
+            form.ShowDialog();
+        }
     }
 }
