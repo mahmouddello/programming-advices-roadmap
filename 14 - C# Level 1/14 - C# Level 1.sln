@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22 - TreeView and ImageList
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23 - ListView Control", "23 - ListView Control\23 - ListView Control.csproj", "{5E7F7A81-D54E-405C-AE2B-203E7E0DB519}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24 - ErrorProvider Control", "24 - ErrorProvider Control\24 - ErrorProvider Control.csproj", "{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{5E7F7A81-D54E-405C-AE2B-203E7E0DB519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E7F7A81-D54E-405C-AE2B-203E7E0DB519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E7F7A81-D54E-405C-AE2B-203E7E0DB519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
