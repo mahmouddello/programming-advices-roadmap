@@ -87,5 +87,11 @@ namespace _16___First_Windows_Forms_Project
             Form form = new ProgressBarForm();
             form.ShowDialog();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form form = new frmTrackbar();
+            form.ShowDialog();
+        }
     }
 }

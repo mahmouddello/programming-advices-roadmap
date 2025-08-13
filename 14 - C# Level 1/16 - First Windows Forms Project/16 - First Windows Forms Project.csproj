@@ -82,6 +82,12 @@
     <Compile Include="ComboBoxExercise.Designer.cs">
       <DependentUpon>ComboBoxExercise.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTrackbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrackbar.Designer.cs">
+      <DependentUpon>frmTrackbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="MonthCalendarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChkRadioGroup.resx">
       <DependentUpon>frmChkRadioGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrackbar.resx">
+      <DependentUpon>frmTrackbar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LinkLabelForm.resx">
       <DependentUpon>LinkLabelForm.cs</DependentUpon>
