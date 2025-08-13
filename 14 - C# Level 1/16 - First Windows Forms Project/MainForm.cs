@@ -93,5 +93,11 @@ namespace _16___First_Windows_Forms_Project
             Form form = new frmTrackbar();
             form.ShowDialog();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Form form = new frmNumericUpdown();
+            form.ShowDialog();
+        }
     }
 }
