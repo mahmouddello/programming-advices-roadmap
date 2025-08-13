@@ -26,7 +26,7 @@ namespace _23___ListView_Control
             }
 
             ListViewItem item = new ListViewItem(IDTextBox.Text);
-            item.SubItems.Add(NameTextBox.Text);
+            item.SubItems.Add(NameTextBox.Text.Trim());
             item.ImageIndex = 0;
 
             listView1.Items.Add(item);

@@ -40,14 +40,14 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.ColumnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.largeImageList = new System.Windows.Forms.ImageList(this.components);
+            this.smallImageList = new System.Windows.Forms.ImageList(this.components);
             this.RBDetails = new System.Windows.Forms.RadioButton();
             this.RBTile = new System.Windows.Forms.RadioButton();
             this.RBSmallIcon = new System.Windows.Forms.RadioButton();
             this.RBList = new System.Windows.Forms.RadioButton();
             this.RBLargeIcon = new System.Windows.Forms.RadioButton();
             this.IDTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.smallImageList = new System.Windows.Forms.ImageList(this.components);
-            this.largeImageList = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -143,6 +143,20 @@
             // 
             this.ColumnName.Text = "Name";
             // 
+            // largeImageList
+            // 
+            this.largeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("largeImageList.ImageStream")));
+            this.largeImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.largeImageList.Images.SetKeyName(0, "Strong.png");
+            this.largeImageList.Images.SetKeyName(1, "Weak.png");
+            // 
+            // smallImageList
+            // 
+            this.smallImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallImageList.ImageStream")));
+            this.smallImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.smallImageList.Images.SetKeyName(0, "Strong.png");
+            this.smallImageList.Images.SetKeyName(1, "Weak.png");
+            // 
             // RBDetails
             // 
             this.RBDetails.AutoSize = true;
@@ -217,22 +231,9 @@
             this.IDTextBox.TabIndex = 15;
             this.IDTextBox.ValidatingType = typeof(int);
             // 
-            // smallImageList
-            // 
-            this.smallImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallImageList.ImageStream")));
-            this.smallImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.smallImageList.Images.SetKeyName(0, "Strong.png");
-            this.smallImageList.Images.SetKeyName(1, "Weak.png");
-            // 
-            // largeImageList
-            // 
-            this.largeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("largeImageList.ImageStream")));
-            this.largeImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.largeImageList.Images.SetKeyName(0, "Strong.png");
-            this.largeImageList.Images.SetKeyName(1, "Weak.png");
-            // 
             // Form1
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 755);
