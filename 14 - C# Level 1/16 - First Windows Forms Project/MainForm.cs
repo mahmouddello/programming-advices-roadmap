@@ -99,5 +99,11 @@ namespace _16___First_Windows_Forms_Project
             Form form = new frmNumericUpdown();
             form.ShowDialog();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Form form = new frmTabControl();
+            form.ShowDialog();
+        }
     }
 }
