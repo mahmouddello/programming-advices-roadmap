@@ -82,6 +82,12 @@
     <Compile Include="ComboBoxExercise.Designer.cs">
       <DependentUpon>ComboBoxExercise.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGroupBoxVsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGroupBoxVsPanel.Designer.cs">
+      <DependentUpon>frmGroupBoxVsPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNumericUpdown.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChkRadioGroup.resx">
       <DependentUpon>frmChkRadioGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGroupBoxVsPanel.resx">
+      <DependentUpon>frmGroupBoxVsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNumericUpdown.resx">
       <DependentUpon>frmNumericUpdown.cs</DependentUpon>
