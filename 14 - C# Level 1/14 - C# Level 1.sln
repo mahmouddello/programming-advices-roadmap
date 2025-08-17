@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23 - ListView Control", "23
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24 - ErrorProvider Control", "24 - ErrorProvider Control\24 - ErrorProvider Control.csproj", "{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25 - Dialogs", "25 - Dialogs\25 - Dialogs.csproj", "{4C8F4E4F-39B4-420B-AEB3-5071557B259E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37B64B48-FEEE-4E06-B376-AAACB4F28D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8F4E4F-39B4-420B-AEB3-5071557B259E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8F4E4F-39B4-420B-AEB3-5071557B259E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8F4E4F-39B4-420B-AEB3-5071557B259E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8F4E4F-39B4-420B-AEB3-5071557B259E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
