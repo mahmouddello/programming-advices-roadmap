@@ -29,6 +29,18 @@ namespace DateAndTime
 
             Console.WriteLine(result);
 
+            DateTime dt3 = new DateTime(2015, 12, 20);
+            DateTime dt4 = new DateTime(2016, 12, 31, 5, 10, 20);
+            TimeSpan time = new TimeSpan(10, 5, 25, 50);
+
+            Console.WriteLine(dt3 + time); // 1/10/2017 10:36:10 AM
+            Console.WriteLine(dt3 - dt4); //377.05:10:20
+            Console.WriteLine(dt3 == dt4); //False
+            Console.WriteLine(dt3 != dt4); //True
+            Console.WriteLine(dt3 > dt4); //False
+            Console.WriteLine(dt3 < dt4); //True
+            Console.WriteLine(dt3 >= dt4); //False
+            Console.WriteLine(dt3 <= dt4);//True
 
             Console.ReadKey();
 

@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26 - MDI Container", "26 - 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27 - MenuStrip", "27 - MenuStrip\27 - MenuStrip.csproj", "{234643BC-7992-4077-8D59-AA4521665122}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "38 - Context Menu", "38 - Context Menu\38 - Context Menu.csproj", "{FEE4634D-B5A6-483B-A0F5-03321CD3B692}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{234643BC-7992-4077-8D59-AA4521665122}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{234643BC-7992-4077-8D59-AA4521665122}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{234643BC-7992-4077-8D59-AA4521665122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE4634D-B5A6-483B-A0F5-03321CD3B692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE4634D-B5A6-483B-A0F5-03321CD3B692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE4634D-B5A6-483B-A0F5-03321CD3B692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE4634D-B5A6-483B-A0F5-03321CD3B692}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
