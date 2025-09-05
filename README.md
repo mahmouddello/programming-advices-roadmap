@@ -1,7 +1,6 @@
 # Programming Advices Roadmap
 
 >[!TIP]
-> هل تبحث عن النسخة العربية؟  
 > [اقرأ هذا الملف باللغة العربية هنا](./README.ar.md)
 
 Welcome to the **Programming Advices Roadmap** repository!  
