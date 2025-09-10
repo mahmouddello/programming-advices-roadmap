@@ -381,3 +381,27 @@ select ID, FirstName, LastName from Employees
 Where firstName like '[a-l]%'
 ORDER BY FirstName ASC;
 ---------------------------------
+
+
+--1- first name Is exactly 5 characters long, ends with a vowel
+Select E.FirstName
+From Employees E
+Where FirstName Like '____[aeiou]';
+
+--2- First names that Begin with S or T, and have 6 total letters
+
+Select E.FirstName
+From Employees E
+Where FirstName Like '[ST]_____';
+
+--3- Last names where the second letter is a, and it ends with n
+
+Select ID, FirstName, LastName
+From Employees
+Where LastName like '_a%n'
+
+--4- Last names that Start with 'M', and the second letter is a vowel
+
+Select ID, FirstName, LastName
+From Employees
+Where LastName like 'M[aeiou]%'
