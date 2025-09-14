@@ -94,8 +94,10 @@ CREATE DATABASE DB3;
 
 USE DB3;
 
+DROP TABLE IF EXISTS Persons;
+
 CREATE TABLE Persons (
-   ID int NOT NULL,
+   ID int NOT NULL PRIMARY KEY,
    LastName varchar(255) NOT NULL,
    FirstName varchar(255),
    Age int,
@@ -171,3 +173,12 @@ INSERT INTO Lawyers (LastName, FirstName, Age, Email) VALUES ('Ali', 'Omar', 40,
 
 ALTER TABLE Lawyers
 ALTER COLUMN ID INT NULL;
+
+ALTER TABLE Persons
+ADD PRIMARY KEY (ID);
+
+CREATE INDEX idx_lastname
+ON Persons (lastName);
+
+CREATE INDEX idx_fname
+ON Persons (lastName, FirstName);
