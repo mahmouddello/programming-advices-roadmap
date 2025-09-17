@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36429.23 d17.14
+VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 - Class & Object", "01 - Class & Object\01 - Class & Object.csproj", "{B02C9EB0-9B74-40A6-9A9D-A2E5413669A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 - Access Modifiers", "02 - AccessModifiers\02 - Access Modifiers.csproj", "{99E4D21A-1197-4F79-BE8F-3679182D3C9E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 - Properties", "03 - Properties\03 - Properties.csproj", "{F7C96932-490B-4040-B4D7-BE16F1583863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 - Calculator", "04 - Calculator\04 - Calculator.csproj", "{486A1FA6-E56B-421A-BBC7-82472818B67D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F7C96932-490B-4040-B4D7-BE16F1583863}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7C96932-490B-4040-B4D7-BE16F1583863}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7C96932-490B-4040-B4D7-BE16F1583863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486A1FA6-E56B-421A-BBC7-82472818B67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486A1FA6-E56B-421A-BBC7-82472818B67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486A1FA6-E56B-421A-BBC7-82472818B67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486A1FA6-E56B-421A-BBC7-82472818B67D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
