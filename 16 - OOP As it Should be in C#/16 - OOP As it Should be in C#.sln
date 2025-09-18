@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 - Properties", "03 - Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 - Calculator", "04 - Calculator\04 - Calculator.csproj", "{486A1FA6-E56B-421A-BBC7-82472818B67D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 - Constructor And Destructor", "05 - Constructor And Destructor\05 - Constructor And Destructor.csproj", "{E7304293-6467-437D-BE6C-C58C9FAAAD78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{486A1FA6-E56B-421A-BBC7-82472818B67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{486A1FA6-E56B-421A-BBC7-82472818B67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{486A1FA6-E56B-421A-BBC7-82472818B67D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7304293-6467-437D-BE6C-C58C9FAAAD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7304293-6467-437D-BE6C-C58C9FAAAD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7304293-6467-437D-BE6C-C58C9FAAAD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7304293-6467-437D-BE6C-C58C9FAAAD78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
