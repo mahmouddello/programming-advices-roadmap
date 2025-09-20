@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09 - Interface", "09 - Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 - Misc", "10 - Misc\10 - Misc.csproj", "{044DA26B-F6C2-4685-B7DC-1BB23DD27973}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 - .NET Class Library", "11 - .NET Class Library\11 - .NET Class Library.csproj", "{8663C9EA-EBCB-46AB-B766-25D501810E84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12 - MyFirstClassLibrary", "12 - MyFirstClassLibrary\12 - MyFirstClassLibrary.csproj", "{DD179C93-38FA-436D-BAC9-655F80CC9EB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{044DA26B-F6C2-4685-B7DC-1BB23DD27973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{044DA26B-F6C2-4685-B7DC-1BB23DD27973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{044DA26B-F6C2-4685-B7DC-1BB23DD27973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8663C9EA-EBCB-46AB-B766-25D501810E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8663C9EA-EBCB-46AB-B766-25D501810E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8663C9EA-EBCB-46AB-B766-25D501810E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8663C9EA-EBCB-46AB-B766-25D501810E84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD179C93-38FA-436D-BAC9-655F80CC9EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD179C93-38FA-436D-BAC9-655F80CC9EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD179C93-38FA-436D-BAC9-655F80CC9EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD179C93-38FA-436D-BAC9-655F80CC9EB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
