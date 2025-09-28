@@ -1,0 +1,57 @@
+Table Persons {
+  id int [pk, increment]
+  name varchar(255)
+  birthdate date
+  gender char(1)
+  Phone varchar(20)
+  Email varchar(100)
+  Address varchar(255)
+}
+
+Table Patients {
+  patient_id int [pk, increment]
+  person_id int [ref: - Persons.id, unique] // 0..1 relationship
+}
+
+Table Doctors {
+  doctor_id int [pk, increment]
+  person_id int [ref: - Persons.id, unique] // 0..1 relationship
+  specialization varchar(100)
+}
+
+Table Appointments {
+  appointment_id int [pk, increment]
+  patient_id int [ref: > Patients.patient_id]
+  doctor_id int [ref: > Doctors.doctor_id]
+  appointment_date date
+  appointment_time time
+  appointment_status varchar(50)
+}
+
+Table MedicalRecords {
+  record_id int [pk, increment]
+  appointment_id int [ref: > Appointments.appointment_id]
+  description_of_visit text
+  diagnosis text
+  additional_notes text
+}
+
+Table Prescriptions {
+  prescription_id int [pk, increment]
+  medical_record_id int [ref: > MedicalRecords.record_id]
+  medication_name varchar(100)
+  dosage varchar(50)
+  frequency varchar(50)
+  start_date date
+  end_date date
+  special_instructions text
+}
+
+Table Payments {
+  payment_id int [pk, increment]
+  appointment_id int [ref: > Appointments.appointment_id]
+  payment_date date
+  payment_method varchar(50)
+  amount_paid decimal(10,2)
+  additional_notes text
+}
