@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 - DBConnection & SimpleQ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 - Insert Data", "02 - Insert Data\02 - Insert Data.csproj", "{876E628E-BE29-458E-A988-320AC88F62BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 - Update Data", "03 - Update Data\03 - Update Data.csproj", "{041AB53A-4F30-4D65-B376-763E57DE9D8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{876E628E-BE29-458E-A988-320AC88F62BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{876E628E-BE29-458E-A988-320AC88F62BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{876E628E-BE29-458E-A988-320AC88F62BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041AB53A-4F30-4D65-B376-763E57DE9D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041AB53A-4F30-4D65-B376-763E57DE9D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041AB53A-4F30-4D65-B376-763E57DE9D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041AB53A-4F30-4D65-B376-763E57DE9D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
