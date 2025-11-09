@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.IO;
+using dotenv.net;
 
 namespace _03___Update_Data
 {
@@ -16,7 +18,31 @@ namespace _03___Update_Data
             public int CountryID { get; set; }
         }
 
-        static string connectionString = "Server=.;Database=ContactsDB;User Id=sa;Password=sa123456";
+        private static string _connectionString;
+
+        static string connectionString
+        {
+            get
+            {
+                if (_connectionString == null)
+                {
+                    // Get the absolute path to your .env file (4 levels up from /bin/Debug)
+                    string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                    string envPath = Path.GetFullPath(Path.Combine(baseDir, @"..\..\..\.env"));
+
+                    Console.WriteLine("Loading .env from: " + envPath);
+
+                    DotEnv.Load(new DotEnvOptions(
+                        envFilePaths: new[] { envPath },
+                        overwriteExistingVars: true
+                    ));
+
+                    _connectionString = Environment.GetEnvironmentVariable("ContactsDB");
+                }
+
+                return _connectionString;
+            }
+        }
 
         static void UpdateContact(int contactID,  stContact newContact)
         {
