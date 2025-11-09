@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 - Insert Data", "02 - In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 - Update Data", "03 - Update Data\03 - Update Data.csproj", "{041AB53A-4F30-4D65-B376-763E57DE9D8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 - Delete Data", "04 - Delete Data\04 - Delete Data.csproj", "{1242F471-DFFD-4AE4-AB94-E3C11490310E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{041AB53A-4F30-4D65-B376-763E57DE9D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{041AB53A-4F30-4D65-B376-763E57DE9D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{041AB53A-4F30-4D65-B376-763E57DE9D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1242F471-DFFD-4AE4-AB94-E3C11490310E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1242F471-DFFD-4AE4-AB94-E3C11490310E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1242F471-DFFD-4AE4-AB94-E3C11490310E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1242F471-DFFD-4AE4-AB94-E3C11490310E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
