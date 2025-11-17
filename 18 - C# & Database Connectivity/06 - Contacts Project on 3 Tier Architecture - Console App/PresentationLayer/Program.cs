@@ -6,7 +6,7 @@ namespace PresentationLayer
 {
     internal class Program
     {
-        static void testFindContacat(int id)
+        static void testFindContact(int id)
         {
             Contact contact = Contact.Find(id);
             
@@ -44,10 +44,34 @@ namespace PresentationLayer
             else
                 Console.WriteLine("Contact Add failed");
         }
+
+        static void testUpdateContact(int id)
+        {
+            Contact contact2 = Contact.Find(id);
+
+            if (contact2 != null) 
+            {
+                contact2.FirstName = "Hamdi";
+                contact2.LastName = "Alwawi";
+                contact2.Email = "h@a.com";
+                contact2.Phone = "010010";
+                contact2.Address = "address7";
+                contact2.DateOfBirth = new DateTime(1979, 11, 6, 10, 30, 0);
+                contact2.CountryID = 1;
+                contact2.ImagePath = "";
+            }
+
+            if (contact2.Save())
+            {
+                Console.WriteLine("Updated the contact sucessfully");
+                testFindContact(id);
+            }
+        }
         static void Main(string[] args)
         {
-            //testFindContacat(2);
-            testAddNewContact();
+            //testFindContact(2);
+            //testAddNewContact();
+            testUpdateContact(1);
         }
     }
 }

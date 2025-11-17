@@ -58,6 +58,13 @@ namespace BusinessLayer
             return (this.ID != -1);
         }
 
+        private bool _UpdateContact()
+        {
+            // call dataAccessLayer
+            return ContactDataAccess.UpdateContact(this.ID, this.FirstName, this.LastName, this.Email, this.Phone,
+                this.Address, this.DateOfBirth,this.CountryID, this.ImagePath);
+        }
+
         public static Contact Find (int contactID)
         {
             string firstName = "", lastName = "", email = "", phone = "", address = "";
@@ -87,6 +94,8 @@ namespace BusinessLayer
                     }
                     else
                         return false;
+                case enMode.Update:
+                    return this._UpdateContact();
 
                 default: return false;
             }

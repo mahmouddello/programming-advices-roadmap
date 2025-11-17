@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Net;
+using System.Security.Policy;
 
 namespace DataAccessLayer
 {
@@ -106,6 +108,60 @@ namespace DataAccessLayer
             }
 
             return contactID;
+        }
+
+        public static bool UpdateContact(int contactID, string firstName, string lastName,
+            string email, string phone, string address,
+            DateTime dateOfBirth, int countryID, string imagePath)
+        {
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+
+            string query = @"UPDATE  Contacts  
+                            SET FirstName = @FirstName, 
+                                LastName = @LastName, 
+                                Email = @Email, 
+                                Phone = @Phone, 
+                                Address = @Address, 
+                                DateOfBirth = @DateOfBirth,
+                                CountryID = @CountryID,
+                                ImagePath =@ImagePath
+                            WHERE 
+                                ContactID = @ContactID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ContactID", contactID);
+            command.Parameters.AddWithValue("@FirstName", firstName);
+            command.Parameters.AddWithValue("@LastName", lastName);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+            command.Parameters.AddWithValue("@CountryID", countryID);
+
+            if (imagePath != "")
+                command.Parameters.AddWithValue("@ImagePath", imagePath);
+            else
+                command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex) 
+            {
+                // log file
+                return false;
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                    connection.Close();
+            }
+
+            return rowsAffected > 0;
         }
     }
 }
