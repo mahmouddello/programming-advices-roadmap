@@ -54,5 +54,58 @@ namespace DataAccessLayer
 
             return isFound;
         }
+
+        public static int AddNewContact(string firstName, string lastName,
+            string email, string phone, string address,
+            DateTime dateOfBirth, int countryID, string imagePath)
+        {
+            int contactID = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+
+            string query = @"INSERT INTO Contacts (FirstName, LastName, Email, Phone, Address,DateOfBirth, CountryID,ImagePath)
+                             VALUES (@FirstName, @LastName, @Email, @Phone, @Address,@DateOfBirth, @CountryID,@ImagePath);
+                             SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@FirstName", firstName);
+            command.Parameters.AddWithValue("@LastName", lastName);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Phone", phone);
+            command.Parameters.AddWithValue("@Address", address);
+            command.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+            command.Parameters.AddWithValue("@CountryID", countryID);
+
+            if (imagePath != "")
+                command.Parameters.AddWithValue("@ImagePath", imagePath);
+            else
+                command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    contactID = insertedID;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return contactID;
+        }
     }
 }

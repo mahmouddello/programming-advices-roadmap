@@ -1,5 +1,6 @@
-﻿using System;
-using BusinessLayer;
+﻿using BusinessLayer;
+using System;
+using System.Diagnostics.Contracts;
 
 namespace PresentationLayer
 {
@@ -24,9 +25,29 @@ namespace PresentationLayer
                 Console.WriteLine("Contact [" + id + "] Not found!");
             }
         }
+
+        static void testAddNewContact()
+        {
+            Contact contact2 = new Contact();
+
+            contact2.FirstName = "Fadi";
+            contact2.LastName = "Maher";
+            contact2.Email = "A@a.com";
+            contact2.Phone = "010010";
+            contact2.Address = "address1";
+            contact2.DateOfBirth = new DateTime(1977, 11, 6, 10, 30, 0);
+            contact2.CountryID = 1;
+            contact2.ImagePath = "";
+
+            if (contact2.Save())
+                Console.WriteLine($"Contact Added with id: {contact2.ID}");
+            else
+                Console.WriteLine("Contact Add failed");
+        }
         static void Main(string[] args)
         {
-            testFindContacat(2);
+            //testFindContacat(2);
+            testAddNewContact();
         }
     }
 }
