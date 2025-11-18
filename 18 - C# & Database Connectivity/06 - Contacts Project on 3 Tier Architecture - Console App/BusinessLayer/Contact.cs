@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer;
 using System;
+using System.Data.SqlClient;
 
 namespace BusinessLayer
 {
@@ -65,7 +66,7 @@ namespace BusinessLayer
                 this.Address, this.DateOfBirth,this.CountryID, this.ImagePath);
         }
 
-        public static Contact Find (int contactID)
+        public static Contact Find(int contactID)
         {
             string firstName = "", lastName = "", email = "", phone = "", address = "";
             DateTime dateOfBirth = DateTime.Now; int countryID = -1; string imagePath = "";
@@ -79,6 +80,11 @@ namespace BusinessLayer
             }
 
             return null;
+        }
+
+        public static bool Delete(int contactID)
+        {
+           return ContactDataAccess.DeleteContactByID(contactID);
         }
 
         public bool Save()

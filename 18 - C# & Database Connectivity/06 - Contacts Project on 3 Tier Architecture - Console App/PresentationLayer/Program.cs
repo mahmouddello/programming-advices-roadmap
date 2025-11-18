@@ -67,11 +67,21 @@ namespace PresentationLayer
                 testFindContact(id);
             }
         }
+
+        static void testDeleteContact(int id)
+        {
+            if (Contact.Delete(id))
+                Console.WriteLine("Contact Deleted Sucessfully");
+            else
+                Console.WriteLine("Contact Deletion failed");
+        }
         static void Main(string[] args)
         {
             //testFindContact(2);
             //testAddNewContact();
-            testUpdateContact(1);
+            //testUpdateContact(1);
+
+            testDeleteContact(15);
         }
     }
 }
