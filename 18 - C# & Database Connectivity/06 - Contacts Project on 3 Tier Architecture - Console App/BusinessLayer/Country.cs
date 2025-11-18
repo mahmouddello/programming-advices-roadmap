@@ -8,25 +8,30 @@ namespace BusinessLayer
     {
         public int CountryID { get; set; }
         public string CountryName { get; set; }
+        public string CountryCode { get; set; }
+
+        public string PhoneCode { get; set; }
 
         public enum enMode { AddNewMode = 0, UpdateMode = 1}
         enMode Mode = enMode.AddNewMode;
 
         private bool _AddNewCountry()
         {
-            this.CountryID = CountryDataAccess.AddNewCountry(this.CountryName);
+            this.CountryID = CountryDataAccess.AddNewCountry(this.CountryName, this.CountryCode, this.PhoneCode);
             return this.CountryID != -1;
         }
 
         private bool _UpdateCountry()
         {
-            return CountryDataAccess.UpdateCountry(this.CountryID, this.CountryName);
+            return CountryDataAccess.UpdateCountry(this.CountryID, this.CountryName, this.CountryCode, this.PhoneCode);
         }
 
-        private Country(int countryID, string countryName) 
+        private Country(int countryID, string countryName, string countryCode, string phoneCode) 
         {
             this.CountryID = countryID;
             this.CountryName = countryName;
+            this.CountryCode = countryCode;
+            this.PhoneCode = phoneCode;
 
             this.Mode = enMode.UpdateMode;
         }
@@ -35,16 +40,18 @@ namespace BusinessLayer
         {
             this.CountryID = -1;
             this.CountryName = string.Empty;
+            this.CountryCode = string.Empty;
+            this.PhoneCode = string.Empty;
             
             this.Mode = enMode.AddNewMode;
         }
 
         public static Country FindByID(int countryID)
         {
-            string countryName = string.Empty;
+            string countryName = string.Empty, countryCode = string.Empty, phoneCode = string.Empty;
 
-            if (CountryDataAccess.GetCountryByID(countryID, ref countryName))
-                return new Country(countryID, countryName);
+            if (CountryDataAccess.GetCountryByID(countryID, ref countryName, ref countryCode, ref phoneCode))
+                return new Country(countryID, countryName, countryCode, phoneCode);
 
             return null;
         }
@@ -52,9 +59,11 @@ namespace BusinessLayer
         public static Country FindByName(string countryName)
         {
             int countryID = -1;
+            string countryCode = string.Empty;
+            string phoneCode = string.Empty;
 
-            if (CountryDataAccess.GetCountryByName(ref countryName, ref countryID))
-                return new Country(countryID, countryName);
+            if (CountryDataAccess.GetCountryByName(ref countryName, ref countryID, ref countryCode, ref phoneCode))
+                return new Country(countryID, countryName, countryCode, phoneCode);
 
             return null;
         }

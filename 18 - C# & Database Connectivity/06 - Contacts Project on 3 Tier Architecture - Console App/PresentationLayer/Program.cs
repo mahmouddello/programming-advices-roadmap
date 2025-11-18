@@ -123,11 +123,13 @@ namespace PresentationLayer
                 Console.WriteLine($"Country with name \"{name}\" doesn't exists!");
         }
 
-        static void testAddNewCountry(string newCountryName)
+        static void testAddNewCountry(string newCountryName, string newCountryCode, string newPhoneCode)
         {
             Country country = new Country();
 
             country.CountryName = newCountryName;
+            country.CountryCode = newCountryCode;
+            country.PhoneCode = newPhoneCode;
 
             if (country.Save())
             {
@@ -139,13 +141,15 @@ namespace PresentationLayer
 
         }
 
-        static void testUpdateCountryByID(int countryID, string newCountryName)
+        static void testUpdateCountryByID(int countryID, string newCountryName, string newCountryCode, string newPhoneCode)
         {
             Country country = Country.FindByID(countryID);
 
             if (country != null)
             {
                 country.CountryName = newCountryName;
+                country.CountryCode = newCountryCode;
+                country.PhoneCode = newPhoneCode;
 
                 if (country.Save())
                 {
@@ -173,7 +177,7 @@ namespace PresentationLayer
             Console.WriteLine("Countries Data");
             foreach (DataRow row in dt.Rows)
             {
-                Console.WriteLine($"{row["CountryID"]}, {row["CountryName"]}");
+                Console.WriteLine($"{row["CountryID"]}, {row["CountryName"]}, {row["CountryCode"]}, {row["PhoneCode"]}");
             }
         }
 
@@ -204,7 +208,7 @@ namespace PresentationLayer
             Console.WriteLine("------------------------------------------------");
 
             //testAddNewCountry("Syria");
-            //testUpdateCountryByID(9, "Austria");
+            testUpdateCountryByID(6, "Syrian Arab Republic", "SY", "963");
 
             //testDeleteCountryByID(9);
 
