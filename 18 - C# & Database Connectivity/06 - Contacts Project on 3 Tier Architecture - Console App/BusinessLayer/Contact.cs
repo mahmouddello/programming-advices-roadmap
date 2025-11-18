@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -112,5 +113,9 @@ namespace BusinessLayer
         {
             return ContactDataAccess.GetAllContacts();
         }
+
+        public static bool IsExist(int contactID) {
+            return ContactDataAccess.IsExist(contactID);
+        } 
     }
 }

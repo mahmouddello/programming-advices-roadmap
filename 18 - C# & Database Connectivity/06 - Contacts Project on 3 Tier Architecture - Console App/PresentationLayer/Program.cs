@@ -87,6 +87,14 @@ namespace PresentationLayer
                 Console.WriteLine($"{row["ContactID"]}, {row["FirstName"]}, {row["LastName"]}");
             }
         }
+
+        static void testIsExist(int id)
+        {
+            if (Contact.IsExist(id))
+                Console.WriteLine("Contact exists!");
+            else
+                Console.WriteLine("Contact doesn't exists!");
+        }
         static void Main(string[] args)
         {
             //testFindContact(2);
@@ -94,7 +102,10 @@ namespace PresentationLayer
             //testUpdateContact(1);
 
             //testDeleteContact(15);
-            ListContacts();
+            //ListContacts();
+
+            testIsExist(1);
+            testIsExist(100);
         }
     }
 }

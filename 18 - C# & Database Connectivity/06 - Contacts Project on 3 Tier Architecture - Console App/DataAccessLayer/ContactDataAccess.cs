@@ -222,5 +222,35 @@ namespace DataAccessLayer
 
             return dt;
         }
+
+        public static bool IsExist(int contactID)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+
+            string query = @"SELECT Found = 1 FROM Contacts WHERE ContactID = @ContactID";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@ContactID", contactID);
+
+            try
+            {
+                connection.Open();
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                    isFound = true;
+            }
+
+            catch (Exception ex) { }
+
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                    connection.Close();
+            }
+
+            return isFound;
+        }
     }
 }
