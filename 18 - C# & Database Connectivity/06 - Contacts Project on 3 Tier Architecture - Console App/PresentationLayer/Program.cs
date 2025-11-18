@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using System;
+using System.Data;
 using System.Diagnostics.Contracts;
 
 namespace PresentationLayer
@@ -75,13 +76,25 @@ namespace PresentationLayer
             else
                 Console.WriteLine("Contact Deletion failed");
         }
+
+        static void ListContacts()
+        {
+            DataTable dt = Contact.GetAllContacts();
+            Console.WriteLine("Contacts Data:\n");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Console.WriteLine($"{row["ContactID"]}, {row["FirstName"]}, {row["LastName"]}");
+            }
+        }
         static void Main(string[] args)
         {
             //testFindContact(2);
             //testAddNewContact();
             //testUpdateContact(1);
 
-            testDeleteContact(15);
+            //testDeleteContact(15);
+            ListContacts();
         }
     }
 }

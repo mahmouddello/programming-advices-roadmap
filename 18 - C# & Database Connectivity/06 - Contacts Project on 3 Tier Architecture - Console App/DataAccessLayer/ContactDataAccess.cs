@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Net;
-using System.Security.Policy;
+using System.Data;
 
 namespace DataAccessLayer
 {
@@ -191,6 +190,37 @@ namespace DataAccessLayer
             }
 
             return rowsAffected > 0;
+        }
+
+        public static DataTable GetAllContacts()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);
+
+            string query = @"SELECT * FROM Contacts";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                if (dataReader.HasRows)
+                    dt.Load(dataReader);
+
+                dataReader.Close();
+            }
+            catch (Exception ex) 
+            { 
+            }
+
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                    connection.Close();
+            }
+
+            return dt;
         }
     }
 }

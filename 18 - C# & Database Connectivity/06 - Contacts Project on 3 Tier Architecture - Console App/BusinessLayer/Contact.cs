@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer;
 using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace BusinessLayer
@@ -105,6 +106,11 @@ namespace BusinessLayer
 
                 default: return false;
             }
+        }
+
+        public static DataTable GetAllContacts()
+        {
+            return ContactDataAccess.GetAllContacts();
         }
     }
 }
