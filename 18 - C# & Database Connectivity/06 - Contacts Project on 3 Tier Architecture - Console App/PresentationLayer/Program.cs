@@ -1,7 +1,6 @@
 ﻿using BusinessLayer;
 using System;
 using System.Data;
-using System.Diagnostics.Contracts;
 
 namespace PresentationLayer
 {
@@ -88,13 +87,96 @@ namespace PresentationLayer
             }
         }
 
-        static void testIsExist(int id)
+        static void testIsCountryIsExistsById(int id)
         {
-            if (Contact.IsExist(id))
-                Console.WriteLine("Contact exists!");
+            if (Country.IsExistsByID(id))
+                Console.WriteLine($"Country with id {id} exists!");
             else
-                Console.WriteLine("Contact doesn't exists!");
+                Console.WriteLine($"Country with id {id} exists!");
         }
+
+        static void testFindCountryByID(int id)
+        {
+            Country country = Country.FindByID(id);
+
+            if (country != null)
+                country.Info();
+            else
+                Console.WriteLine($"Country with id \"{id}\" wasn't found!");
+        }
+
+        static void testFindCountryByName(string name)
+        {
+            Country country = Country.FindByName(name);
+
+            if (country != null)
+                country.Info();
+            else
+                Console.WriteLine($"Country with name \"{name}\" wasn't found!");
+        }
+
+        static void testCountryIsExistsByName(string name)
+        {
+            if (Country.IsExistsByName(name))
+                Console.WriteLine($"Country with name \"{name}\" exists");
+            else
+                Console.WriteLine($"Country with name \"{name}\" doesn't exists!");
+        }
+
+        static void testAddNewCountry(string newCountryName)
+        {
+            Country country = new Country();
+
+            country.CountryName = newCountryName;
+
+            if (country.Save())
+            {
+                Console.WriteLine($"Country Added Successfully, with ID: {country.CountryID}");
+                country.Info();
+            }
+            else
+                Console.WriteLine("Country Addition failed!");
+
+        }
+
+        static void testUpdateCountryByID(int countryID, string newCountryName)
+        {
+            Country country = Country.FindByID(countryID);
+
+            if (country != null)
+            {
+                country.CountryName = newCountryName;
+
+                if (country.Save())
+                {
+                    Console.WriteLine("Country updated!");
+                    country.Info();
+                }
+                else
+                    Console.WriteLine("Country Found but update failed!");
+            }
+            else
+                Console.WriteLine("Country not found!");
+        }
+
+        static void testDeleteCountryByID(int countryID)
+        {
+            if (Country.DeleteByID(countryID))
+                Console.WriteLine("Deleted Successfully");
+            else
+                Console.WriteLine("Delete Failed");
+        }
+
+        static void testListCountries()
+        {
+            DataTable dt = Country.ListAllCountries();
+            Console.WriteLine("Countries Data");
+            foreach (DataRow row in dt.Rows)
+            {
+                Console.WriteLine($"{row["CountryID"]}, {row["CountryName"]}");
+            }
+        }
+
         static void Main(string[] args)
         {
             //testFindContact(2);
@@ -104,8 +186,29 @@ namespace PresentationLayer
             //testDeleteContact(15);
             //ListContacts();
 
-            testIsExist(1);
-            testIsExist(100);
+            testIsCountryIsExistsById(1);
+            testIsCountryIsExistsById(100);
+            Console.WriteLine("------------------------------------------------");
+
+
+            testFindCountryByID(1);
+            testFindCountryByID(100);
+            Console.WriteLine("------------------------------------------------");
+
+            testFindCountryByName("United States");
+            testFindCountryByName("Syrian Arab Republic");
+            Console.WriteLine("------------------------------------------------");
+
+            testCountryIsExistsByName("United States");
+            testCountryIsExistsByName("Syrian Arab Republic");
+            Console.WriteLine("------------------------------------------------");
+
+            //testAddNewCountry("Syria");
+            //testUpdateCountryByID(9, "Austria");
+
+            //testDeleteCountryByID(9);
+
+            testListCountries();
         }
     }
 }

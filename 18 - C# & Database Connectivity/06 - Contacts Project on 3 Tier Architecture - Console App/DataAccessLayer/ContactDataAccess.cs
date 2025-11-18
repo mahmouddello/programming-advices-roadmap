@@ -223,7 +223,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        public static bool IsExist(int contactID)
+        public static bool IsExists(int contactID)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(DataAccessSettings.connectionString);

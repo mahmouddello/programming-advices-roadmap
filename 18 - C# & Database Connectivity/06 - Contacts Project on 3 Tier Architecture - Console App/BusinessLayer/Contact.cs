@@ -114,8 +114,8 @@ namespace BusinessLayer
             return ContactDataAccess.GetAllContacts();
         }
 
-        public static bool IsExist(int contactID) {
-            return ContactDataAccess.IsExist(contactID);
+        public static bool IsExists(int contactID) {
+            return ContactDataAccess.IsExists(contactID);
         } 
     }
 }
