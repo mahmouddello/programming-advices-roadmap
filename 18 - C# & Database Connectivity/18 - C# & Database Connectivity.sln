@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 - Delete Data", "04 - De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 - Handle IN Statement", "05 - Handle IN Statement\05 - Handle IN Statement.csproj", "{1089535E-0046-412A-9BC7-A7A4EBD982F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 - DataTables", "07 - DataTables\07 - DataTables.csproj", "{6AE4026C-C628-42F1-9F80-66850CADA39A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08 - DataTables", "08 - DataTables\08 - DataTables.csproj", "{6AE4026C-C628-42F1-9F80-66850CADA39A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
