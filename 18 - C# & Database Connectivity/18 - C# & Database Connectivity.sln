@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08 - DataTables", "08 - Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09 - Dataview", "09 - Dataview\09 - Dataview.csproj", "{8F4EA7EB-B9AE-4BEB-A646-BE397F549055}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 - Dataset", "10 - Dataset\10 - Dataset.csproj", "{98BF940D-A92E-4151-A8E5-B8F85F3D2624}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8F4EA7EB-B9AE-4BEB-A646-BE397F549055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F4EA7EB-B9AE-4BEB-A646-BE397F549055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F4EA7EB-B9AE-4BEB-A646-BE397F549055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BF940D-A92E-4151-A8E5-B8F85F3D2624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BF940D-A92E-4151-A8E5-B8F85F3D2624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BF940D-A92E-4151-A8E5-B8F85F3D2624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BF940D-A92E-4151-A8E5-B8F85F3D2624}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
