@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_02 - User Controls & Exp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_04 - Send Data Across Forms (Back & Forth)", "03_04 - Send Data Across Forms (Back & Forth)\03_04 - Send Data Across Forms (Back & Forth).csproj", "{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 - Simple Event With Parameters", "05 - Simple Event With Parameters\05 - Simple Event With Parameters.csproj", "{66A27A72-0276-412B-A12C-11F29D1D696E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A27A72-0276-412B-A12C-11F29D1D696E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A27A72-0276-412B-A12C-11F29D1D696E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A27A72-0276-412B-A12C-11F29D1D696E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A27A72-0276-412B-A12C-11F29D1D696E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
