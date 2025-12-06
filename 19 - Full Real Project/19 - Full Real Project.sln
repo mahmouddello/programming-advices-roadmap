@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_02 - User Controls & Expose Property", "01_02 - User Controls & Expose Property\01_02 - User Controls & Expose Property.csproj", "{7A7B4B3B-687F-4D58-8114-9E14DC39DAA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_04 - Send Data Across Forms (Back & Forth)", "03_04 - Send Data Across Forms (Back & Forth)\03_04 - Send Data Across Forms (Back & Forth).csproj", "{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7A7B4B3B-687F-4D58-8114-9E14DC39DAA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A7B4B3B-687F-4D58-8114-9E14DC39DAA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A7B4B3B-687F-4D58-8114-9E14DC39DAA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFDA9D3F-4C19-4ECA-8E8A-5B6FAC0B3339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
