@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="01 - Send Data Between Forms/01 - Send Data Between Forms.csproj" Id="3aec8166-74fa-47cd-92ca-10c6b2dffd58" />
   <Project Path="02 - Delegates/02 - Delegates.csproj" Id="02ae030f-f86c-401e-a345-fd76618374c6" />
+  <Project Path="03_01 - Simple Event With Parameters Using Arguments/03_01 - Simple Event With Parameters Using Arguments.csproj" Id="02570e08-fd61-426a-b036-ed73ed3e9747" />
 </Solution>
