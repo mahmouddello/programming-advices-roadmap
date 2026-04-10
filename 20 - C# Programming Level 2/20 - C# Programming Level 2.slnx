@@ -3,4 +3,5 @@
   <Project Path="02 - Delegates/02 - Delegates.csproj" Id="02ae030f-f86c-401e-a345-fd76618374c6" />
   <Project Path="03_01 - Simple Event With Parameters Using Arguments/03_01 - Simple Event With Parameters Using Arguments.csproj" Id="02570e08-fd61-426a-b036-ed73ed3e9747" />
   <Project Path="03_02 - Events Practice &amp; Examples/03_02 - Events Practice &amp; Examples.csproj" Id="e894b055-5f71-4e95-982e-29f225be29be" />
+  <Project Path="04 - More About Delegates/04 - More About Delegates.csproj" Id="54c5db63-037b-420c-8b54-909838f9513d" />
 </Solution>
