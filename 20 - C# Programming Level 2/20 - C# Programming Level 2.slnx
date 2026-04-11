@@ -5,4 +5,5 @@
   <Project Path="03_02 - Events Practice &amp; Examples/03_02 - Events Practice &amp; Examples.csproj" Id="e894b055-5f71-4e95-982e-29f225be29be" />
   <Project Path="04 - More About Delegates/04 - More About Delegates.csproj" Id="54c5db63-037b-420c-8b54-909838f9513d" />
   <Project Path="05 - Lambda Expression/05 - Lambda Expression.csproj" Id="b4c702df-15ef-4352-8c1a-305f6103f189" />
+  <Project Path="06 - using Statement in C#/06 - using Statement in C#.csproj" Id="741353ea-7c06-4a01-b1a9-2fdf65eaa13b" />
 </Solution>
