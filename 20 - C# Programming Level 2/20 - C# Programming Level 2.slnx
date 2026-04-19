@@ -9,4 +9,5 @@
   <Project Path="07 - Nullable Datatypes/07 - Nullable Datatypes.csproj" Id="60206c81-ee67-47f6-a34f-92720fbfc6be" />
   <Project Path="08 - Serialization/08 - Serialization.csproj" Id="8bb71549-096c-4eef-bfda-5ee04dc1243b" />
   <Project Path="09 - C# Attributes/09 - C# Attributes.csproj" Id="ea853462-7a79-4dab-9bd1-d5d6f35ec824" />
+  <Project Path="10 - Reflection/10 - Reflection.csproj" Id="418e5283-b6c0-4674-9d22-32c653ba69eb" />
 </Solution>
