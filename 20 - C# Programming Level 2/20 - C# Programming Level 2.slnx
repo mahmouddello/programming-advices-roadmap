@@ -11,4 +11,7 @@
   <Project Path="09 - C# Attributes/09 - C# Attributes.csproj" Id="ea853462-7a79-4dab-9bd1-d5d6f35ec824" />
   <Project Path="10 - Reflection/10 - Reflection.csproj" Id="418e5283-b6c0-4674-9d22-32c653ba69eb" />
   <Project Path="11 - Special Comments (Docstrings)/11 - Special Comments (Docstrings).csproj" Id="ffe8872e-2e64-49b4-b9d2-09d3af15d0cf" />
+  <Project Path="12 -  Mutable &amp; Immutable Types/12 -  Mutable &amp; Immutable Types.csproj" Id="1594b55c-956b-407d-b8ef-1ce9b53c5e97" />
+  <Project Path="13 - Generics/13 - Generics.csproj" Id="b74d1173-fc17-48c3-8413-a7248f217435" />
+  <Project Path="14 - Windows Registry/14 - Windows Registry.csproj" Id="91bd9048-772d-402d-870a-e61a7a535d2f" />
 </Solution>
