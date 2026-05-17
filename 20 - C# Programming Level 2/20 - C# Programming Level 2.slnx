@@ -18,4 +18,6 @@
   <Project Path="16 - App.Config/16 - App.Config.csproj" Id="7534ebe1-7d7f-4a3f-bdc0-6c1cbd8b68a1" />
   <Project Path="17 - String Builder/17 - String Builder.csproj" Id="a70dbb92-7fb1-4055-b27a-6f2e9493351b" />
   <Project Path="18 - Introduction to Cryptography/18 - Introduction to Cryptography.csproj" Id="17c6304f-5bee-425d-af29-d50bc411c062" />
+  <Project Path="19 - Operator Overloading/19 - Operator Overloading.csproj" Id="6b415bd0-18ac-4665-b6df-771002f55a83" />
+  <Project Path="20 - Introduction to Multithreading/20 - Introduction to Multithreading.csproj" Id="af97d815-d714-4ac3-9316-18905c36e0db" />
 </Solution>
