@@ -20,4 +20,5 @@
   <Project Path="18 - Introduction to Cryptography/18 - Introduction to Cryptography.csproj" Id="17c6304f-5bee-425d-af29-d50bc411c062" />
   <Project Path="19 - Operator Overloading/19 - Operator Overloading.csproj" Id="6b415bd0-18ac-4665-b6df-771002f55a83" />
   <Project Path="20 - Introduction to Multithreading/20 - Introduction to Multithreading.csproj" Id="af97d815-d714-4ac3-9316-18905c36e0db" />
+  <Project Path="21 - Introduction to Asynchronous Programming/21 - Introduction to Asynchronous Programming.csproj" Id="19caffd9-bb45-45be-adfa-7b3be8b222e2" />
 </Solution>
