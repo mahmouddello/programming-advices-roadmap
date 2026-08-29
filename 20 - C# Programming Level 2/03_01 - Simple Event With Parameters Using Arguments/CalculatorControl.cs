@@ -55,9 +55,8 @@ namespace _03_01___Simple_Event_With_Parameters_Using_Arguments
             int result = value1 + value2;
             lblResult.Text = result.ToString();
 
-            if (OnCalculationComplete != null)
-                // Raise the event with parameters
-                RaiseOnCalculationComplete(result, value1, value2);
+            // Raise the event with parameters
+            RaiseOnCalculationComplete(result, value1, value2);
         }
     }
 }
