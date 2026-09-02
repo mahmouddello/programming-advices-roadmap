@@ -20,4 +20,5 @@
   <Project Path="19 - Operator Overloading/19 - Operator Overloading.csproj" Id="6b415bd0-18ac-4665-b6df-771002f55a83" />
   <Project Path="20 - Introduction to Multithreading/20 - Introduction to Multithreading.csproj" Id="af97d815-d714-4ac3-9316-18905c36e0db" />
   <Project Path="21 - Introduction to Asynchronous Programming/21 - Introduction to Asynchronous Programming.csproj" Id="19caffd9-bb45-45be-adfa-7b3be8b222e2" />
+  <Project Path="22 - Traffic Light Control Project/22 - Traffic Light Control Project.csproj" Id="afd9f646-d236-4e76-b32c-b015543868bf" />
 </Solution>
