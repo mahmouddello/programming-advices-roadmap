@@ -22,4 +22,7 @@
   <Project Path="21 - Introduction to Asynchronous Programming/21 - Introduction to Asynchronous Programming.csproj" Id="19caffd9-bb45-45be-adfa-7b3be8b222e2" />
   <Project Path="22 - Traffic Light Control Project/22 - Traffic Light Control Project.csproj" Id="afd9f646-d236-4e76-b32c-b015543868bf" />
   <Project Path="23 - Pool Club Control Project/23 - Pool Club Control Project.csproj" Id="be8c734c-e0d6-4e66-8792-3af2d0aa8b2c" />
+  <Project Path="24_01 - My Control Library/24_01 - My Control Library.csproj" Id="ceda326f-55c4-4d8b-ac6a-a4b8e75e9d74" />
+  <Project Path="24_02 - Introduction to Control Library/24_02 - Introduction to Control Library.csproj" Id="e8ede238-6f5f-47cf-a497-c01076b4e40f" />
+  <Project Path="25 - Introduction to Custom Controls/25 - Introduction to Custom Controls.csproj" Id="8e9e9a0d-14af-4fec-840c-05ba17ea4f38" />
 </Solution>
