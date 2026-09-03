@@ -25,4 +25,5 @@
   <Project Path="24_01 - My Control Library/24_01 - My Control Library.csproj" Id="ceda326f-55c4-4d8b-ac6a-a4b8e75e9d74" />
   <Project Path="24_02 - Introduction to Control Library/24_02 - Introduction to Control Library.csproj" Id="e8ede238-6f5f-47cf-a497-c01076b4e40f" />
   <Project Path="25 - Introduction to Custom Controls/25 - Introduction to Custom Controls.csproj" Id="8e9e9a0d-14af-4fec-840c-05ba17ea4f38" />
+  <Project Path="26 - Calling Stored Procedures in C#/26 - Calling Stored Procedures in C#.csproj" Id="e4de9265-c967-454e-a18d-1e493611e1d2" />
 </Solution>
